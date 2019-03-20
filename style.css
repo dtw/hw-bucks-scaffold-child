@@ -1,0 +1,63 @@
+/*
+ Theme Name:     Scaffold Child Theme
+ Description:    Child theme for the Scaffold WordPress theme for Healthwatch
+ Author:         Jason King
+ Author URI:     http://www.kingjason.co.uk
+ Template:       scaffold
+ Version:        4.9.8
+*/
+@media (min-width: 1200px) {
+	#section-1 .aohl-video {
+		padding-top: 7rem;
+	}
+	#section-2 .aohl-video {
+		padding-top: 15rem;
+	}
+	#section-3 .aohl-video {
+		padding-top: 20rem;
+	}
+	#section-4 .aohl-video {
+		padding-top: 25rem;
+	}
+	#section-5 .aohl-video {
+		padding-top: 35rem;
+	}
+	#section-6 .aohl-video {
+		padding-top: 25rem;
+	}
+	#section-7 .aohl-video {
+		padding-top: 30rem;
+	}
+	#section-8 .aohl-video {
+		padding-top: 0rem;
+	}
+}
+
+@media (max-width: 1199px) {
+	.aohl-video {
+		padding-top: 0rem;
+	}
+}
+
+@media (max-width: 576px) {
+	.aohl-video {
+		width: 100%;
+	}
+}
+
+#hwbucks {
+	margin-bottom: 1rem;
+}
+#hwbucks .toprow {
+	background: #0080A4;
+	color: white;
+}
+
+#hwbucks td {
+	padding:10px 5px;
+	border: 1px solid rgb(242,242,242);
+}
+
+#HWBucksCommentLogo {
+	border-radius: 0px !important;
+}
