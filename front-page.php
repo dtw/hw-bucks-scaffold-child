@@ -373,7 +373,7 @@ $count = 1;
 								<div class="text-center col-md-4 col-sm-12">
 									<a href="
 										<?php the_permalink(); ?>" rel="bookmark">
-										<?php the_post_thumbnail(); ?>
+										<?php the_post_thumbnail([auto,180]); ?>
 									</a>
 								</div>
 								<!-- end of col -->
@@ -473,7 +473,7 @@ $count = 1;
 								<div style="text-align: right;" class="col-md-3 hidden-sm hidden-xs">
 									<a href="
 										<?php the_permalink(); ?>" rel="bookmark">
-										<?php the_post_thumbnail(); ?>
+										<?php the_post_thumbnail([auto,180]); ?>
 									</a>
 								</div>
 							</div>
