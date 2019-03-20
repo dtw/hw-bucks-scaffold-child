@@ -223,12 +223,14 @@ $count = 1;
 						<?php while($news->have_posts()) : $news->the_post(); ?>
 						<?php if ($count == 1) { ?>
 						<div class="col-md-12 col-sm-12 col-xs-12 panel panel-pink">
+							<div class="col-md-12 panel-title">
+								<h2>Latest news</h2>
+							</div>
 							<div class="col-md-9 col-sm-9 col-xs-12">
-								<h2>Latest news: 
 								<a class="title-link" href="
 									<?php the_permalink(); ?>" rel="bookmark">
 									<?php the_title(); ?>
-								</a></h2>
+								</a>
 								<?php the_excerpt(); ?>
 								<!-- <p><a href="
 								<?php echo get_the_permalink(); ?>">Read more &raquo;</a></p> -->
