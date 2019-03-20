@@ -370,7 +370,7 @@ $count = 1;
 								<div class="col-md-12 panel-title">
 									<h2>Lastest Dignity in Care visit</h2>
 								</div>
-								<div class="col-md-4 col-sm-12">
+								<div class="text-center col-md-4 col-sm-12">
 									<a href="
 										<?php the_permalink(); ?>" rel="bookmark">
 										<?php the_post_thumbnail(); ?>
