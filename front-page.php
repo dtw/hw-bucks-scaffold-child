@@ -80,16 +80,16 @@ $term_icon = get_term_meta( $term_id, 'icon', true );						// Get meta
 						<?php if ($reviewcount == 1) { ?>
 							<?php if ( has_post_thumbnail($comment->comment_post_ID) ) { ?>
 								<div class="col-md-8 col-xs-12">
-									<h2><a href="
+									<a class="title-link" href="
 										<?php echo get_the_permalink($comment->comment_post_ID); ?>">
 										<?php echo get_the_title($comment->comment_post_ID); ?>
-									</a></h3>
+									</a>
 							<?php } else { ?>
 								<div class="col-md-9 col-sm-6 col-xs-12">
-									<h3><a href="
+									<a class="title-link" href="
 										<?php echo get_the_permalink($comment->comment_post_ID); ?>">
 										<?php echo get_the_title($comment->comment_post_ID); ?>
-									</a></h3>
+									</a>
 							<?php } ?>
 						<?php } else { ?>
 							<div class="col-md-9 col-sm-6 col-xs-12">
