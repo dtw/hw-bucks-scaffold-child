@@ -40,7 +40,9 @@ if ( $comments ) {
 	foreach ( $comments as $comment ) { ?>
 			<?php if ($reviewcount == 1) { ?>
 			<div class="col-md-12 col-sm-12 col-xs-12 panel">
+				<div class="col-md-12 panel-title">
 					<h2>Recent feedback from the public</h2>
+				</div>
 				<?php } else { ?>
 				<div class="col-md-4 col-sm-4 hidden-xs">
 					<?php } ?>
