@@ -279,7 +279,7 @@ $reviewcount = 1;
 if ( $comments ) {
 	echo "<div class='feedback row'>";
 
-		
+
 	foreach ( $comments as $comment ) { ?>
 			<?php if ($reviewcount == 1) { ?>
 			<div class="col-md-12 col-sm-12 col-xs-12 panel">
@@ -289,7 +289,7 @@ if ( $comments ) {
 				<?php } else { ?>
 				<div class="col-md-4 col-sm-4 hidden-xs">
 					<?php } ?>
-					<?php 										// Display icon for taxonomy term	
+					<?php 										// Display icon for taxonomy term
 
 $term_ids = get_the_terms( $comment->comment_post_ID, 'service_types' );	// Find taxonomies
 $term_id = $term_ids[0]->term_id;											// Get taxonomy ID
@@ -343,7 +343,7 @@ $term_icon = get_term_meta( $term_id, 'icon', true );						// Get meta
 									</a>
 								</h3>
 						<?php } ?>
-									<?php if ($reviewcount == 1) { 
+									<?php if ($reviewcount == 1) {
 get_template_part("elements/comments-list");
 ?>
 									<p>
@@ -423,7 +423,7 @@ $individual_rating = get_comment_meta( $comment->comment_ID, 'feedback_rating', 
 											<?php echo human_time_diff( strtotime($comment->comment_date), current_time( 'timestamp' ) ); ?> ago
 										</strong>
 									</p>
-									<?php 
+									<?php
 	$reviewcount = $reviewcount + 1;
 
 
@@ -447,9 +447,9 @@ echo "
 					<!--<div class="col-md-12 col-sm-12 col-xs-12 panel strap"><h2 style="line-height:4rem;">Our vision is that everyone who needs them experiences high quality health and care services in Buckinghamshire</h2></div>-->
 					<!-- 4. News -->
 					<div class='row news'>
-						<?php 
+						<?php
 
-		$news = new WP_Query(array( 
+		$news = new WP_Query(array(
 			'showposts' 		=> 4,
 			'post_type'      	=> 'post',
 			'post_status'      	=> 'publish',
@@ -457,7 +457,7 @@ echo "
 			)
 		);
 
-		if( $news->have_posts() ) : 
+		if( $news->have_posts() ) :
 
 
 
@@ -507,17 +507,17 @@ $count = 1;
 							<!-- end of column -->
 							<?php 		$count = $count + 1;
 
-		endwhile; 
-		
+		endwhile;
+
 		endif; wp_reset_query(); ?>
 						</div>
 						<!-- end of row --?></div>
 						<!-- end of loop -->
 						<!-- 5. Article -->
 						<div class='row news'>
-							<?php 
+							<?php
 
-		$news = new WP_Query(array( 
+		$news = new WP_Query(array(
 			'showposts' 		=> 1,
 			'post_type'      	=> 'post',
 			'post_status'      	=> 'publish',
@@ -525,7 +525,7 @@ $count = 1;
 			)
 		);
 
-		if( $news->have_posts() ) : 
+		if( $news->have_posts() ) :
 
 		?>
 							<?php while($news->have_posts()) : $news->the_post(); ?>
@@ -554,10 +554,10 @@ $count = 1;
 								</div>
 							</div>
 							<!-- end of column -->
-							<?php 
+							<?php
 
-		endwhile; 
-		
+		endwhile;
+
 		endif; wp_reset_query(); ?>
 							<div class="col-md-4 col-sm-4 col-xs-12 subitem">
 								<h3>
@@ -589,9 +589,9 @@ $count = 1;
 						</div>
 						<!-- end of row -->
 						<!-- 3. Dignity in Care -->
-						<?php 
+						<?php
 
-		$mlq = new WP_Query(array( 
+		$mlq = new WP_Query(array(
 			'post_type' => 'Local_services',
 			// 'orderby' => 'rand',
 			'showposts' => 1,
@@ -605,7 +605,7 @@ $count = 1;
 			)
 		);
 
-		if( $mlq->have_posts() ) : 
+		if( $mlq->have_posts() ) :
 		?>
 						<?php while($mlq->have_posts()) : $mlq->the_post(); ?>
 						<div class="row news">
@@ -630,18 +630,18 @@ $count = 1;
 									</span>
 									<?php the_excerpt(); ?>
 									<p>
-										<?php $rating = get_post_meta( $post->ID, 'hw_services_overall_rating', true ); 
-				for ($i = 1; $i <= $rating; ++$i)  { 
+										<?php $rating = get_post_meta( $post->ID, 'hw_services_overall_rating', true );
+				for ($i = 1; $i <= $rating; ++$i)  {
 				echo "
-										<i class='fa fa-star fa-2x green'></i> "; 
+										<i class='fa fa-star fa-2x green'></i> ";
 				}
-				for ($i = 1; $i <= (5 - $rating); ++$i)  { 
+				for ($i = 1; $i <= (5 - $rating); ++$i)  {
 				echo "
-										<i class='fa fa-star-o fa-2x green'></i> "; 
-				} 
+										<i class='fa fa-star-o fa-2x green'></i> ";
+				}
 			?>
 									</p>
-									<p class="visit-date">Visited on 
+									<p class="visit-date">Visited on
 										<?php echo the_date(); ?>
 									</p>
 									<?php // get_template_part("elements/comments-rating-average"); ?>
@@ -649,7 +649,7 @@ $count = 1;
 								<!-- end of column -->
 							</div>
 							<!-- end of panel -->
-							<?php  
+							<?php
 		endwhile; endif; wp_reset_query(); ?>
 							<div class="col-md-4 col-sm-4 col-xs-12 subitem">
 								<h3>
@@ -682,9 +682,9 @@ $count = 1;
 						<!-- end of row -->
 						<!-- 7. PPG -->
 						<div class='row news'>
-							<?php 
+							<?php
 
-		$news = new WP_Query(array( 
+		$news = new WP_Query(array(
 			'showposts' 		=> 1,
 			'post_type'      	=> 'post',
 			'post_status'      	=> 'publish',
@@ -692,7 +692,7 @@ $count = 1;
 			)
 		);
 
-		if( $news->have_posts() ) : 
+		if( $news->have_posts() ) :
 
 		?>
 							<?php while($news->have_posts()) : $news->the_post(); ?>
@@ -721,10 +721,10 @@ $count = 1;
 								</div>
 							</div>
 							<!-- end of column -->
-							<?php 
+							<?php
 
-		endwhile; 
-		
+		endwhile;
+
 		endif; wp_reset_query(); ?>
 							<div class="col-md-4 col-sm-4 col-xs-12 subitem">
 								<h3>
