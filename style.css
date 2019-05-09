@@ -301,3 +301,287 @@ h3 {
 .subitem:hover {
 	background-color: rgba(0,0,0,.07);
 }
+
+/*
+	new-home styles
+*/
+
+
+h3.comment-reply-title {
+display: none;
+}
+
+.comment-form-cookies-consent {
+display:none;
+}
+
+#comments {
+	margin-top: 12rem;
+}
+
+#comments ul ul .comment-content {
+	background-color: rgba(0,0,0,.015);
+}
+
+
+#comments ul {
+	list-style: none;
+	padding-left: 0 !important;
+}
+
+#comments ul ul {
+	padding-left: 8rem !important;
+}
+
+#comments ul {
+	list-style: none;
+}
+
+#comments .reply {
+	text-align: right;
+}
+
+#comments .reply:before {
+	content: "↑ ";
+}
+
+.byuser .comment-body {
+	border: 1px solid rgba(0,0,0,.1);
+}
+
+
+/* Home page
+-------------------- */
+
+.home img {
+	border-radius: 5px !important;
+}
+
+.home .panel {
+	background-color: rgba(0,0,0,.03);
+	padding: 2rem;
+	margin: 4rem 0 5rem 0;
+	transition: 400ms ease-out 100ms;
+	}
+
+.home .row {
+}
+
+.home .panel h1 {
+	text-shadow: #f2f2f2 1px 1px 1px;
+	font-weight: 700;
+	color: rgb(0,79,107);
+	margin:0;
+	padding-left: 1.5rem;
+}
+
+.home .panel h2 {
+	color: rgba(0,0,0,.6);
+	font-size: 3.2rem;
+	font-weight: 700 !important;
+	padding: 0;
+	margin-bottom: 3rem;
+	line-height: 3.6rem;
+	}
+
+.home .panel .city {
+	margin-bottom: 2rem;
+	color: #666;
+	font-size: 2.5rem;
+	line-height: 3rem;
+	display: inline-block;
+	font-weight: 700 !important;
+}
+
+.home .panel .city a {
+	display: inline-block;
+	margin-bottom: 0;
+}
+
+.home .panel .title-link {
+	margin-bottom: 2rem;
+
+	font-weight: 700 !important;
+	line-height: 3rem;
+}
+
+.home .panel-icon {
+	text-align: right;
+}
+
+.home .panel .btn {
+	margin-bottom: 0;
+}
+
+
+.home .panel-turquoise {
+	background-color: rgba(179, 255, 249, .8);
+	border: rgba(179, 255, 249, .8) solid 2px !important;
+}
+
+.home .panel-turquoise:hover {
+	border: #1CFFEF solid 2px !important;
+}
+
+.home .panel-orange {
+	border: rgba(252, 219, 214, .8) solid 2px !important;
+	background-color: rgba(252, 219, 214, .8);
+}
+
+.home .panel-orange:hover {
+	border: #F79486 solid 2px !important;
+}
+
+.home .panel-pink {
+	border: rgba(250,216,234,.8) solid 2px !important;
+	background-color: rgba(250,216,234,.8);
+}
+
+.home .panel-pink:hover {
+	border: #F08BC0 solid 2px !important;
+}
+
+.home .panel-blue {
+	border: rgba(185,239, 255,.8) solid 2px !important;
+	background-color: rgba(185,239, 255,.8);
+}
+
+.home .panel-blue:hover {
+	border: #2FD1FF solid 2px !important;
+}
+
+.home .panel-green {
+	border: rgba(235,255, 190,.8) solid 2px !important;
+	background-color: rgba(235,255, 190,.8);
+}
+
+.home .panel-green:hover {
+	border: #C4FF3E solid 2px !important;
+}
+
+.home .widget_search {
+	padding: 0 !important;
+	background-image: url(https://www.healthwatchbucks.co.uk/wp-content/themes/scaffold-child/images/frontpage.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 0% 5%;
+	border-radius: 0;
+	}
+
+.home .widget_search .ajaxsearchpro {
+	margin-top: 12rem;
+	}
+
+.home .widget_search p,
+.home .widget_search h2 {
+	text-shadow: #000 1px 1px 1px;
+	font-weight: 700;
+	color: #fff;
+	text-align: left;
+	padding:0px;
+	}
+
+.home .widget_search:before {
+	content: " " !important;
+}
+
+.home .widget_search:after {
+  content: " " !important;
+}
+
+.home .row h3 {
+	margin:0 !important;
+	padding-top: 0;
+	padding-bottom: .5rem;
+}
+
+.home h3 {
+	font-weight: 700;
+}
+
+.home .strap {
+	text-align: center;
+	padding: 2rem;
+	margin-top: 0;
+}
+
+.home .strap h2 {
+	margin-bottom: 0px;
+}
+
+.home #search-box {
+	background-color: rgba(35, 82, 124, 0.8);
+	padding: 3rem;
+}
+
+.home .shade {
+	background-color: rgba(35, 82, 124, 0.5);
+	padding: 3rem 0 0 0;
+}
+
+.home .shade h2 {
+	padding: 0 2rem 2rem 2rem;
+	line-height:4rem;
+	}
+
+.home .feedback .row {
+	margin-bottom: 0;
+}
+
+.home .service-icon-container {
+	padding-left:0;
+}
+
+.home .service-icon-md {
+	width: 180px;
+	height: 180px;
+}
+
+.home .service-icon-sm {
+	width: 80px;
+	height: 80px;
+}
+
+.home .subitem {
+	padding-right: 4rem;
+}
+
+.home .subitem:hover {
+	background-color: rgba(0,0,0,.07);
+}
+
+@media only screen and (min-width: 769px) {
+.home .subitem {
+		transition: 400ms ease-out 100ms;
+		min-height: 215px;
+	}
+}
+
+@media only screen and (max-width: 769px) {
+.home .panel h2 {
+		font-size: 2.2rem;
+		font-weight: 700 !important;
+		padding: 2rem 0 0 0;
+		line-height: 3rem;
+	}
+
+.home .panel .title-link {
+		display: block;
+		font-size: 2rem;
+		line-height: 2.4rem;
+		font-weight: 700 !important;
+	}
+
+.home .panel .city {
+		font-size: 2rem;
+	}
+
+.home .visit-date {
+		font-size: 1.4rem;
+	}
+
+.home .service-icon-md {
+	width: 80px;
+	height: 80px;
+	}
+}
