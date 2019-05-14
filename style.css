@@ -84,15 +84,6 @@
 	transition: 400ms ease-out 100ms;
 	}
 
-.widget_search {
-	padding: 0 !important;
-	background-image: url(https://www.healthwatchbucks.co.uk/wp-content/themes/scaffold-child/images/frontpage.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 0% 5%;
-	border-radius: 0;
-	}
-
 .widget_search .ajaxsearchpro {
 	margin-top: 12rem;
 	}
