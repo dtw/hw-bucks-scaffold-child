@@ -20,17 +20,17 @@
 	<div id="content">
 		<!-- 2. Recent feedback -->
 		<?php
-$args = array(
-	'status' => 'approve',
-	'post_type' => 'local_services',
-	'number' => 4,
-);
+			$args = array(
+				'status' => 'approve',
+				'post_type' => 'local_services',
+				'number' => 4,
+			);
 
-// The Query
-$comments_query = new WP_Comment_Query;
-$comments = $comments_query->query( $args );
+		// The Query
+		$comments_query = new WP_Comment_Query;
+		$comments = $comments_query->query( $args );
 
-$reviewcount = 1;
+		$reviewcount = 1;
 
 // Comment Loop
 if ( $comments ) {
@@ -47,11 +47,10 @@ if ( $comments ) {
 				<div class="col-md-4 col-sm-4 hidden-xs">
 					<?php } ?>
 					<?php 										// Display icon for taxonomy term
-
-$term_ids = get_the_terms( $comment->comment_post_ID, 'service_types' );	// Find taxonomies
-$term_id = $term_ids[0]->term_id;											// Get taxonomy ID
-$term_icon = get_term_meta( $term_id, 'icon', true );						// Get meta
-		?>
+						$term_ids = get_the_terms( $comment->comment_post_ID, 'service_types' );	// Find taxonomies
+						$term_id = $term_ids[0]->term_id;											// Get taxonomy ID
+						$term_icon = get_term_meta( $term_id, 'icon', true );						// Get meta
+					?>
 					<div class="feedback row">
 								<?php if ($reviewcount == 1) { ?>
 									<?php if ( has_post_thumbnail($comment->comment_post_ID) ) { ?>
