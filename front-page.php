@@ -78,20 +78,20 @@ if ( $comments ) {
 						</div>
 						<?php if ($reviewcount == 1) { ?>
 							<?php if ( has_post_thumbnail($comment->comment_post_ID) ) { ?>
-								<div class="col-md-8 col-xs-12">
+								<div class="service-info-container col-md-8 col-xs-12">
 									<a class="title-link" href="
 										<?php echo get_the_permalink($comment->comment_post_ID); ?>">
 										<?php echo get_the_title($comment->comment_post_ID); ?>
 									</a>
 							<?php } else { ?>
-								<div class="col-md-9 col-sm-6 col-xs-12">
+								<div class="service-info-container col-md-9 col-sm-6 col-xs-12">
 									<a class="title-link" href="
 										<?php echo get_the_permalink($comment->comment_post_ID); ?>">
 										<?php echo get_the_title($comment->comment_post_ID); ?>
 									</a>
 							<?php } ?>
 						<?php } else { ?>
-							<div class="col-md-9 col-sm-6 col-xs-12">
+							<div class="service-info-container-sm col-md-9 col-sm-6 col-xs-12">
 								<h3 style="margin: 0; padding-bottom: .5rem;">
 									<a href="
 										<?php echo get_the_permalink($comment->comment_post_ID); ?>">
