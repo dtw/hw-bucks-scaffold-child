@@ -360,7 +360,7 @@ display:none;
 .home .panel {
 	background-color: rgba(0,0,0,.03);
 	padding: 2rem;
-	margin: 4rem 0 5rem 0;
+	margin-bottom: 2rem;
 	transition: 400ms ease-out 100ms;
 	}
 
@@ -380,7 +380,7 @@ display:none;
 	font-size: 3.2rem;
 	font-weight: 700 !important;
 	padding: 0;
-	margin-bottom: 3rem;
+	margin-top:0;
 	line-height: 3.6rem;
 	}
 
