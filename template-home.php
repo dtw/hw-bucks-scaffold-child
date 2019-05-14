@@ -20,17 +20,17 @@
 	<div id="content">
 		<!-- 2. Recent feedback -->
 		<?php
-$args = array(
-	'status' => 'approve',
-	'post_type' => 'local_services',
-	'number' => 4,
-);
+			$args = array(
+				'status' => 'approve',
+				'post_type' => 'local_services',
+				'number' => 4,
+			);
 
-// The Query
-$comments_query = new WP_Comment_Query;
-$comments = $comments_query->query( $args );
+		// The Query
+		$comments_query = new WP_Comment_Query;
+		$comments = $comments_query->query( $args );
 
-$reviewcount = 1;
+		$reviewcount = 1;
 
 // Comment Loop
 if ( $comments ) {
