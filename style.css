@@ -532,6 +532,10 @@ display:none;
 	padding-left:0;
 }
 
+.home .service-info-container {
+	padding:0;
+}
+
 .home .service-icon-md {
 	width: 180px;
 	height: 180px;
