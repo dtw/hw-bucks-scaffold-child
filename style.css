@@ -62,11 +62,11 @@
 	border-radius: 0px !important;
 }
 
-.row {
+/* .row {
 	margin-bottom: 2rem;
 }
 
-/* .news .panel {
+.news .panel {
 	padding: 2rem 0;
 	border: none;
 	}
@@ -356,6 +356,7 @@ display:none;
 	}
 
 .home .row {
+	margin-bottom: 1rem;
 }
 
 .home .panel h1 {
