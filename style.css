@@ -306,10 +306,11 @@ display: none;
 display:none;
 }
 
+/*
 #comments {
 	margin-top: 12rem;
 }
-
+*/
 #comments ul ul .comment-content {
 	background-color: rgba(0,0,0,.015);
 }
@@ -580,4 +581,8 @@ display:none;
 	width: 80px;
 	height: 80px;
 	}
+}
+
+.navbar-header {
+	padding-top: 10px;
 }
