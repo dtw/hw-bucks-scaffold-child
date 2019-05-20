@@ -18,6 +18,9 @@
 <!-- widget -->
 <div class="container">
 	<div id="content">
+		<!-- Front Page news widget -->
+		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Front Page Top") ) : ?>
+		<?php endif;?>
 		<!-- 2. Recent feedback -->
 		<?php
 			$args = array(

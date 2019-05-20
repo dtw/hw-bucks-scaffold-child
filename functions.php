@@ -130,6 +130,14 @@ printf( __( 'On ' ), get_comment_author_link() ); echo get_comment_date();
     endif;
 }
 
-
+if ( function_exists('register_sidebar') )
+  register_sidebar(array(
+    'name' => 'Front Page Top',
+    'before_widget' => '<div class="hotnews row">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3>',
+    'after_title' => '</h3>',
+  )
+);
 
 ?>
