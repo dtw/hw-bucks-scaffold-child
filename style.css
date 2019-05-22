@@ -51,10 +51,6 @@
 	padding-top: 10px;
 }
 
-.navbar-brand img {
-	border-radius: 0px !important;
-}
-
 /* Other stuff */
 
 #hwbucks {
@@ -357,7 +353,7 @@ display:none;
 /* Home page
 -------------------- */
 
-.home img {
+.home .panel img {
 	border-radius: 5px !important;
 }
 
