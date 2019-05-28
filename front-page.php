@@ -357,7 +357,7 @@ $count = 1;
 			'meta_query' => array(
 				array(
 					'key'     => 'hw_services_overall_rating',
-					'value'   => array( 4, 5 ),
+					'value'   => array( 3, 4, 5 ),
 					'compare' => 'IN',
 						),
 					),
