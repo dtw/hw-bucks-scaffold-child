@@ -445,81 +445,83 @@ echo "
 							</div>
 						</div>
 						<!-- end of row -->
-						<!-- 7. PPG -->
-						<div class='row news'>
-							<?php
-
+<!-- 7. PPG -->
+<div class='row news'>
+	<?php
 		$ppg = new WP_Query(array(
 			'showposts' 		=> 1,
 			'post_type'      	=> 'post',
 			'post_status'      	=> 'publish',
-			'category__in'            	=> '200',
-			)
+			'category__in'            	=> '200',)
 		);
-
 		if( $ppg->have_posts() ) :
-
-		?>
-							<?php while($ppg->have_posts()) : $ppg->the_post(); ?>
-							<div class="panel col-md-12 col-sm-12 col-xs-12 panel-blue">
-								<div class="col-md-12 panel-title">
-									<h2>Supporting Bucks PPGs</h2>
-								</div>
-								<div class="col-md-9 col-sm-9 col-xs-12">
-									<a class="title-link" href="
-											<?php the_permalink(); ?>" rel="bookmark">
-											<?php the_title(); ?>
-										</a>
-									<?php the_excerpt(); ?>
-									<!--<p><a href="
-									<?php echo get_the_permalink(); ?>">Read more &raquo;</a></p>-->
-									<?php echo '
-									<p style="clear: both;">
-										<a class="btn btn-primary" href="' . get_category_link(200) . '">Read all ' . get_cat_name(200) . '</a>
-									</p>'; ?>
-								</div>
-								<div style="text-align: right;" class="col-md-3 hidden-sm hidden-xs">
-									<a href="
-										<?php the_permalink(); ?>" rel="bookmark">
-										<?php the_post_thumbnail([auto,180]); ?>
-									</a>
-								</div>
-							</div>
-							<!-- end of column -->
-							<?php
-
-		endwhile;
-
-		endif; wp_reset_query(); ?>
-							<div class="col-md-4 col-sm-4 col-xs-12 subitem">
-								<h3>
-									<a href="https://www.healthwatchbucks.co.uk/how-we-work/projects/patient-participation-group-support/">PPG Toolkit</a>
-								</h3>
-								<p>A selection to tools to develop and grow your PPG</p>
-								<p>
-									<a href="https://www.healthwatchbucks.co.uk/how-we-work/projects/patient-participation-group-support/">Read more &raquo;</a>
-								</p>
-							</div>
-							<div class="col-md-4 col-sm-4 col-xs-12 subitem">
-								<h3>
-									<a href="https://www.healthwatchbucks.co.uk/how-we-work/press-releases/">Press & Media</a>
-								</h3>
-								<p>Read our latest press releases.</p>
-								<p>
-									<a href="https://www.healthwatchbucks.co.uk/how-we-work/press-releases/">Read more &raquo;</a>
-								</p>
-							</div>
-							<div class="col-md-4 col-sm-4 col-xs-12 subitem">
-								<h3>
-									<a href="https://www.healthwatchbucks.co.uk/category/results/">Reports & Results</a>
-								</h3>
-								<p>We produce a variety of reports and recommendations to influence service improvement</p>
-								<p>
-									<a href="https://www.healthwatchbucks.co.uk/category/results/">Read our reports &raquo;</a>
-								</p>
-							</div>
-						</div>
-						<!-- end of row -->
+	?>
+	<?php while($ppg->have_posts()) : $ppg->the_post(); ?>
+	<div class="panel col-md-12 col-sm-12 col-xs-12 panel-blue">
+		<div class="row">
+			<div class="col-md-8 col-sm-6 col-xs-12">
+				<div class="row">
+					<div class="col-md-12 panel-title">
+						<h2>Latest article</h2>
 					</div>
-					<!-- end of content column -->
-					<?php get_footer(); ?>
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<a class="title-link" href="
+								<?php the_permalink(); ?>" rel="bookmark">
+								<?php the_title(); ?>
+							</a>
+						<?php the_excerpt(); ?>
+						<!--<p><a href="
+						<?php echo get_the_permalink(); ?>">Read more &raquo;</a></p>-->
+						<?php echo '
+						<p style="clear: both;">
+							<a class="btn btn-primary" href="' . get_category_link(200) . '">Read all ' . get_cat_name(200) . '</a>
+						</p>'; ?>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6 hidden-xs panel-icon">
+				<a href="
+					<?php the_permalink(); ?>" rel="bookmark">
+					<?php the_post_thumbnail([auto,240]); ?>
+				</a>
+			</div>
+		</div>
+	</div>
+	<!-- end of column -->
+	<?php
+		endif; wp_reset_query();
+	?>
+	<div class="col-md-4 col-sm-4 col-xs-12 subitem">
+		<h3>
+			<a href="https://www.healthwatchbucks.co.uk/how-we-work/projects/patient-participation-group-support/">PPG Toolkit</a>
+		</h3>
+		<p>A selection to tools to develop and grow your PPG</p>
+		<p>
+			<a href="https://www.healthwatchbucks.co.uk/how-we-work/projects/patient-participation-group-support/">Read more &raquo;</a>
+		</p>
+	</div>
+	<div class="col-md-4 col-sm-4 col-xs-12 subitem">
+		<h3>
+			<a href="https://www.healthwatchbucks.co.uk/how-we-work/press-releases/">Press & Media</a>
+		</h3>
+		<p>Read our latest press releases.</p>
+		<p>
+			<a href="https://www.healthwatchbucks.co.uk/how-we-work/press-releases/">Read more &raquo;</a>
+		</p>
+	</div>
+	<div class="col-md-4 col-sm-4 col-xs-12 subitem">
+		<h3>
+			<a href="https://www.healthwatchbucks.co.uk/category/results/">Reports & Results</a>
+		</h3>
+		<p>We produce a variety of reports and recommendations to influence service improvement</p>
+		<p>
+			<a href="https://www.healthwatchbucks.co.uk/category/results/">Read our reports &raquo;</a>
+		</p>
+	</div>
+</div>
+<!-- end of row -->
+</div>
+<!-- end of content column -->
+<?php get_footer(); ?>
