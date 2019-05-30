@@ -354,49 +354,46 @@ echo "
 	</div>
 </div>
 <!-- end of row -->
-						<!-- 3. Dignity in Care -->
-						<?php
-
-		$mlq = new WP_Query(array(
-			'post_type' => 'Local_services',
-			// 'orderby' => 'rand',
-			'showposts' => 1,
-			'meta_query' => array(
-				array(
-					'key'     => 'hw_services_overall_rating',
-					'value'   => array( 3, 4, 5 ),
-					'compare' => 'IN',
-						),
-					),
-			)
-		);
-
-		if( $mlq->have_posts() ) :
-		?>
-						<?php while($mlq->have_posts()) : $mlq->the_post(); ?>
-						<div class="row news">
-							<div class='panel col-md-12 col-sm-12 col-xs-12 panel-green' id='dignity-in-care'>
-								<div class="col-md-12 panel-title">
-									<h2>Lastest Dignity in Care visit</h2>
-								</div>
-								<div class="text-center col-md-4 col-sm-12">
-									<a href="
-										<?php the_permalink(); ?>" rel="bookmark">
-										<?php the_post_thumbnail([auto,180]); ?>
-									</a>
-								</div>
-								<!-- end of col -->
-								<div class="col-md-8 col-sm-12">
-									<span class="city">
-										<a class="title-link" href="
-											<?php the_permalink(); ?>" rel="bookmark">
-											<?php the_title(); ?>
-										</a>
-										<?php $city = get_post_meta( $post->ID, 'hw_services_city', true ); if ($city) { echo $city; } ?>
-									</span>
-									<?php the_excerpt(); ?>
-									<p>
-										<?php $rating = get_post_meta( $post->ID, 'hw_services_overall_rating', true );
+<!-- 3. Dignity in Care -->
+<div class="row news">
+<?php
+	$dic = new WP_Query(array(
+		'post_type' => 'Local_services',
+		// 'orderby' => 'rand',
+		'showposts' => 1,
+		'meta_query' => array(
+			array(
+				'key'     => 'hw_services_overall_rating',
+				'value'   => array( 3, 4, 5 ),
+				'compare' => 'IN',),
+			),
+		)
+	);
+	if( $dic->have_posts() ) :
+?>
+	<?php while($dic->have_posts()) : $dic->the_post(); ?>
+		<div class='panel col-md-12 col-sm-12 col-xs-12 panel-green' id='dignity-in-care'>
+			<div class="col-md-12 panel-title">
+				<h2>Lastest Dignity in Care visit</h2>
+			</div>
+			<div class="text-center col-md-4 col-sm-12">
+				<a href="
+					<?php the_permalink(); ?>" rel="bookmark">
+					<?php the_post_thumbnail([auto,180]); ?>
+				</a>
+			</div>
+			<!-- end of col -->
+			<div class="col-md-8 col-sm-12">
+				<span class="city">
+					<a class="title-link" href="
+						<?php the_permalink(); ?>" rel="bookmark">
+						<?php the_title(); ?>
+					</a>
+					<?php $city = get_post_meta( $post->ID, 'hw_services_city', true ); if ($city) { echo $city; } ?>
+				</span>
+				<?php the_excerpt(); ?>
+				<p>
+					<?php $rating = get_post_meta( $post->ID, 'hw_services_overall_rating', true );
 				for ($i = 1; $i <= $rating; ++$i)  {
 				echo "
 										<i class='fa fa-star fa-2x green'></i> ";
