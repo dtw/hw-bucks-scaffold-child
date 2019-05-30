@@ -203,11 +203,10 @@ echo "
 
 
 ?>
-					<!--<div class="col-md-12 col-sm-12 col-xs-12 panel strap"><h2 style="line-height:4rem;">Our vision is that everyone who needs them experiences high quality health and care services in Buckinghamshire</h2></div>-->
-					<!-- 4. News -->
-					<div class='row news'>
-						<?php
-
+<!--<div class="col-md-12 col-sm-12 col-xs-12 panel strap"><h2 style="line-height:4rem;">Our vision is that everyone who needs them experiences high quality health and care services in Buckinghamshire</h2></div>-->
+<!-- 4. News -->
+<div class='row news'>
+	<?php
 		$news = new WP_Query(array(
 			'showposts' 		=> 4,
 			'post_type'      	=> 'post',
@@ -217,63 +216,59 @@ echo "
 		);
 
 		if( $news->have_posts() ) :
-
-
-
-$count = 1;
-		?>
-						<?php while($news->have_posts()) : $news->the_post(); ?>
-						<?php if ($count == 1) { ?>
-						<div class="col-md-12 col-sm-12 col-xs-12 panel panel-pink">
-							<div class="col-md-12 panel-title">
-								<h2>Latest news</h2>
-							</div>
-							<div class="col-md-9 col-sm-9 col-xs-12">
-								<a class="title-link" href="
-									<?php the_permalink(); ?>" rel="bookmark">
-									<?php the_title(); ?>
-								</a>
-								<?php the_excerpt(); ?>
-								<!-- <p><a href="
-								<?php echo get_the_permalink(); ?>">Read more &raquo;</a></p> -->
-								<?php echo '
-								<p style="clear: both;">
-									<a class="btn btn-primary" href="' . get_category_link(68) . '">Read all ' . get_cat_name(68) . '</a>
-								</p>'; ?>
-							</div>
-							<div class="col-md-3 hidden-sm hidden-xs panel-icon">
-								<a href="
-									<?php the_permalink(); ?>" rel="bookmark">
-									<?php the_post_thumbnail([auto,180]); ?>
-								</a>
-							</div>
-							<?php } else { ?>
-							<div class="col-md-4 col-sm-4 hidden-xs" style="padding-right: 2rem;">
-								<h3>
-									<a href="
-										<?php the_permalink(); ?>" rel="bookmark">
-										<?php the_title(); ?>
-									</a>
-								</h3>
-								<?php the_excerpt(); ?>
-								<p>
-									<a href="
-										<?php echo get_the_permalink(); ?>">Read more &raquo;
-									</a>
-								</p>
-								<?php } ?>
-							</div>
-							<!-- end of column -->
-							<?php 		$count = $count + 1;
-
+			$count = 1;
+	?>
+	<?php while($news->have_posts()) : $news->the_post(); ?>
+		<?php if ($count == 1) { ?>
+			<div class="col-md-12 col-sm-12 col-xs-12 panel panel-pink">
+				<div class="col-md-12 panel-title">
+					<h2>Latest news</h2>
+				</div>
+				<div class="col-md-9 col-sm-9 col-xs-12">
+					<a class="title-link" href="
+						<?php the_permalink(); ?>" rel="bookmark">
+						<?php the_title(); ?>
+					</a>
+					<?php the_excerpt(); ?>
+					<!-- <p><a href="
+					<?php echo get_the_permalink(); ?>">Read more &raquo;</a></p> -->
+					<?php echo '
+					<p style="clear: both;">
+						<a class="btn btn-primary" href="' . get_category_link(68) . '">Read all ' . get_cat_name(68) . '</a>
+					</p>'; ?>
+				</div>
+				<div class="col-md-3 hidden-sm hidden-xs panel-icon">
+					<a href="
+						<?php the_permalink(); ?>" rel="bookmark">
+						<?php the_post_thumbnail([auto,180]); ?>
+					</a>
+				</div>
+			<?php } else { ?>
+				<div class="col-md-4 col-sm-4 hidden-xs" style="padding-right: 2rem;">
+					<h3>
+						<a href="
+							<?php the_permalink(); ?>" rel="bookmark">
+							<?php the_title(); ?>
+						</a>
+					</h3>
+					<?php the_excerpt(); ?>
+					<p>
+						<a href="
+							<?php echo get_the_permalink(); ?>">Read more &raquo;
+						</a>
+					</p>
+				<?php } ?>
+			</div>
+		<!-- end of column -->
+	<?php 		$count = $count + 1;
 		endwhile;
-
-		endif; wp_reset_query(); ?>
-						</div>
-						<!-- end of row --?></div>
-						<!-- end of loop -->
-						<!-- 5. Article -->
-						<div class='row news'>
+		endif; wp_reset_query();
+	?>
+</div>
+<!-- end of row --?></div>
+<!-- end of loop -->
+<!-- 5. Article -->
+<div class='row news'>
 							<?php
 
 		$news = new WP_Query(array(
