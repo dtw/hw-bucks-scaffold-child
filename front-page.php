@@ -280,7 +280,7 @@ echo "
 <div class='row news'>
 							<?php
 
-		$news = new WP_Query(array(
+		$article = new WP_Query(array(
 			'showposts' 		=> 1,
 			'post_type'      	=> 'post',
 			'post_status'      	=> 'publish',
@@ -288,10 +288,10 @@ echo "
 			)
 		);
 
-		if( $news->have_posts() ) :
+		if( $article->have_posts() ) :
 
 		?>
-							<?php while($news->have_posts()) : $news->the_post(); ?>
+							<?php while($article->have_posts()) : $article->the_post(); ?>
 							<div class="panel col-md-12 col-sm-12 col-xs-12 panel-blue">
 								<div class="row">
 									<div class="col-md-8 col-sm-6 col-xs-12">
@@ -454,7 +454,7 @@ echo "
 						<div class='row news'>
 							<?php
 
-		$news = new WP_Query(array(
+		$ppg = new WP_Query(array(
 			'showposts' 		=> 1,
 			'post_type'      	=> 'post',
 			'post_status'      	=> 'publish',
@@ -462,10 +462,10 @@ echo "
 			)
 		);
 
-		if( $news->have_posts() ) :
+		if( $ppg->have_posts() ) :
 
 		?>
-							<?php while($news->have_posts()) : $news->the_post(); ?>
+							<?php while($ppg->have_posts()) : $ppg->the_post(); ?>
 							<div class="panel col-md-12 col-sm-12 col-xs-12 panel-blue">
 								<div class="col-md-12 panel-title">
 									<h2>Supporting Bucks PPGs</h2>
