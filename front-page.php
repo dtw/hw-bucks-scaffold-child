@@ -466,7 +466,7 @@ echo "
 			<div class="col-md-8 col-sm-6 col-xs-12">
 				<div class="row">
 					<div class="col-md-12 panel-title">
-						<h2>Latest article</h2>
+						<h2>Supporting Bucks PPGs</h2>
 					</div>
 				</div>
 				<div class="row">
