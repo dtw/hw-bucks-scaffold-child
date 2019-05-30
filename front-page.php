@@ -325,11 +325,10 @@ echo "
 								</div>
 							</div>
 							<!-- end of column -->
-							<?php
-
+	<?php
 		endwhile;
-
-		endif; wp_reset_query(); ?>
+		endif; wp_reset_query();
+	?>
 							<div class="col-md-4 col-sm-4 col-xs-12 subitem">
 								<h3>
 									<a href="https://www.healthwatchbucks.co.uk/how-we-work/client-services/">Client Services</a>
