@@ -221,28 +221,37 @@ echo "
 	<?php while($news->have_posts()) : $news->the_post(); ?>
 		<?php if ($count == 1) { ?>
 			<div class="col-md-12 col-sm-12 col-xs-12 panel panel-pink">
-				<div class="col-md-12 panel-title">
-					<h2>Latest news</h2>
-				</div>
-				<div class="col-md-9 col-sm-9 col-xs-12">
-					<a class="title-link" href="
-						<?php the_permalink(); ?>" rel="bookmark">
-						<?php the_title(); ?>
-					</a>
-					<?php the_excerpt(); ?>
-					<!-- <p><a href="
-					<?php echo get_the_permalink(); ?>">Read more &raquo;</a></p> -->
-					<?php echo '
-					<p style="clear: both;">
-						<a class="btn btn-primary" href="' . get_category_link(68) . '">Read all ' . get_cat_name(68) . '</a>
-					</p>'; ?>
-				</div>
-				<div class="col-md-3 hidden-sm hidden-xs panel-icon">
-					<a href="
-						<?php the_permalink(); ?>" rel="bookmark">
-						<?php the_post_thumbnail([auto,180]); ?>
-					</a>
-				</div>
+				<div class="row">
+					<div class="col-md-8 col-sm-6 col-xs-12">
+						<div class="row">
+							<div class="col-md-12 panel-title">
+								<h2>Latest news</h2>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<a class="title-link" href="
+									<?php the_permalink(); ?>" rel="bookmark">
+									<?php the_title(); ?>
+								</a>
+								<?php the_excerpt(); ?>
+								<!-- <p><a href="
+								<?php echo get_the_permalink(); ?>">Read more &raquo;</a></p> -->
+								<?php echo '
+								<p style="clear: both;">
+									<a class="btn btn-primary" href="' . get_category_link(68) . '">Read all ' . get_cat_name(68) . '</a>
+								</p>'; ?>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 hidden-xs panel-icon">
+						<a href="
+							<?php the_permalink(); ?>" rel="bookmark">
+							<?php the_post_thumbnail([auto,380]); ?>
+						</a>
+					</div>
+			</div>
+
 			<?php } else { ?>
 				<div class="col-md-4 col-sm-4 hidden-xs" style="padding-right: 2rem;">
 					<h3>
