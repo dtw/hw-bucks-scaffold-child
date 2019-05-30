@@ -289,27 +289,35 @@ $count = 1;
 		?>
 							<?php while($news->have_posts()) : $news->the_post(); ?>
 							<div class="panel col-md-12 col-sm-12 col-xs-12 panel-blue">
-								<div class="col-md-12 panel-title">
-									<h2>Latest article</h2>
-								</div>
-								<div class="col-md-9 col-sm-9 col-xs-12">
-									<a class="title-link" href="
+								<div class="row">
+									<div class="col-md-8 col-sm-12 col-xs-12">
+										<div class="row">
+											<div class="col-md-12 panel-title">
+												<h2>Latest article</h2>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12 col-sm-12 col-xs-12">
+												<a class="title-link" href="
+														<?php the_permalink(); ?>" rel="bookmark">
+														<?php the_title(); ?>
+													</a>
+												<?php the_excerpt(); ?>
+												<!--<p><a href="
+												<?php echo get_the_permalink(); ?>">Read more &raquo;</a></p>-->
+												<?php echo '
+												<p style="clear: both;">
+													<a class="btn btn-primary" href="' . get_category_link(119) . '">Read all ' . get_cat_name(119) . '</a>
+												</p>'; ?>
+											</div>
+										</div>
+									</div>
+									<div style="text-align: right;" class="col-md-4 hidden-sm hidden-xs">
+										<a href="
 											<?php the_permalink(); ?>" rel="bookmark">
-											<?php the_title(); ?>
+											<?php the_post_thumbnail([auto,300]); ?>
 										</a>
-									<?php the_excerpt(); ?>
-									<!--<p><a href="
-									<?php echo get_the_permalink(); ?>">Read more &raquo;</a></p>-->
-									<?php echo '
-									<p style="clear: both;">
-										<a class="btn btn-primary" href="' . get_category_link(119) . '">Read all ' . get_cat_name(119) . '</a>
-									</p>'; ?>
-								</div>
-								<div style="text-align: right;" class="col-md-3 hidden-sm hidden-xs">
-									<a href="
-										<?php the_permalink(); ?>" rel="bookmark">
-										<?php the_post_thumbnail([auto,180]); ?>
-									</a>
+									</div>
 								</div>
 							</div>
 							<!-- end of column -->
