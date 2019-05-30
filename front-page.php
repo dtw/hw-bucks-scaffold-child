@@ -278,85 +278,81 @@ echo "
 <!-- end of loop -->
 <!-- 5. Article -->
 <div class='row news'>
-							<?php
-
+	<?php
 		$article = new WP_Query(array(
 			'showposts' 		=> 1,
 			'post_type'      	=> 'post',
 			'post_status'      	=> 'publish',
-			'category__in'            	=> '119',
-			)
+			'category__in'            	=> '119',)
 		);
-
 		if( $article->have_posts() ) :
-
-		?>
-							<?php while($article->have_posts()) : $article->the_post(); ?>
-							<div class="panel col-md-12 col-sm-12 col-xs-12 panel-blue">
-								<div class="row">
-									<div class="col-md-8 col-sm-6 col-xs-12">
-										<div class="row">
-											<div class="col-md-12 panel-title">
-												<h2>Latest article</h2>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-12 col-sm-12 col-xs-12">
-												<a class="title-link" href="
-														<?php the_permalink(); ?>" rel="bookmark">
-														<?php the_title(); ?>
-													</a>
-												<?php the_excerpt(); ?>
-												<!--<p><a href="
-												<?php echo get_the_permalink(); ?>">Read more &raquo;</a></p>-->
-												<?php echo '
-												<p style="clear: both;">
-													<a class="btn btn-primary" href="' . get_category_link(119) . '">Read all ' . get_cat_name(119) . '</a>
-												</p>'; ?>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-4 col-sm-6 hidden-xs panel-icon">
-										<a href="
-											<?php the_permalink(); ?>" rel="bookmark">
-											<?php the_post_thumbnail([auto,240]); ?>
-										</a>
-									</div>
-								</div>
-							</div>
-							<!-- end of column -->
+	?>
+	<?php while($article->have_posts()) : $article->the_post(); ?>
+	<div class="panel col-md-12 col-sm-12 col-xs-12 panel-blue">
+		<div class="row">
+			<div class="col-md-8 col-sm-6 col-xs-12">
+				<div class="row">
+					<div class="col-md-12 panel-title">
+						<h2>Latest article</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<a class="title-link" href="
+								<?php the_permalink(); ?>" rel="bookmark">
+								<?php the_title(); ?>
+							</a>
+						<?php the_excerpt(); ?>
+						<!--<p><a href="
+						<?php echo get_the_permalink(); ?>">Read more &raquo;</a></p>-->
+						<?php echo '
+						<p style="clear: both;">
+							<a class="btn btn-primary" href="' . get_category_link(119) . '">Read all ' . get_cat_name(119) . '</a>
+						</p>'; ?>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6 hidden-xs panel-icon">
+				<a href="
+					<?php the_permalink(); ?>" rel="bookmark">
+					<?php the_post_thumbnail([auto,240]); ?>
+				</a>
+			</div>
+		</div>
+	</div>
+	<!-- end of column -->
 	<?php
 		endif; wp_reset_query();
 	?>
-							<div class="col-md-4 col-sm-4 col-xs-12 subitem">
-								<h3>
-									<a href="https://www.healthwatchbucks.co.uk/how-we-work/client-services/">Client Services</a>
-								</h3>
-								<p>At Healthwatch Bucks we believe that we all learn from each other. Make sure that what people have to say helps you do better every day; our client services can help.</p>
-								<p>
-									<a href="https://www.healthwatchbucks.co.uk/how-we-work/client-services/">What we offer &raquo;</a>
-								</p>
-							</div>
-							<div class="col-md-4 col-sm-4 col-xs-12 subitem">
-								<h3>
-									<a href="https://www.healthwatchbucks.co.uk/category/real-stories/">Real Stories</a>
-								</h3>
-								<p>When it comes to health, we’ve all got a story. We’re here to help you share yours.</p>
-								<p>
-									<a href="https://www.healthwatchbucks.co.uk/category/real-stories/">Read the stories &raquo;</a>
-								</p>
-							</div>
-							<div class="col-md-4 col-sm-4 col-xs-12 subitem">
-								<h3>
-									<a href="https://www.healthwatchbucks.co.uk/how-we-work/about-our-meetings-in-public/">Our Meetings</a>
-								</h3>
-								<p>Healthwatch Bucks has a commitment to transparency and open communication. Our Board Meetings are held in public and anyone is welcome to attend.</p>
-								<p>
-									<a href="https://www.healthwatchbucks.co.uk/how-we-work/about-our-meetings-in-public/">Read more &raquo;</a>
-								</p>
-							</div>
-						</div>
-						<!-- end of row -->
+	<div class="col-md-4 col-sm-4 col-xs-12 subitem">
+		<h3>
+			<a href="https://www.healthwatchbucks.co.uk/how-we-work/client-services/">Client Services</a>
+		</h3>
+		<p>At Healthwatch Bucks we believe that we all learn from each other. Make sure that what people have to say helps you do better every day; our client services can help.</p>
+		<p>
+			<a href="https://www.healthwatchbucks.co.uk/how-we-work/client-services/">What we offer &raquo;</a>
+		</p>
+	</div>
+	<div class="col-md-4 col-sm-4 col-xs-12 subitem">
+		<h3>
+			<a href="https://www.healthwatchbucks.co.uk/category/real-stories/">Real Stories</a>
+		</h3>
+		<p>When it comes to health, we’ve all got a story. We’re here to help you share yours.</p>
+		<p>
+			<a href="https://www.healthwatchbucks.co.uk/category/real-stories/">Read the stories &raquo;</a>
+		</p>
+	</div>
+	<div class="col-md-4 col-sm-4 col-xs-12 subitem">
+		<h3>
+			<a href="https://www.healthwatchbucks.co.uk/how-we-work/about-our-meetings-in-public/">Our Meetings</a>
+		</h3>
+		<p>Healthwatch Bucks has a commitment to transparency and open communication. Our Board Meetings are held in public and anyone is welcome to attend.</p>
+		<p>
+			<a href="https://www.healthwatchbucks.co.uk/how-we-work/about-our-meetings-in-public/">Read more &raquo;</a>
+		</p>
+	</div>
+</div>
+<!-- end of row -->
 						<!-- 3. Dignity in Care -->
 						<?php
 
