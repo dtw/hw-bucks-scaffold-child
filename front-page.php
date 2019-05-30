@@ -222,7 +222,7 @@ echo "
 		<?php if ($count == 1) { ?>
 			<div class="col-md-12 col-sm-12 col-xs-12 panel panel-pink">
 				<div class="row">
-					<div class="col-md-8 col-sm-6 col-xs-12">
+					<div class="col-md-8 col-sm-6 col-xs-12 panel-text">
 						<div class="row">
 							<div class="col-md-12 panel-title">
 								<h2>Latest news</h2>
@@ -290,7 +290,7 @@ echo "
 	<?php while($article->have_posts()) : $article->the_post(); ?>
 	<div class="panel col-md-12 col-sm-12 col-xs-12 panel-blue">
 		<div class="row">
-			<div class="col-md-8 col-sm-6 col-xs-12">
+			<div class="col-md-8 col-sm-6 col-xs-12 panel-text">
 				<div class="row">
 					<div class="col-md-12 panel-title">
 						<h2>Latest article</h2>
@@ -374,13 +374,13 @@ echo "
 	<?php while($dic->have_posts()) : $dic->the_post(); ?>
 	<div class='panel col-md-12 col-sm-12 col-xs-12 panel-green' id='dignity-in-care'>
 		<div class="row">
-			<div class="col-md-4 col-sm-6 hidden-xs panel-icon">
+			<div class="col-md-4 col-sm-6 hidden-xs panel-icon-left">
 				<a href="
 					<?php the_permalink(); ?>" rel="bookmark">
 					<?php the_post_thumbnail([auto,240]); ?>
 				</a>
 			</div>
-			<div class="col-md-8 col-sm-6 col-xs-12">
+			<div class="col-md-8 col-sm-6 col-xs-12 panel-text-right">
 				<div class="row">
 					<div class="col-md-12 panel-title">
 						<h2>Latest Dignity in Care visit</h2>
@@ -463,7 +463,7 @@ echo "
 	<?php while($ppg->have_posts()) : $ppg->the_post(); ?>
 	<div class="panel col-md-12 col-sm-12 col-xs-12 panel-blue">
 		<div class="row">
-			<div class="col-md-8 col-sm-6 col-xs-12">
+			<div class="col-md-8 col-sm-6 col-xs-12 panel-text">
 				<div class="row">
 					<div class="col-md-12 panel-title">
 						<h2>Supporting Bucks PPGs</h2>

@@ -364,7 +364,9 @@ display:none;
 	transition: 400ms ease-out 100ms;
 	}
 
-.home .row {
+.home .hotnews,
+.home .feedback,
+.home .news {
 	margin-bottom: 1rem;
 }
 
@@ -458,6 +460,23 @@ display:none;
 
 .home .panel-green:hover {
 	border: #C4FF3E solid 2px !important;
+}
+
+.home .panel-text {
+	padding-left: 0px;
+}
+
+.home .panel-text-right {
+	padding-left: 0px;
+}
+
+.home .panel-icon {
+	padding-right: 0px;
+}
+
+.home .panel-icon-left {
+	padding-left: 0px;
+	padding-right: 0px;
 }
 
 .home .widget_search {
