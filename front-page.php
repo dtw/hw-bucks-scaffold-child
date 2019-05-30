@@ -247,7 +247,7 @@ echo "
 					<div class="col-md-4 col-sm-6 hidden-xs panel-icon">
 						<a href="
 							<?php the_permalink(); ?>" rel="bookmark">
-							<?php the_post_thumbnail([auto,380]); ?>
+							<?php the_post_thumbnail([auto,240]); ?>
 						</a>
 					</div>
 			</div>
@@ -319,7 +319,7 @@ echo "
 									<div class="col-md-4 col-sm-6 hidden-xs panel-icon">
 										<a href="
 											<?php the_permalink(); ?>" rel="bookmark">
-											<?php the_post_thumbnail([auto,300]); ?>
+											<?php the_post_thumbnail([auto,240]); ?>
 										</a>
 									</div>
 								</div>
