@@ -372,77 +372,83 @@ echo "
 	if( $dic->have_posts() ) :
 ?>
 	<?php while($dic->have_posts()) : $dic->the_post(); ?>
-		<div class='panel col-md-12 col-sm-12 col-xs-12 panel-green' id='dignity-in-care'>
-			<div class="col-md-12 panel-title">
-				<h2>Lastest Dignity in Care visit</h2>
-			</div>
-			<div class="text-center col-md-4 col-sm-12">
+	<div class='panel col-md-12 col-sm-12 col-xs-12 panel-green' id='dignity-in-care'>
+		<div class="row">
+			<div class="col-md-4 col-sm-6 hidden-xs panel-icon">
 				<a href="
 					<?php the_permalink(); ?>" rel="bookmark">
-					<?php the_post_thumbnail([auto,180]); ?>
+					<?php the_post_thumbnail([auto,240]); ?>
 				</a>
 			</div>
-			<!-- end of col -->
-			<div class="col-md-8 col-sm-12">
-				<span class="city">
-					<a class="title-link" href="
-						<?php the_permalink(); ?>" rel="bookmark">
-						<?php the_title(); ?>
-					</a>
-					<?php $city = get_post_meta( $post->ID, 'hw_services_city', true ); if ($city) { echo $city; } ?>
-				</span>
-				<?php the_excerpt(); ?>
-				<p>
-					<?php $rating = get_post_meta( $post->ID, 'hw_services_overall_rating', true );
-				for ($i = 1; $i <= $rating; ++$i)  {
-				echo "
-										<i class='fa fa-star fa-2x green'></i> ";
-				}
-				for ($i = 1; $i <= (5 - $rating); ++$i)  {
-				echo "
-										<i class='fa fa-star-o fa-2x green'></i> ";
-				}
-			?>
-									</p>
-									<p class="visit-date">Visited on
-										<?php echo the_date(); ?>
-									</p>
-									<?php // get_template_part("elements/comments-rating-average"); ?>
-								</div>
-								<!-- end of column -->
-							</div>
-							<!-- end of panel -->
-							<?php
-		endwhile; endif; wp_reset_query(); ?>
-							<div class="col-md-4 col-sm-4 col-xs-12 subitem">
-								<h3>
-									<a href="https://www.healthwatchbucks.co.uk/how-we-work/projects/dignity-in-care/">Dignity in Care</a>
-								</h3>
-								<p>Our visits are a brief snapshot view of a care home at a particular point in time, looking particularly at dignity and care. We make recommendations for improvements and highlight good practice.</p>
-								<p>
-									<a href="https://www.healthwatchbucks.co.uk/how-we-work/projects/dignity-in-care/">Find out more &raquo;</a>
-								</p>
-							</div>
-							<div class="col-md-4 col-sm-4 col-xs-12 subitem">
-								<h3>
-									<a href="https://www.healthwatchbucks.co.uk/how-we-work/volunteer/">Volunteer</a>
-								</h3>
-								<p>Healthwatch Bucks is looking for volunteers to help in a wide variety of areas. You might want to make a difference to people around you and in your community or help those without a voice.</p>
-								<p>
-									<a href="https://www.healthwatchbucks.co.uk/how-we-work/volunteer/">How you can help &raquo;</a>
-								</p>
-							</div>
-							<div class="col-md-4 col-sm-4 col-xs-12 subitem">
-								<h3>
-									<a href="https://www.healthwatchbucks.co.uk/service-guide/">Social Care in Bucks</a>
-								</h3>
-								<p>Helping you to find information and guidance on social care services in Buckinghamshire.</p>
-								<p>
-									<a href="https://www.healthwatchbucks.co.uk/signpost-category/social-care/">Social Care Signposts &raquo;</a>
-								</p>
-							</div>
-						</div>
-						<!-- end of row -->
+			<div class="col-md-8 col-sm-6 col-xs-12">
+				<div class="row">
+					<div class="col-md-12 panel-title">
+						<h2>Latest Dignity in Care visit</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<span class="city">
+							<a class="title-link" href="
+								<?php the_permalink(); ?>" rel="bookmark">
+								<?php the_title(); ?>
+							</a>
+							<?php $city = get_post_meta( $post->ID, 'hw_services_city', true ); if ($city) { echo $city; } ?>
+						</span>
+						<?php the_excerpt(); ?>
+						<p>
+							<?php $rating = get_post_meta( $post->ID, 'hw_services_overall_rating', true );
+								for ($i = 1; $i <= $rating; ++$i)  {
+									echo "<i class='fa fa-star fa-2x green'></i> ";
+								}
+								for ($i = 1; $i <= (5 - $rating); ++$i)  {echo "<i class='fa fa-star-o fa-2x green'></i> ";
+								}
+							?>
+						</p>
+						<p class="visit-date">Visited on
+							<?php echo the_date(); ?>
+						</p>
+					</div>
+					<?php // get_template_part("elements/comments-rating-average"); ?>
+				</div>
+			</div>
+		</div>
+		<!-- end of column -->
+	</div>
+		<!-- end of panel -->
+  <?php
+		endwhile;
+		endif; wp_reset_query();
+	?>
+	<div class="col-md-4 col-sm-4 col-xs-12 subitem">
+		<h3>
+			<a href="https://www.healthwatchbucks.co.uk/how-we-work/projects/dignity-in-care/">Dignity in Care</a>
+		</h3>
+		<p>Our visits are a brief snapshot view of a care home at a particular point in time, looking particularly at dignity and care. We make recommendations for improvements and highlight good practice.</p>
+		<p>
+			<a href="https://www.healthwatchbucks.co.uk/how-we-work/projects/dignity-in-care/">Find out more &raquo;</a>
+		</p>
+	</div>
+	<div class="col-md-4 col-sm-4 col-xs-12 subitem">
+		<h3>
+			<a href="https://www.healthwatchbucks.co.uk/how-we-work/volunteer/">Volunteer</a>
+		</h3>
+		<p>Healthwatch Bucks is looking for volunteers to help in a wide variety of areas. You might want to make a difference to people around you and in your community or help those without a voice.</p>
+		<p>
+			<a href="https://www.healthwatchbucks.co.uk/how-we-work/volunteer/">How you can help &raquo;</a>
+		</p>
+	</div>
+	<div class="col-md-4 col-sm-4 col-xs-12 subitem">
+		<h3>
+			<a href="https://www.healthwatchbucks.co.uk/service-guide/">Social Care in Bucks</a>
+		</h3>
+		<p>Helping you to find information and guidance on social care services in Buckinghamshire.</p>
+		<p>
+			<a href="https://www.healthwatchbucks.co.uk/signpost-category/social-care/">Social Care Signposts &raquo;</a>
+		</p>
+	</div>
+</div>
+<!-- end of row -->
 <!-- 7. PPG -->
 <div class='row news'>
 	<?php
