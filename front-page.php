@@ -29,7 +29,7 @@
 				'number' => 4,
 			);
 
-		// The Query
+		// The Query - gets the last 4 approved comments for post_type local_services
 		$comments_query = new WP_Comment_Query;
 		$comments = $comments_query->query( $args );
 
@@ -38,50 +38,67 @@
 // Comment Loop
 if ( $comments ) {
 	echo "<div class='feedback row'>";
-
-
 	foreach ( $comments as $comment ) { ?>
-			<?php if ($reviewcount == 1) { ?>
+		<!-- if this is the first review -->
+		<?php if ($reviewcount == 1) { ?>
+			<!-- start the main panel -->
 			<div class="col-md-12 col-sm-12 col-xs-12 panel">
 				<div class="col-md-12 panel-title">
 					<h2>Recent feedback from the public</h2>
 				</div>
-				<?php } else { ?>
-				<div class="col-md-4 col-sm-4 hidden-xs">
+		<?php } elseif ($reviewcount == 4) { ?>
+			<!-- start the final small panel -->
+			<div class="col-md-4 hidden-sm">
+		<?php } else { ?>
+			<!-- start a smaller panel -->
+			<div class="col-md-4 col-sm-6 hidden-xs">
+		<?php } ?>
+		<?php 										// Display icon for taxonomy term
+			$term_ids = get_the_terms( $comment->comment_post_ID, 'service_types' );	// Find taxonomies
+			$term_id = $term_ids[0]->term_id;											// Get taxonomy ID
+			$term_icon = get_term_meta( $term_id, 'icon', true );						// Get meta
+		?>
+				<div class="feedback row">
+				<!-- if this is the main panel -->
+				<?php if ($reviewcount == 1) { ?>
+					<!-- if the post has an thumnail -->
+					<?php if ( has_post_thumbnail($comment->comment_post_ID) ) { ?>
+						<!-- add a container and wrap the thumbnail in a hyperlink to the post -->
+						<div class="service-icon-container text-center col-md-4 col-sm-3 col-xs-12">
+							<a href="
+							<?php echo get_the_permalink($comment->comment_post_ID); ?>
+							">
+							<?php echo get_the_post_thumbnail($comment->comment_post_ID,[auto,180]); ?>
+					<?php } else { ?>
+						<!-- if there is no thumb... the col's are different?! -->
+						<div class="service-icon-container text-center col-md-4 col-sm-3 col-xs-12">
+							<a href="
+							<?php echo get_the_permalink($comment->comment_post_ID); ?>
+							">
+								<img class="service-icon-md" src="
+								<?php echo $term_icon; ?>
+								" alt="
+								<?php echo get_the_title($comment->comment_post_ID); ?>
+								" />
 					<?php } ?>
-					<?php 										// Display icon for taxonomy term
-						$term_ids = get_the_terms( $comment->comment_post_ID, 'service_types' );	// Find taxonomies
-						$term_id = $term_ids[0]->term_id;											// Get taxonomy ID
-						$term_icon = get_term_meta( $term_id, 'icon', true );						// Get meta
-					?>
-					<div class="feedback row">
-								<?php if ($reviewcount == 1) { ?>
-									<?php if ( has_post_thumbnail($comment->comment_post_ID) ) { ?>
-										<div class="service-icon-container text-center col-md-4 col-xs-12">
-										<a href="
-										<?php echo get_the_permalink($comment->comment_post_ID); ?>">
-										<?php echo get_the_post_thumbnail($comment->comment_post_ID,[auto,180]); ?>
-									<?php } else { ?>
-										<div class="service-icon-container text-center col-md-3 col-sm-6 col-xs-12">
-										<a href="
-										<?php echo get_the_permalink($comment->comment_post_ID); ?>">
-										<img class="service-icon-md" src="
-											<?php echo $term_icon; ?>" alt="
-											<?php echo get_the_title($comment->comment_post_ID); ?>" />
-									<?php } ?>
-								<?php } else { ?>
-									<div class="service-icon-container text-center col-md-3 col-sm-6 col-xs-12">
-										<a href="
-										<?php echo get_the_permalink($comment->comment_post_ID); ?>">
-										<img class="service-icon-sm" src="
-											<?php echo $term_icon; ?>" alt="
-											<?php echo get_the_title($comment->comment_post_ID); ?>" />
-								<?php } ?>
-							</a>
-						</div>
+				<!-- this isn't the main panel 4x to 2x to 1x-->
+				<?php } else { ?>
+					<!-- add a container and wrap the term icon in a hyperlink to the post -->
+					<div class="service-icon-container text-center col-md-3 col-sm-6 col-xs-12">
+						<a href="
+						<?php echo get_the_permalink($comment->comment_post_ID); ?>
+						">
+						<img class="service-icon-sm" src="
+						<?php echo $term_icon; ?>
+						" alt="
+						<?php echo get_the_title($comment->comment_post_ID); ?>
+						" />
+				<?php } ?>
+			</a>
+		</div>
 						<?php if ($reviewcount == 1) { ?>
 							<?php if ( has_post_thumbnail($comment->comment_post_ID) ) { ?>
-								<div class="service-info-container col-md-8 col-xs-12">
+								<div class="service-info-container col-md-8 col-sm-9 col-xs-12">
 									<a class="title-link" href="
 										<?php echo get_the_permalink($comment->comment_post_ID); ?>">
 										<?php echo get_the_title($comment->comment_post_ID); ?>
