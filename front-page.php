@@ -48,7 +48,7 @@ if ( $comments ) {
 				</div>
 		<?php } elseif ($reviewcount == 4) { ?>
 			<!-- start the final small panel -->
-			<div class="col-md-4 hidden-sm">
+			<div class="col-md-4 hidden-sm hidden-xs">
 		<?php } else { ?>
 			<!-- start a smaller panel -->
 			<div class="col-md-4 col-sm-6 hidden-xs">
@@ -84,7 +84,7 @@ if ( $comments ) {
 				<!-- this isn't the main panel 4x to 2x to 1x-->
 				<?php } else { ?>
 					<!-- add a container and wrap the term icon in a hyperlink to the post -->
-					<div class="service-icon-container text-center col-md-3 col-sm-6 col-xs-12">
+					<div class="service-icon-container text-center col-md-3 col-sm-3 col-xs-12">
 						<a href="
 						<?php echo get_the_permalink($comment->comment_post_ID); ?>
 						">
@@ -112,7 +112,7 @@ if ( $comments ) {
 									</a>
 							<?php } ?>
 						<?php } else { ?>
-							<div class="service-info-container-sm col-md-9 col-sm-6 col-xs-12">
+							<div class="service-info-container-sm col-md-9 col-sm-9 col-xs-12">
 								<h3 style="margin: 0; padding-bottom: .5rem;">
 									<a href="
 										<?php echo get_the_permalink($comment->comment_post_ID); ?>">
