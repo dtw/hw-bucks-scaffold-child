@@ -128,71 +128,22 @@ get_template_part("elements/comments-list");
 									<?php } ?>
 									<?php // Display star rating
 $individual_rating = get_comment_meta( $comment->comment_ID, 'feedback_rating', true ); ?>
-									<?php if ($individual_rating) { ?>
+									<?php if ($individual_rating) {
+										$star_count = 0;
+									?>
 									<p class="star-rating p-rating">
-										<?php if ($individual_rating < 1.25 ) { ?>
-										<i class="fa fa-star fa-lg"></i>
-										<i class="fa fa-star-o fa-lg"></i>
-										<i class="fa fa-star-o fa-lg"></i>
-										<i class="fa fa-star-o fa-lg"></i>
-										<i class="fa fa-star-o fa-lg"></i>
-										<?php } ?>
-										<?php if ($individual_rating >= 1.25 && $individual_rating < 1.75 ) { ?>
-										<i class="fa fa-star fa-lg"></i>
-										<i class="fa fa-star-half-empty fa-lg"></i>
-										<i class="fa fa-star-o fa-lg"></i>
-										<i class="fa fa-star-o fa-lg"></i>
-										<i class="fa fa-star-o fa-lg"></i>
-										<?php } ?>
-										<?php if ($individual_rating >= 1.75 && $individual_rating < 2.25 ) { ?>
-										<i class="fa fa-star fa-lg"></i>
-										<i class="fa fa-star fa-lg"></i>
-										<i class="fa fa-star-o fa-lg"></i>
-										<i class="fa fa-star-o fa-lg"></i>
-										<i class="fa fa-star-o fa-lg"></i>
-										<?php } ?>
-										<?php if ($individual_rating >= 2.25 && $individual_rating < 2.75 ) { ?>
-										<i class="fa fa-star fa-lg"></i>
-										<i class="fa fa-star fa-lg"></i>
-										<i class="fa fa-star-half-empty fa-lg"></i>
-										<i class="fa fa-star-o fa-lg"></i>
-										<i class="fa fa-star-o fa-lg"></i>
-										<?php } ?>
-										<?php if ($individual_rating >= 2.75 && $individual_rating < 3.25 ) { ?>
-										<i class="fa fa-star fa-lg"></i>
-										<i class="fa fa-star fa-lg"></i>
-										<i class="fa fa-star fa-lg"></i>
-										<i class="fa fa-star-o fa-lg"></i>
-										<i class="fa fa-star-o fa-lg"></i>
-										<?php } ?>
-										<?php if ($individual_rating >= 3.25 && $individual_rating < 3.75 ) { ?>
-										<i class="fa fa-star fa-lg"></i>
-										<i class="fa fa-star fa-lg"></i>
-										<i class="fa fa-star fa-lg"></i>
-										<i class="fa fa-star-half-empty fa-lg"></i>
-										<i class="fa fa-star-o fa-lg"></i>
-										<?php } ?>
-										<?php if ($individual_rating >= 3.75 && $individual_rating < 4.25 ) { ?>
-										<i class="fa fa-star fa-lg"></i>
-										<i class="fa fa-star fa-lg"></i>
-										<i class="fa fa-star fa-lg"></i>
-										<i class="fa fa-star fa-lg"></i>
-										<i class="fa fa-star-o fa-lg"></i>
-										<?php } ?>
-										<?php if ($individual_rating >= 4.25 && $individual_rating < 4.75 ) { ?>
-										<i class="fa fa-star fa-lg"></i>
-										<i class="fa fa-star fa-lg"></i>
-										<i class="fa fa-star fa-lg"></i>
-										<i class="fa fa-star fa-lg"></i>
-										<i class="fa fa-star-half-empty fa-lg"></i>
-										<?php } ?>
-										<?php if ($individual_rating >= 4.75 ) { ?>
-										<i class="fa fa-star fa-lg"></i>
-										<i class="fa fa-star fa-lg"></i>
-										<i class="fa fa-star fa-lg"></i>
-										<i class="fa fa-star fa-lg"></i>
-										<i class="fa fa-star fa-lg"></i>
-										<?php } ?>
+										<?php
+										for ($int_count = 1; $int_count <= $individual_rating; $int_count++) {
+											echo '<i class="fa fa-star fa-lg"></i>
+											';
+											$star_count++;
+										}
+										while ($star_count < 5) {
+											echo '<i class="fa fa-star-o fa-lg"></i>
+											';
+											$star_count++;
+										}
+										?>
 									</p>
 									<p>
 										<strong>
