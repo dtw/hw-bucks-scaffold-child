@@ -61,7 +61,7 @@ if ( $comments ) {
 				<div class="feedback row">
 				<!-- if this is the main panel -->
 				<?php if ($reviewcount == 1) { ?>
-					<!-- if the post has an thumnail -->
+					<!-- if the post has an thumbnail -->
 					<?php if ( has_post_thumbnail($comment->comment_post_ID) ) { ?>
 						<!-- add a container and wrap the thumbnail in a hyperlink to the post -->
 						<div class="service-icon-container text-center col-md-4 col-sm-3 col-xs-12">
