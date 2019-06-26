@@ -96,6 +96,7 @@ if ( $comments ) {
 				<?php } ?>
 			</a>
 		</div>
+<!-- REVIEWED TO HERE-->
 						<?php if ($reviewcount == 1) { ?>
 							<?php if ( has_post_thumbnail($comment->comment_post_ID) ) { ?>
 								<div class="service-info-container col-md-8 col-sm-9 col-xs-12">
