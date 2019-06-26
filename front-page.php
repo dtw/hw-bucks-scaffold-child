@@ -104,7 +104,7 @@ if ( $comments ) {
 										<?php echo get_the_title($comment->comment_post_ID); ?>
 									</a>
 							<?php } else { ?>
-								<div class="service-info-container col-md-9 col-sm-6 col-xs-12">
+								<div class="service-info-container col-md-8 col-sm-9 col-xs-12">
 									<a class="title-link" href="
 										<?php echo get_the_permalink($comment->comment_post_ID); ?>">
 										<?php echo get_the_title($comment->comment_post_ID); ?>
