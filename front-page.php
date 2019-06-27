@@ -71,7 +71,7 @@ if ( $comments ) {
 							<?php echo get_the_post_thumbnail($comment->comment_post_ID,[auto,180]); ?>
 					<?php } else { ?>
 						<!-- if there is no thumb... the col's are different?! -->
-						<div class="service-icon-container text-center col-md-4 col-sm-3 col-xs-12">
+						<div class="service-icon-container text-center col-md-4 col-sm-3 hidden-xs">
 							<a href="
 							<?php echo get_the_permalink($comment->comment_post_ID); ?>
 							">
