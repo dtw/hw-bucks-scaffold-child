@@ -623,3 +623,7 @@ display:none;
 	border-left: 1px solid !important;
 	border-right: 1px solid !important;
 }
+
+.your-story {
+    margin-top: 0;
+}

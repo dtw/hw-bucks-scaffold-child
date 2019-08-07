@@ -75,7 +75,7 @@
                 <?php the_content(); ?>
                 <div id="respond">
                   <?php echo $response; ?>
-                  <form action="<?php the_permalink(); ?>" method="post">
+                  <form class="your-story" action="<?php the_permalink(); ?>" method="post">
                     <p class="comment-form-comment">
                       <label for="comment">What happened?</label>
                       <p>Please tell us what happened and make suggestions for improvements. Please do not include any personal information like names, dates or detailed health information.</p>
