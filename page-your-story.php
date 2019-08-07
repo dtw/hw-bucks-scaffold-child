@@ -15,7 +15,7 @@
 
   //response messages
   $not_human       = "Human verification incorrect.";
-  $missing_content = "Please supply all information.";
+  $missing_content = "Please mandatory information.";
   $email_invalid   = "Email Address Invalid.";
   $message_unsent  = "Message was not sent. Try Again.";
   $message_sent    = "Thanks! Your message has been sent.";
@@ -29,9 +29,9 @@
 
   //php mailer variables
   $to = get_option('admin_email');
-  $subject = "Someone sent a message from ".get_bloginfo('name');
   $headers = 'From: '. $email . "\r\n" .
     'Reply-To: ' . $email . "\r\n";
+  $subject = "Someone sent a story via ".get_bloginfo('name');
 
   if(!$human == 0){
     if($human != 2) my_contact_form_generate_response("error", $not_human); //not human!
