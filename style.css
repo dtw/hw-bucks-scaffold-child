@@ -622,6 +622,13 @@ display:none;
 	position: relative !important;
 	border-left: 1px solid !important;
 	border-right: 1px solid !important;
+
+input#verification {
+	width: 60px;
+}
+
+input.no-asterisk{
+	background-image: none !important;
 }
 
 .your-story {
