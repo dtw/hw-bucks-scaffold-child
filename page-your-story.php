@@ -114,7 +114,10 @@
                   </p>
                   <h2>Privacy</h2>
                   <p>Please review our <a href="https://www.healthwatchbucks.co.uk/data-protection-privacy-policy/" target="_blank">data protection policy</a>. By completing this form, you agree that you have read and understood the privacy information provided, and confirm you are over 18.</p>
-                  <p><label for="message_human">Human Verification: <span>*</span> <br><input type="text" style="width: 60px;" name="message_human"> + 3 = 5</label></p>
+                  <p>
+                    <label for="message_human">Human Verification</label>
+                    <input required type="text" style="width: 60px;" id="verification" name="message_human" tabindex="5" aria-required="true"> + 3 = 5
+                  </p>
                   <input type="hidden" name="submitted" value="1">
                   <p><input type="submit"></p>
                 </form>
