@@ -1,4 +1,6 @@
 <?php
+  //set the DateTimeZone
+  date_default_timezone_set('Europe/London');
 
   //response generation function
   $response = "";
