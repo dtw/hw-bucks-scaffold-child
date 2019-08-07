@@ -78,8 +78,8 @@
                   <form class="your-story" action="<?php the_permalink(); ?>" method="post">
                     <p class="comment-form-comment">
                       <label for="comment">What happened?</label>
-                      <p>Please tell us what happened and make suggestions for improvements. Please do not include any personal information like names, dates or detailed health information.</p>
-                      <textarea required tabindex="1" id="comment" name="message_text" type="text" cols="45" rows="8" aria-required="true"><?php echo esc_textarea($_POST['message_text']); ?></textarea>
+                      <p>Please tell us what happened. If you can, please make suggestions for improvements. Please do not include any personal information like names or detailed health information.</p>
+                      <textarea required tabindex="1" id="comment" name="message_text" type="text" cols="45" rows="4" aria-required="true"><?php echo esc_textarea($_POST['message_text']); ?></textarea>
                     </p>
                     <hr />
                     <h2>Your contact details</h2>
