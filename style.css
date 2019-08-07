@@ -614,3 +614,12 @@ display:none;
 	height: 80px;
 	}
 }
+
+/* Bootstrap Alerts
+-------------------- */
+
+.alert {
+	position: relative !important;
+	border-left: 1px !important;
+	border-right: 1px !important;
+}

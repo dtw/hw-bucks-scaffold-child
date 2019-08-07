@@ -10,8 +10,10 @@
 
     global $response;
 
-    if($type == "success") $response = "<div class='success'>{$message}</div>";
-    else $response = "<div class='error'>{$message}</div>";
+    //if($type == "success") $response = "<div class='success'>{$message}</div>";
+    //else $response = "<div class='error'>{$message}</div>";
+    if($type == "success") $response = "<div class='alert alert-success' role='alert'>{$message}</div>";
+    else $response = "<div class='alert alert-danger' role='alert'>{$message}</div>";
 
   }
 
@@ -71,27 +73,6 @@
 
             <div class="entry-content">
               <?php the_content(); ?>
-
-              <style type="text/css">
-                .error{
-                  padding: 5px 9px;
-                  border: 1px solid red;
-                  color: red;
-                  border-radius: 3px;
-                }
-
-                .success{
-                  padding: 5px 9px;
-                  border: 1px solid green;
-                  color: green;
-                  border-radius: 3px;
-                }
-
-                form span{
-                  color: red;
-                }
-              </style>
-
               <div id="respond">
                 <?php echo $response; ?>
                 <form action="<?php the_permalink(); ?>" method="post">
