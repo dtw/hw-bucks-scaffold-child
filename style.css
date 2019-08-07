@@ -620,8 +620,12 @@ display:none;
 
 .alert {
 	position: relative !important;
-	border-left: 1px solid !important;
-	border-right: 1px solid !important;
+}
+
+.alert-success {
+	border-left: 1px solid #b2dba1 !important;
+	border-right: 1px solid #b2dba1 !important;
+}
 
 input#verification {
 	width: 60px;
