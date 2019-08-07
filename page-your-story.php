@@ -63,60 +63,60 @@
 
 ?>
 <?php get_header(); ?>
+  <div class="container">
+    <div id="content" role="main" class="col-md-12 col-sm-12">
+      <div class="row">
 
-  <div id="primary" class="site-content">
-    <div id="content" role="main">
+        <?php while ( have_posts() ) : the_post(); ?>
 
-      <?php while ( have_posts() ) : the_post(); ?>
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-          <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+              <div class="entry-content">
+                <?php the_content(); ?>
+                <div id="respond">
+                  <?php echo $response; ?>
+                  <form action="<?php the_permalink(); ?>" method="post">
+                    <p class="comment-form-comment">
+                      <label for="comment">What happened?</label>
+                      <p>Please tell us what happened and make suggestions for improvements. Please do not include any personal information like names, dates or detailed health information.</p>
+                      <textarea required tabindex="1" id="comment" name="message_text" type="text" cols="45" rows="8" aria-required="true"><?php echo esc_textarea($_POST['message_text']); ?></textarea>
+                    </p>
+                    <hr />
+                    <h2>Your contact details</h2>
+                    <p>If you would like us to contact you about your story, please provide your details below.</p>
+                    <p class="comment-form-author">
+                      <label for="message_name">Your name</label>
+                      <input placeholder="Your first and last names (optional)" id="author" name="message_name" type="text" size="30" tabindex="2" value="<?php echo esc_attr($_POST['message_name']); ?>"/>
+                    </p>
+                    <p class="comment-form-email">
+                      <label for="message_email">Email</label>
+                      <input placeholder="Your email address (optional)" id="email" name="message_email" type="text" size="30" tabindex="3" value="<?php echo esc_attr($_POST['message_email']); ?>"/>
+                    </p>
+                    <p class="comment-form-phone">
+                      <label for="message_phone">Phone</label>
+                      <input placeholder="Your phone number (optional)" id="phone" name="message_phone" type="text" size="30" tabindex="4" value="<?php echo esc_attr($_POST['message_phone']); ?>"/>
+                    </p>
+                    <h2>Privacy</h2>
+                    <p>Please review our <a href="https://www.healthwatchbucks.co.uk/data-protection-privacy-policy/" target="_blank">data protection policy</a>. By completing this form, you agree that you have read and understood the privacy information provided, and confirm you are over 18.</p>
+                    <p>
+                      <label for="message_human">Human Verification</label>
+                      <input required type="text" style="width: 60px;" id="verification" name="message_human" tabindex="5" aria-required="true"> + 3 = 5
+                    </p>
+                    <input type="hidden" name="submitted" value="1">
+                    <p class="form-submit">
+                      <input name="submit" type="submit" id="submit" class="submit" value="Send your story" />
+                    </p>
+                  </form>
+                </div>
 
-            <div class="entry-content">
-              <?php the_content(); ?>
-              <div id="respond">
-                <?php echo $response; ?>
-                <form action="<?php the_permalink(); ?>" method="post">
-                  <p class="comment-form-comment">
-                    <label for="comment">What happened?</label>
-                    <p>Please tell us what happened and make suggestions for improvements. Please do not include any personal information like names, dates or detailed health information.</p>
-                    <textarea required tabindex="1" id="comment" name="message_text" type="text" cols="45" rows="8" aria-required="true"><?php echo esc_textarea($_POST['message_text']); ?></textarea>
-                  </p>
-                  <hr />
-                  <h2>Your contact details</h2>
-                  <p>If you would like us to contact you about your story, please provide your details below.</p>
-                  <p class="comment-form-author">
-                    <label for="message_name">Your name</label>
-                    <input placeholder="Your first and last names (optional)" id="author" name="message_name" type="text" size="30" tabindex="2" value="<?php echo esc_attr($_POST['message_name']); ?>"/>
-                  </p>
-                  <p class="comment-form-email">
-                    <label for="message_email">Email</label>
-                    <input placeholder="Your email address (optional)" id="email" name="message_email" type="text" size="30" tabindex="3" value="<?php echo esc_attr($_POST['message_email']); ?>"/>
-                  </p>
-                  <p class="comment-form-phone">
-                    <label for="message_phone">Phone</label>
-                    <input placeholder="Your phone number (optional)" id="phone" name="message_phone" type="text" size="30" tabindex="4" value="<?php echo esc_attr($_POST['message_phone']); ?>"/>
-                  </p>
-                  <h2>Privacy</h2>
-                  <p>Please review our <a href="https://www.healthwatchbucks.co.uk/data-protection-privacy-policy/" target="_blank">data protection policy</a>. By completing this form, you agree that you have read and understood the privacy information provided, and confirm you are over 18.</p>
-                  <p>
-                    <label for="message_human">Human Verification</label>
-                    <input required type="text" style="width: 60px;" id="verification" name="message_human" tabindex="5" aria-required="true"> + 3 = 5
-                  </p>
-                  <input type="hidden" name="submitted" value="1">
-                  <p class="form-submit">
-                    <input name="submit" type="submit" id="submit" class="submit" value="Send your story" />
-                  </p>
-                </form>
-              </div>
+              </div><!-- .entry-content -->
 
-            </div><!-- .entry-content -->
+            </article><!-- #post -->
 
-          </article><!-- #post -->
-
-      <?php endwhile; // end of the loop. ?>
-
+        <?php endwhile; // end of the loop. ?>
+      </div><!-- .row -->
     </div><!-- #content -->
-  </div><!-- #primary -->
+  </div><!-- .container -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
