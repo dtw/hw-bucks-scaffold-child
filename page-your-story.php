@@ -102,8 +102,8 @@
                       <input required class="no-asterisk regular-checkbox" id="privacy" name="message_privacy" type="checkbox" tabindex="5" aria-required="true">
                     </p>
                     <p class="comment-form-verification">
-                      <input required class="no-asterisk" id="verification" name="message_human" type="text" tabindex="5" aria-required="true"> + 3 = 5
                       <label class="inline-label" for="message_human">Human Verification</label>
+                      <input required class="no-asterisk" id="verification" name="message_human" type="text" tabindex="6" aria-required="true"> + 3 = 5
                     </p>
                     <input type="hidden" name="submitted" value="1">
                     <p class="form-submit">
