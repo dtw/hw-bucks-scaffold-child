@@ -6,7 +6,7 @@
   $response = "";
 
   //function to generate response
-  function my_contact_form_generate_response($type, $message){
+  function your_story_generate_response($type, $message){
 
     global $response;
 
@@ -36,28 +36,28 @@
   $headers = array('Content-Type: text/html; charset=UTF-8');
 
   if(!$human == 0){
-    if($human != 2) my_contact_form_generate_response("error", $not_human); //not human!
+    if($human != 2) your_story_generate_response("error", $not_human); //not human!
     else {
       //validate email
       if(!filter_var($email, FILTER_VALIDATE_EMAIL))
-        my_contact_form_generate_response("error", $email_invalid);
+        your_story_generate_response("error", $email_invalid);
       else //email is valid
       {
-        //validate presence of name and message
-        if(empty($name) || empty($message)){
-          my_contact_form_generate_response("error", $missing_content);
+        //validate presence of message
+        if(empty($message)){
+          your_story_generate_response("error", $missing_content);
         }
         else //ready to go!
         {
           $formatted_message = '<strong>My story</strong><br>' . strip_tags($message) .'<br><br><strong>Email: </strong>' . $email . '<br><br><strong>Phone: </strong>' . strip_tags($phone) . '<br><br><strong>Sent at: </strong>' . date('d/m/Y h:i:s a', time());
           $sent = wp_mail($to, $subject, $formatted_message, $headers);
-          if($sent) my_contact_form_generate_response("success", $message_sent); //message sent!
-          else my_contact_form_generate_response("error", $message_unsent); //message wasn't sent
+          if($sent) your_story_generate_response("success", $message_sent); //message sent!
+          else your_story_generate_response("error", $message_unsent); //message wasn't sent
         }
       }
     }
   }
-  else if ($_POST['submitted']) my_contact_form_generate_response("error", $missing_content);
+  else if ($_POST['submitted']) your_story_generate_response("error", $missing_content);
 
 ?>
 <?php get_header(); ?>
