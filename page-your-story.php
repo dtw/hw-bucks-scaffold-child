@@ -119,7 +119,9 @@
                     <input required type="text" style="width: 60px;" id="verification" name="message_human" tabindex="5" aria-required="true"> + 3 = 5
                   </p>
                   <input type="hidden" name="submitted" value="1">
-                  <p><input type="submit"></p>
+                  <p class="form-submit">
+                    <input name="submit" type="submit" id="submit" class="submit" value="Send your story" />
+                  </p>
                 </form>
               </div>
 
