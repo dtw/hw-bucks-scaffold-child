@@ -100,6 +100,9 @@
                     <p>Please tell us what happened and make suggestions for improvements. Please do not include any personal information like names, dates or detailed health information.</p>
                     <textarea required tabindex="1" id="comment" name="message_text" type="text" cols="45" rows="8" aria-required="true"><?php echo esc_textarea($_POST['message_text']); ?></textarea>
                   </p>
+                  <hr />
+                  <h2>Your contact details</h2>
+                  <p>If you would like us to contact you about your story, please provide your details below.</p>
                   <p class="comment-form-author">
                     <label for="message_name">Your name</label>
                     <input placeholder="Your first and last names (optional)" id="author" name="message_name" type="text" size="30" tabindex="6" value="<?php echo esc_attr($_POST['message_name']); ?>"/>
