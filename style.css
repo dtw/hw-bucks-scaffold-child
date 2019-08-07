@@ -620,6 +620,6 @@ display:none;
 
 .alert {
 	position: relative !important;
-	border-left: 1px !important;
-	border-right: 1px !important;
+	border-left: 1px solid !important;
+	border-right: 1px solid !important;
 }
