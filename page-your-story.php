@@ -81,7 +81,6 @@
                       <p>Please tell us what happened. If you can, please make suggestions for improvements. Please do not include any personal information like names or detailed health information.</p>
                       <textarea required tabindex="1" id="comment" name="message_text" type="text" cols="45" rows="4" aria-required="true"><?php echo esc_textarea($_POST['message_text']); ?></textarea>
                     </p>
-                    <hr />
                     <h2>Your contact details</h2>
                     <p>If you would like us to contact you about your story, please provide your details below.</p>
                     <p class="comment-form-author">
@@ -97,7 +96,7 @@
                       <input placeholder="Your phone number (optional)" id="phone" name="message_phone" type="text" size="30" tabindex="4" value="<?php echo esc_attr($_POST['message_phone']); ?>"/>
                     </p>
                     <h2>Privacy</h2>
-                    <p>Please review our <a href="https://www.healthwatchbucks.co.uk/data-protection-privacy-policy/" target="_blank">data protection policy</a>. By completing this form, you agree that you have read and understood the privacy information provided, and confirm you are over 18.</p>
+                    <p>Please review our <a href="https://www.healthwatchbucks.co.uk/data-protection-privacy-policy/" target="_blank">data protection policy</a>. By ticking the box, you agree that you have read and understood the privacy information provided, and confirm you are over 18.</p>
                     <p class="comment-form-verification">
                       <label for="message_human">Human Verification</label>
                       <input required class="no-asterisk" id="verification" name="message_human" type="text" tabindex="5" aria-required="true"> + 3 = 5
