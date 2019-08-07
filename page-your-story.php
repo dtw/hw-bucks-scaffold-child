@@ -23,6 +23,7 @@
   //user posted variables
   $name = $_POST['message_name'];
   $email = $_POST['message_email'];
+  $phone = $_POST['message_phone'];
   $message = $_POST['message_text'];
   $human = $_POST['message_human'];
 
@@ -99,6 +100,13 @@
                     <label for="message_email">Email</label>
                     <input placeholder="Your email address (optional)" id="email" name="message_email" type="text" size="30" tabindex="7" value="<?php echo esc_attr($_POST['message_email']); ?>"/>
                   </p>
+                  <p class="comment-form-phone">
+                    <label for="message_phone">Phone</label>
+                    <input placeholder="Your phone number (optional)" id="phone" name="message_phone" type="text" size="30"  tabindex="8" value="<?php echo esc_attr($_POST['message_phone']); ?>"/>
+                  </p>
+                  <h2>Privacy</h2>
+                  <p>Please review our <a href="https://www.healthwatchbucks.co.uk/data-protection-privacy-policy/" target="_blank">data protection policy</a>. By completing this form, you agree that you have read and understood the privacy information provided, and confirm you are over 18.</p>
+
                   <p><label for="message_text">Message: <span>*</span> <br><textarea type="text" name="message_text"><?php echo esc_textarea($_POST['message_text']); ?></textarea></label></p>
                   <p><label for="message_human">Human Verification: <span>*</span> <br><input type="text" style="width: 60px;" name="message_human"> + 3 = 5</label></p>
                   <input type="hidden" name="submitted" value="1">
