@@ -41,7 +41,7 @@
     if($human != 2) your_story_generate_response("error", $not_human); //not human!
     else {
       //validate email
-      if(!filter_var($email, FILTER_VALIDATE_EMAIL))
+      if(!$email == 0 && !filter_var($email, FILTER_VALIDATE_EMAIL))
         your_story_generate_response("error", $email_invalid);
       else //email is valid
       {
