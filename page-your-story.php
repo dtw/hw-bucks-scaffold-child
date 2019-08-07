@@ -20,9 +20,9 @@
   //response messages
   $not_human       = "Human verification incorrect.";
   $missing_content = "Please mandatory information.";
-  $email_invalid   = "Email Address Invalid.";
+  $email_invalid   = "Email address format invalid.";
   $message_unsent  = "Message was not sent. Try Again.";
-  $message_sent    = "Thanks! Your message has been sent.";
+  $message_sent    = "Thanks! Your story has been sent.";
 
   //user posted variables
   $name = $_POST['message_name'];
