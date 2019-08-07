@@ -31,9 +31,9 @@
 
   //php mailer variables
   $to = get_option('admin_email');
-  $headers = 'From: '. $email . "\r\n" .
-    'Reply-To: ' . $email . "\r\n";
   $subject = "Someone sent a story via ".get_bloginfo('name');
+  //set headers to allow HTML
+  $headers = array('Content-Type: text/html; charset=UTF-8');
 
   if(!$human == 0){
     if($human != 2) my_contact_form_generate_response("error", $not_human); //not human!
@@ -49,7 +49,8 @@
         }
         else //ready to go!
         {
-          $sent = wp_mail($to, $subject, strip_tags($message), $headers);
+          $formatted_message = '<strong>My story</strong><br>' . strip_tags($message) .'<br><br><strong>Email: </strong>' . $email . '<br><br><strong>Phone: </strong>' . strip_tags($phone) . '<br><br><strong>Sent at: </strong>' . date('d/m/Y h:i:s a', time());
+          $sent = wp_mail($to, $subject, $formatted_message, $headers);
           if($sent) my_contact_form_generate_response("success", $message_sent); //message sent!
           else my_contact_form_generate_response("error", $message_unsent); //message wasn't sent
         }
