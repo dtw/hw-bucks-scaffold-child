@@ -103,7 +103,7 @@
                     </p>
                     <input type="hidden" name="submitted" value="1">
                     <p class="form-submit">
-                      <input name="submit" type="submit" id="submit" class="submit" value="Send your story" />
+                      <input name="submit" type="submit" id="submit" class="submit" tabindex="7" value="Send your story" />
                     </p>
                   </form>
                 </div>
