@@ -18,8 +18,11 @@
 <!-- widget -->
 <div class="container">
 	<div id="content">
-		<!-- Front Page news widget -->
+		<!-- Front Page top widget -->
 		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Front Page Top") ) : ?>
+		<?php endif;?>
+		<!-- Front Page First Panel widget -->
+		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Front Page Panel One") ) : ?>
 		<?php endif;?>
 		<!-- 2. Recent feedback -->
 		<?php

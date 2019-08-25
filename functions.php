@@ -141,4 +141,14 @@ if ( function_exists('register_sidebar') )
   )
 );
 
+if ( function_exists('register_sidebar') )
+  register_sidebar(array(
+    'name' => 'Front Page Panel One',
+    'before_widget' => '<div class="feedback row">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3>',
+    'after_title' => '</h3>',
+  )
+);
+
 ?>
