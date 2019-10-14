@@ -16,7 +16,7 @@
                       <a class="choice-img-link" href="https://www.healthwatchbucks.co.uk/">
                         <img class="choice-img" src="https://www.staging1.healthwatchbucks.co.uk/wp-content/uploads/2019/08/P2122090.jpg" alt="Rate & Review">
                       </a>
-                      <a class="choice-details rate-review" href="https://www.healthwatchbucks.co.uk/">
+                      <a class="choice-details rate-review" href="https://www.healthwatchbucks.co.uk/rate-and-review">
                         <p>Rate & Review</p>
                         <div class="hover-content">
                           <p>A blurb.</p>
