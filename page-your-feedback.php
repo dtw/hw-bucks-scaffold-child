@@ -58,6 +58,9 @@
 
         <?php endwhile; // end of the loop. ?>
       </div><!-- .row -->
+      <!-- Your Feedback Page Widget Area-->
+      <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Your Feedback Page") ) : ?>
+      <?php endif;?>
     </div><!-- #content -->
     <!-- <div id="sidebar" class="col-md-4 col-xs-12">
       <?php //get_sidebar(); ?>
