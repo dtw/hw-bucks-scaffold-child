@@ -124,7 +124,12 @@ if ( $comments ) {
 get_template_part("elements/comments-list");
 ?>
 									<p>
-										<?php echo mb_strimwidth($comment->comment_content,0,200," ..."); ?>
+										<?php
+										// mb_strimwidth trims comment to 300 (if needed) and adds an ellipsis
+										// wpautop converts double line breaks to <p></p>
+										// i.e. this keeps line breaks in the comment
+											echo wpautop(mb_strimwidth($comment->comment_content,0,300," ..."), true);
+										?>
 									</p>
 									<?php } ?>
 									<?php // Display star rating
