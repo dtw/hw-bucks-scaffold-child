@@ -16,7 +16,7 @@
                       <a class="choice-img-link" href="https://www.healthwatchbucks.co.uk/">
                         <img class="choice-img" src="https://www.staging1.healthwatchbucks.co.uk/wp-content/uploads/2019/08/P2122090.jpg" alt="Rate & Review">
                       </a>
-                      <a class="choice-details rate-review" href="https://www.healthwatchbucks.co.uk/">
+                      <a class="choice-details rate-review" href="https://www.healthwatchbucks.co.uk/rate-and-review">
                         <p>Rate & Review</p>
                         <div class="hover-content">
                           <p>A blurb.</p>
@@ -58,6 +58,9 @@
 
         <?php endwhile; // end of the loop. ?>
       </div><!-- .row -->
+      <!-- Your Feedback Page Widget Area-->
+      <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Your Feedback Page") ) : ?>
+      <?php endif;?>
     </div><!-- #content -->
     <!-- <div id="sidebar" class="col-md-4 col-xs-12">
       <?php //get_sidebar(); ?>
