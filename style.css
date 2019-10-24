@@ -97,7 +97,8 @@
 	}
 
 .widget_search p,
-.widget_search h2 {
+.widget_search h2,
+#mailchimp-title h2 {
 	text-shadow: #000 1px 1px 1px;
 	font-weight: 700;
 	color: #fff;
