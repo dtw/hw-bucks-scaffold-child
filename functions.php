@@ -133,7 +133,7 @@ printf( __( 'On ' ), get_comment_author_link() ); echo get_comment_date();
 
 if ( function_exists('register_sidebar') )
   register_sidebar(array(
-    'name' => 'Front Page Top',
+    'name' => 'Front Page Panel One',
     'before_widget' => '<div class="hotnews row">',
     'after_widget' => '</div>',
     'before_title' => '<h3>',
