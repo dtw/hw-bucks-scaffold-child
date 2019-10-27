@@ -302,33 +302,6 @@ echo "
 	<!-- Front Page Panel Two widget area -->
 	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Front Page Panel Two") ) : ?>
 	<?php endif;?>
-	<div class="col-md-4 col-sm-4 col-xs-12 subitem">
-		<h3>
-			<a href="https://www.healthwatchbucks.co.uk/how-we-work/client-services/">Client Services</a>
-		</h3>
-		<p>At Healthwatch Bucks we believe that we all learn from each other. Make sure that what people have to say helps you do better every day; our client services can help.</p>
-		<p>
-			<a href="https://www.healthwatchbucks.co.uk/how-we-work/client-services/">What we offer &raquo;</a>
-		</p>
-	</div>
-	<div class="col-md-4 col-sm-4 col-xs-12 subitem">
-		<h3>
-			<a href="https://www.healthwatchbucks.co.uk/category/real-stories/">Real Stories</a>
-		</h3>
-		<p>When it comes to health, we’ve all got a story. We’re here to help you share yours.</p>
-		<p>
-			<a href="https://www.healthwatchbucks.co.uk/category/real-stories/">Read the stories &raquo;</a>
-		</p>
-	</div>
-	<div class="col-md-4 col-sm-4 col-xs-12 subitem">
-		<h3>
-			<a href="https://www.healthwatchbucks.co.uk/how-we-work/about-our-meetings-in-public/">Our Meetings</a>
-		</h3>
-		<p>Healthwatch Bucks has a commitment to transparency and open communication. Our Board Meetings are held in public and anyone is welcome to attend.</p>
-		<p>
-			<a href="https://www.healthwatchbucks.co.uk/how-we-work/about-our-meetings-in-public/">Read more &raquo;</a>
-		</p>
-	</div>
 </div>
 <!-- end of row -->
 <!-- 3. Dignity in Care -->
@@ -400,33 +373,6 @@ echo "
 	<!-- Front Page Panel Three widget area -->
 	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Front Page Panel Three") ) : ?>
 	<?php endif;?>
-	<div class="col-md-4 col-sm-4 col-xs-12 subitem">
-		<h3>
-			<a href="https://www.healthwatchbucks.co.uk/how-we-work/projects/dignity-in-care/">Dignity in Care</a>
-		</h3>
-		<p>Our visits are a brief snapshot view of a care home at a particular point in time, looking particularly at dignity and care. We make recommendations for improvements and highlight good practice.</p>
-		<p>
-			<a href="https://www.healthwatchbucks.co.uk/how-we-work/projects/dignity-in-care/">Find out more &raquo;</a>
-		</p>
-	</div>
-	<div class="col-md-4 col-sm-4 col-xs-12 subitem">
-		<h3>
-			<a href="https://www.healthwatchbucks.co.uk/how-we-work/volunteer/">Volunteer</a>
-		</h3>
-		<p>Healthwatch Bucks is looking for volunteers to help in a wide variety of areas. You might want to make a difference to people around you and in your community or help those without a voice.</p>
-		<p>
-			<a href="https://www.healthwatchbucks.co.uk/how-we-work/volunteer/">How you can help &raquo;</a>
-		</p>
-	</div>
-	<div class="col-md-4 col-sm-4 col-xs-12 subitem">
-		<h3>
-			<a href="https://www.healthwatchbucks.co.uk/service-guide/">Social Care in Bucks</a>
-		</h3>
-		<p>Helping you to find information and guidance on social care services in Buckinghamshire.</p>
-		<p>
-			<a href="https://www.healthwatchbucks.co.uk/signpost-category/social-care/">Social Care Signposts &raquo;</a>
-		</p>
-	</div>
 </div>
 <!-- end of row -->
 <!-- 7. PPG -->
