@@ -299,6 +299,9 @@ echo "
 		endwhile;
 		endif; wp_reset_query();
 	?>
+	<!-- Front Page Panel Two widget area -->
+	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Front Page Panel Two") ) : ?>
+	<?php endif;?>
 	<div class="col-md-4 col-sm-4 col-xs-12 subitem">
 		<h3>
 			<a href="https://www.healthwatchbucks.co.uk/how-we-work/client-services/">Client Services</a>
@@ -394,6 +397,9 @@ echo "
 		endwhile;
 		endif; wp_reset_query();
 	?>
+	<!-- Front Page Panel Three widget area -->
+	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Front Page Panel Three") ) : ?>
+	<?php endif;?>
 	<div class="col-md-4 col-sm-4 col-xs-12 subitem">
 		<h3>
 			<a href="https://www.healthwatchbucks.co.uk/how-we-work/projects/dignity-in-care/">Dignity in Care</a>
@@ -472,6 +478,9 @@ echo "
 		endwhile;
 		endif; wp_reset_query();
 	?>
+	<!-- Front Page Panel Four widget area -->
+	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Front Page Panel Four") ) : ?>
+	<?php endif;?>
 	<div class="col-md-4 col-sm-4 col-xs-12 subitem">
 		<h3>
 			<a href="https://www.healthwatchbucks.co.uk/how-we-work/projects/patient-participation-group-support/">PPG Toolkit</a>
