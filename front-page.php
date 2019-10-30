@@ -361,7 +361,6 @@ echo "
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-12 col-sm-12 col-xs-12">
 						<span class="city">
 							<a class="title-link" href="
 								<?php the_permalink(); ?>" rel="bookmark">
@@ -382,7 +381,6 @@ echo "
 						<p class="visit-date">Visited on
 							<?php echo the_date(); ?>
 						</p>
-					</div>
 					<?php // get_template_part("elements/comments-rating-average"); ?>
 				</div>
 			</div>
