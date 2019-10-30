@@ -262,7 +262,7 @@ h3 {
 	padding-right: 4rem;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 992px) {
 	.subitem {
 		transition: 400ms ease-out 100ms;
 		min-height: 215px;
