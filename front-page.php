@@ -427,33 +427,6 @@ echo "
 	<!-- Front Page Panel Four widget area -->
 	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Front Page Panel Four") ) : ?>
 	<?php endif;?>
-	<div class="col-md-4 col-sm-4 col-xs-12 subitem">
-		<h3>
-			<a href="https://www.healthwatchbucks.co.uk/how-we-work/projects/patient-participation-group-support/">PPG Toolkit</a>
-		</h3>
-		<p>A selection to tools to develop and grow your PPG</p>
-		<p>
-			<a href="https://www.healthwatchbucks.co.uk/how-we-work/projects/patient-participation-group-support/">Read more &raquo;</a>
-		</p>
-	</div>
-	<div class="col-md-4 col-sm-4 col-xs-12 subitem">
-		<h3>
-			<a href="https://www.healthwatchbucks.co.uk/how-we-work/press-releases/">Press & Media</a>
-		</h3>
-		<p>Read our latest press releases.</p>
-		<p>
-			<a href="https://www.healthwatchbucks.co.uk/how-we-work/press-releases/">Read more &raquo;</a>
-		</p>
-	</div>
-	<div class="col-md-4 col-sm-4 col-xs-12 subitem">
-		<h3>
-			<a href="https://www.healthwatchbucks.co.uk/category/results/">Reports & Results</a>
-		</h3>
-		<p>We produce a variety of reports and recommendations to influence service improvement</p>
-		<p>
-			<a href="https://www.healthwatchbucks.co.uk/category/results/">Read our reports &raquo;</a>
-		</p>
-	</div>
 </div>
 <!-- end of row -->
 </div>
