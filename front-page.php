@@ -311,6 +311,7 @@ echo "
 		'post_type' => 'Local_services',
 		// 'orderby' => 'rand',
 		'showposts' => 1,
+		'post_status' => 'publish',
 		'meta_query' => array(
 			array(
 				'key'     => 'hw_services_overall_rating',
