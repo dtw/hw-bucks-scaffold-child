@@ -43,7 +43,7 @@ if ( $comments ) {
 		<?php if ($reviewcount == 1) { ?>
 			<!-- start the main panel -->
 			<div class="col-md-12 col-sm-12 col-xs-12 panel">
-				<div class="col-md-12 panel-title">
+				<div class="col-md-12 panel-title-right">
 					<h2>Recent feedback from the public</h2>
 				</div>
 		<?php } elseif ($reviewcount == 4) { ?>
@@ -356,7 +356,7 @@ echo "
 			</div>
 			<div class="col-md-8 col-sm-6 col-xs-12 panel-text-right">
 				<div class="row">
-					<div class="col-md-12 panel-title">
+					<div class="col-md-12 panel-title-right">
 						<h2>Latest Dignity in Care visit</h2>
 					</div>
 				</div>
