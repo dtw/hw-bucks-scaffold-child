@@ -414,7 +414,7 @@ echo "
 	</div>
 	<div class="col-md-4 col-sm-4 col-xs-12 subitem">
 		<h3>
-			<a href="https://www.healthwatchbucks.co.uk/service-guide/">Social Care in Bucks</a>
+			<a href="https://www.healthwatchbucks.co.uk/signpost-category/social-care/">Social Care in Bucks</a>
 		</h3>
 		<p>Helping you to find information and guidance on social care services in Buckinghamshire.</p>
 		<p>
