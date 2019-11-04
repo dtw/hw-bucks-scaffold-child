@@ -66,14 +66,6 @@
   width:
 }
 
-.panel h2 {
-	color: rgba(0,0,0,.6);
-	font-size: 3.2rem;
-	font-weight: 700 !important;
-	padding: 2rem 0 0 0;
-	line-height: 3.6rem;
-	}
-
 .panel .title-link {
 	margin-bottom: 2rem;
 	font-size: 2.5rem;
@@ -220,8 +212,9 @@ display:none;
 
 .home .panel .title-link {
 	margin-bottom: 2rem;
-
+	font-size: 2.5rem;
 	font-weight: 700 !important;
+	display: block;
 	line-height: 3rem;
 }
 
