@@ -6,45 +6,6 @@
  Template:       scaffold
  Version:        4.9.8
 */
-@media (min-width: 1200px) {
-	#section-1 .aohl-video {
-		padding-top: 7rem;
-	}
-	#section-2 .aohl-video {
-		padding-top: 15rem;
-	}
-	#section-3 .aohl-video {
-		padding-top: 20rem;
-	}
-	#section-4 .aohl-video {
-		padding-top: 25rem;
-	}
-	#section-5 .aohl-video {
-		padding-top: 35rem;
-	}
-	#section-6 .aohl-video {
-		padding-top: 25rem;
-	}
-	#section-7 .aohl-video {
-		padding-top: 30rem;
-	}
-	#section-8 .aohl-video {
-		padding-top: 0rem;
-	}
-}
-
-@media (max-width: 1199px) {
-	.aohl-video {
-		padding-top: 0rem;
-	}
-}
-
-@media (max-width: 576px) {
-	.aohl-video {
-		width: 100%;
-	}
-}
-
 /* Header and nav */
 
 .navbar-header {
@@ -85,19 +46,10 @@
 	}
 */
 
-.panel {
-	background-color: rgba(0,0,0,.03);
-	padding: 2rem;
-	margin-bottom: 2rem;
-	transition: 400ms ease-out 100ms;
-	}
-
 .widget_search .ajaxsearchpro {
 	margin-top: 12rem;
 	}
 
-.widget_search p,
-.widget_search h2,
 #mailchimp-title h2 {
 	text-shadow: #000 1px 1px 1px;
 	font-weight: 700;
@@ -114,50 +66,12 @@
   width:
 }
 
-.panel h1 {
-	text-shadow: #f2f2f2 1px 1px 1px;
-	font-weight: 700;
-	color: rgb(0,79,107);
-	margin:0;
-	padding-left: 1.5rem;
-}
-
-.panel h2 {
-	color: rgba(0,0,0,.6);
-	font-size: 3.2rem;
-	font-weight: 700 !important;
-	padding: 2rem 0 0 0;
-	line-height: 3.6rem;
-	}
-
-.panel .city {
-	margin-bottom: 2rem;
-	color: #666;
-	font-size: 2.5rem;
-	line-height: 3rem;
-	display: inline-block;
-	font-weight: 700 !important;
-}
-
-.panel .city a {
-	display: inline-block;
-	margin-bottom: 0;
-}
-
 .panel .title-link {
 	margin-bottom: 2rem;
 	font-size: 2.5rem;
 	font-weight: 700 !important;
 	display: block;
 	line-height: 3rem;
-}
-
-.panel-icon {
-	text-align: right;
-}
-
-.panel .btn {
-	margin-bottom: 0;
 }
 
 .row h3 {
@@ -168,76 +82,6 @@
 
 h3 {
 	font-weight: 700;
-}
-
-.strap {
-	text-align: center;
-	padding: 2rem;
-	margin-top: 0;
-}
-
-.strap h2 {
-	margin-bottom: 0px;
-}
-
-#search-box {
-	background-color: rgba(35, 82, 124, 0.8);
-	padding: 3rem;
-}
-
-.shade {
-	background-color: rgba(35, 82, 124, 0.5);
-	padding: 3rem 0 0 0;
-}
-
-.shade h2 {
-	padding: 0 2rem 2rem 2rem;
-	line-height:4rem;
-	}
-
-.panel-turquoise {
-	background-color: rgba(179, 255, 249, .8);
-	border: rgba(179, 255, 249, .8) solid 2px !important;
-}
-
-.panel-turquoise:hover {
-	border: #1CFFEF solid 2px !important;
-}
-
-.panel-orange {
-	border: rgba(252, 219, 214, .8) solid 2px !important;
-	background-color: rgba(252, 219, 214, .8);
-}
-
-.panel-orange:hover {
-	border: #F79486 solid 2px !important;
-}
-
-.panel-pink {
-	border: rgba(250,216,234,.8) solid 2px !important;
-	background-color: rgba(250,216,234,.8);
-}
-
-.panel-pink:hover {
-	border: #F08BC0 solid 2px !important;
-}
-
-.panel-blue {
-	border: rgba(185,239, 255,.8) solid 2px !important;
-	background-color: rgba(185,239, 255,.8);
-}
-
-.panel-blue:hover {
-	border: #2FD1FF solid 2px !important;
-}
-
-.panel-green {
-	border: rgba(235,255, 190,.8) solid 2px !important;
-	background-color: rgba(235,255, 190,.8);
-}
-
-.panel-green:hover {
-	border: #C4FF3E solid 2px !important;
 }
 
 .feedback .row {
@@ -260,42 +104,6 @@ h3 {
 
 .subitem {
 	padding-right: 4rem;
-}
-
-@media only screen and (min-width: 992px) {
-	.subitem {
-		transition: 400ms ease-out 100ms;
-		min-height: 215px;
-	}
-}
-
-@media only screen and (max-width: 769px) {
-	.panel h2 {
-		font-size: 2.2rem;
-		font-weight: 700 !important;
-		padding: 2rem 0 0 0;
-		line-height: 3rem;
-	}
-
-	.panel .title-link {
-		display: block;
-		font-size: 2rem;
-		line-height: 2.4rem;
-		font-weight: 700 !important;
-	}
-
-	.panel .city {
-		font-size: 2rem;
-	}
-
-	.visit-date {
-		font-size: 1.4rem;
-	}
-
-	.service-icon-md {
-	width: 80px;
-	height: 80px;
-	}
 }
 
 .subitem:hover {
@@ -402,10 +210,18 @@ display:none;
 	margin-bottom: 0;
 }
 
+.home .panel .panel-title {
+}
+
+.home .panel .panel-title-right {
+	padding-right: 0px;
+}
+
 .home .panel .title-link {
 	margin-bottom: 2rem;
-
+	font-size: 2.5rem;
 	font-weight: 700 !important;
+	display: block;
 	line-height: 3rem;
 }
 
@@ -469,6 +285,7 @@ display:none;
 
 .home .panel-text-right {
 	padding-left: 0px;
+	padding-right: 0px;
 }
 
 .home .panel-icon {
@@ -577,42 +394,6 @@ display:none;
 
 .home .subitem h3 {
 	padding-top: 1rem;
-}
-
-@media only screen and (min-width: 769px) {
-.home .subitem {
-		transition: 400ms ease-out 100ms;
-		min-height: 215px;
-	}
-}
-
-@media only screen and (max-width: 769px) {
-.home .panel h2 {
-		font-size: 2.2rem;
-		font-weight: 700 !important;
-		padding: 2rem 0 0 0;
-		line-height: 3rem;
-	}
-
-.home .panel .title-link {
-		display: block;
-		font-size: 2rem;
-		line-height: 2.4rem;
-		font-weight: 700 !important;
-	}
-
-.home .panel .city {
-		font-size: 2rem;
-	}
-
-.home .visit-date {
-		font-size: 1.4rem;
-	}
-
-.home .service-icon-md {
-	width: 80px;
-	height: 80px;
-	}
 }
 
 /* Bootstrap Alerts
