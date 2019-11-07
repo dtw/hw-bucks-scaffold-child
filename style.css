@@ -74,6 +74,10 @@
 	line-height: 3rem;
 }
 
+.panel p .clear-both {
+	clear: both;
+	}
+
 .row h3 {
 	margin:0 !important;
 	padding-top: 0;
