@@ -171,6 +171,10 @@ display:none;
 	border-radius: 5px !important;
 }
 
+.home .panel-icon-img {
+	background: white;
+}
+
 .home .panel {
 	background-color: rgba(0,0,0,.03);
 	padding: 2rem 1.5rem;
