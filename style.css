@@ -249,6 +249,10 @@ display:none;
 	border: #1CFFEF solid 2px !important;
 }
 
+.home .panel-turquoise .panel-icon-img {
+	border: rgba(179, 255, 249, .8) solid 1px;
+}
+
 .home .panel-orange {
 	border: rgba(252, 219, 214, .8) solid 2px !important;
 	background-color: rgba(252, 219, 214, .8);
@@ -256,6 +260,10 @@ display:none;
 
 .home .panel-orange:hover {
 	border: #F79486 solid 2px !important;
+}
+
+.home .panel-orange .panel-icon-img {
+	border: rgba(252, 219, 214, .8) solid 1px;
 }
 
 .home .panel-pink {
@@ -267,6 +275,10 @@ display:none;
 	border: #F08BC0 solid 2px !important;
 }
 
+.home .panel-pink .panel-icon-img {
+	border: rgba(250,216,234,.8) solid 2px;
+}
+
 .home .panel-blue {
 	border: rgba(185,239, 255,.8) solid 2px !important;
 	background-color: rgba(185,239, 255,.8);
@@ -276,6 +288,10 @@ display:none;
 	border: #2FD1FF solid 2px !important;
 }
 
+.home .panel-blue .panel-icon-img {
+	border: rgba(185,239, 255,.8) solid 1px;
+}
+
 .home .panel-green {
 	border: rgba(235,255, 190,.8) solid 2px !important;
 	background-color: rgba(235,255, 190,.8);
@@ -283,6 +299,10 @@ display:none;
 
 .home .panel-green:hover {
 	border: #C4FF3E solid 2px !important;
+}
+
+.home .panel-green .panel-icon-img {
+	border: rgba(235,255, 190,.8) solid 1px;
 }
 
 .home .panel-text {
