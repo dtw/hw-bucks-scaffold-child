@@ -17,8 +17,6 @@
 	// RSS customisations
 	require_once('functions/functions-rss.php');
 
-	// Add custom functions
-	require_once('functions/functions-orientation-check.php');
 
 function hwb_pre_get_posts( $query ) {
 
