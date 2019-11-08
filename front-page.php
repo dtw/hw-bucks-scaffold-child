@@ -18,7 +18,7 @@
 <!-- widget -->
 <div class="container">
 	<div id="content">
-		<div class="feedback row">
+		<div class="row">
 		<!-- Front Page top widget -->
 		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Front Page Panel One") ) : ?>
 		<?php endif;?>
