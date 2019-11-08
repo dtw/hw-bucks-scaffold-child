@@ -18,15 +18,6 @@
 	require_once('functions/functions-rss.php');
 
 
-
-
-
-
-
-
-
-
-
 function hwb_pre_get_posts( $query ) {
 
 
@@ -51,32 +42,6 @@ if ( is_admin() && 'edit.php' == $pagenow && !isset($_GET['orderby'])) {
 }
 
 add_filter('pre_get_posts', 'set_post_order_in_admin', 5 );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function mytheme_comment($comment, $args, $depth) {
     if ( 'div' === $args['style'] ) {
