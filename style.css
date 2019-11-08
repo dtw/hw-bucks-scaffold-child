@@ -235,10 +235,6 @@ display:none;
 	line-height: 3rem;
 }
 
-.home .panel-icon {
-	text-align: right;
-}
-
 .home .panel .btn {
 	margin-bottom: 0;
 }
@@ -304,6 +300,7 @@ display:none;
 }
 
 .home .panel-icon {
+	text-align: right;
 	padding-right: 0px;
 	padding-left: 0px;
 }
