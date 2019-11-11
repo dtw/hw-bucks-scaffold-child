@@ -121,7 +121,6 @@ if ( $comments ) {
 								</h3>
 						<?php } ?>
 									<?php if ($reviewcount == 1) {
-get_template_part("elements/comments-list");
 ?>
 									<p>
 										<?php
