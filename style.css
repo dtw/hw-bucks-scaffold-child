@@ -177,7 +177,7 @@ display:none;
 
 .home .panel {
 	background-color: rgba(0,0,0,.03);
-	padding: 2rem 1.5rem;
+	/* see responsive */
 	margin-bottom: 2rem;
 	transition: 400ms ease-out 100ms;
 	}
