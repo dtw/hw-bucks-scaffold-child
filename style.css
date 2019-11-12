@@ -240,65 +240,62 @@ display:none;
 	margin-bottom: 0;
 }
 
+.home .panel-icon-img {
+	transition: 400ms ease-out 100ms;
+}
 
-.home .panel-turquoise {
+.home .panel-turquoise,
+.home .panel-turquoise .panel-icon-img, {
 	background-color: rgba(179, 255, 249, .8);
 	border: rgba(179, 255, 249, .8) solid 2px !important;
 }
 
-.home .panel-turquoise:hover {
+.home .panel-turquoise:hover,
+.home .panel-turquoise .panel-icon-img:hover {
 	border: #1CFFEF solid 2px !important;
 }
 
-.home .panel-turquoise .panel-icon-img {
-	border: rgba(179, 255, 249, .8) solid 1px;
-}
-
-.home .panel-orange {
+.home .panel-orange,
+.home .panel-orange .panel-icon-img {
 	border: rgba(252, 219, 214, .8) solid 2px !important;
 	background-color: rgba(252, 219, 214, .8);
 }
 
-.home .panel-orange:hover {
+.home .panel-orange:hover,
+.home .panel-orange .panel-icon-img:hover {
 	border: #F79486 solid 2px !important;
 }
 
-.home .panel-orange .panel-icon-img {
-	border: rgba(252, 219, 214, .8) solid 1px;
-}
-
-.home .panel-pink {
+.home .panel-pink,
+.home .panel-pink .panel-icon-img {
 	border: rgba(250,216,234,.8) solid 2px !important;
 	background-color: rgba(250,216,234,.8);
 }
 
-.home .panel-pink:hover {
+.home .panel-pink:hover,
+.home .panel-pink .panel-icon-img:hover {
 	border: #F08BC0 solid 2px !important;
 }
 
-.home .panel-pink .panel-icon-img {
-	border: rgba(250,216,234,.8) solid 2px;
-}
-
-.home .panel-blue {
+.home .panel-blue,
+.home .panel-blue .panel-icon-img {
 	border: rgba(185,239, 255,.8) solid 2px !important;
 	background-color: rgba(185,239, 255,.8);
 }
 
-.home .panel-blue:hover {
+.home .panel-blue:hover,
+.home .panel-blue .panel-icon-img:hover {
 	border: #2FD1FF solid 2px !important;
 }
 
-.home .panel-blue .panel-icon-img {
-	border: rgba(185,239, 255,.8) solid 1px;
-}
-
-.home .panel-green {
+.home .panel-green,
+.home .panel-green .panel-icon-img {
 	border: rgba(235,255, 190,.8) solid 2px !important;
 	background-color: rgba(235,255, 190,.8);
 }
 
-.home .panel-green:hover {
+.home .panel-green:hover,
+.home .panel-green .panel-icon-img:hover {
 	border: #C4FF3E solid 2px !important;
 }
 
