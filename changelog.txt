@@ -6,9 +6,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.0.8] - 2019-11-04
+## [1.0.13] - 2019-11-04
 ### Changed
 - extensive CSS updates. Some styles moved to parent theme files.
+
+## [1.0.12] - 2019-10-29
+### Added
+- disabled auto-complete on some submission fields for improved privacy.
+
+### Removed
+- hard-coded functionality from your-feedback page template. Now in a widget to allow edits.
+
+## [1.0.11] - 2019-10-18
+### Added
+- widget areas to rate-and-review and your-feedback page templates
+
+## [1.0.10] - 2019-10-14
+### Added
+- rate-and-review - a page template for rate and review
+
+## [1.0.9] - 2019-08-13
+### Added
+- your-feedback - a page template for landing page giving feedback options
+
+## [1.0.8] - 2019-08-07
+### Added
+- your-story - a page template for submitting "real stories"
 
 ## [1.0.7] - 2019-06-27
 ### Changed
