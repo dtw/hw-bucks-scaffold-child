@@ -6,6 +6,41 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.8] - 2019-11-04
+### Changed
+- extensive CSS updates. Some styles moved to parent theme files.
+
+## [1.0.7] - 2019-06-27
+### Changed
+- ratings stars code and responsive styles
+
+## [1.0.6] - 2019-06-20
+### Changed
+- admin interface updated to list Pages in descending order of date
+
+## [1.0.5] - 2019-05-30
+### Changed
+- extensive updates to front-page layout, including bootstrap columns, and CSS styles
+
+### Removed
+- unused template-home removed
+
+## [1.0.4] - 2019-05-22
+### Changed
+- minor CSS updates
+
+## [1.0.3] - 2019-05-20
+### Added
+- new widget area added to top of front-page
+
+## [1.0.2] - 2019-05-15
+### Changed
+- minor CSS updates
+
+## [1.0.1] - 2019-03-20
+### Changed
+- extensive updates to front-page
+
 ## [1.0.0] - 2019-11-29
 ### Added
 -
