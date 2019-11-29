@@ -6,16 +6,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.0.13] - 2019-11-04
+## [1.0.16] - 2019-11-12
+### Changed
+- extensive CSS updates on front-page
+
+## [1.0.15] - 2019-11-04
 ### Changed
 - extensive CSS updates. Some styles moved to parent theme files.
 
-## [1.0.12] - 2019-10-29
+## [1.0.14] - 2019-11-01
+### Removed
+- most hardcoded content from front-page to widgets.
+
+## [1.0.13] - 2019-10-29
 ### Added
 - disabled auto-complete on some submission fields for improved privacy.
 
 ### Removed
 - hard-coded functionality from your-feedback page template. Now in a widget to allow edits.
+
+## [1.0.12] - 2019-10-27
+### Added
+- widget areas to front-page. This is the first step of removing all the hardcode.
 
 ## [1.0.11] - 2019-10-18
 ### Added
