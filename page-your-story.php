@@ -25,10 +25,11 @@
   $message_sent    = "Thanks! Your story has been sent.";
 
   //user posted variables
-  $name = $_POST['message_name'];
+  //names should only contain basic ascii characters
+  $name = filter_var($_POST['message_name'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_BACKTICK);
   $email = $_POST['message_email'];
-  $phone = $_POST['message_phone'];
-  $message = $_POST['message_text'];
+  $phone = filter_var($_POST['message_phone'], FILTER_SANITIZE_NUMBER_INT);
+  $message = filter_var($_POST['message_text'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_BACKTICK);
   $human = $_POST['message_human'];
 
   //php mailer variables
@@ -37,21 +38,25 @@
   //set headers to allow HTML
   $headers = array('Content-Type: text/html; charset=UTF-8');
 
-  if(!$human == 0){
-    if($human != 2) your_story_generate_response("error", $not_human); //not human!
+  //validate $human is numeric
+  if (filter_var($human, FILTER_VALIDATE_INT)) {
+    //we don't use $human again
+    if(intval($human) != 2) your_story_generate_response("error", $not_human); //not human!
     else {
       //validate email
       if(!$email == 0 && !filter_var($email, FILTER_VALIDATE_EMAIL))
         your_story_generate_response("error", $email_invalid);
       else //email is valid
       {
+        //sanitize email
+        $email = filter_var($email, FILTER_SANITIZE_EMAIL);
         //validate presence of message
         if(empty($message)){
           your_story_generate_response("error", $missing_content);
         }
         else //ready to go!
         {
-          $formatted_message = '<strong>My story</strong><br>' . strip_tags($message) .'<br><br><strong>Email: </strong>' . $email . '<br><br><strong>Phone: </strong>' . strip_tags($phone) . '<br><br><strong>Sent at: </strong>' . date('d/m/Y h:i:s a', time());
+          $formatted_message = '<strong>My story</strong><br>' . $message .'<br><br><strong>Name: </strong>' . $name . '<br><br><strong>Email: </strong>' . $email . '<br><br><strong>Phone: </strong>' . $phone . '<br><br><strong>Sent at: </strong>' . date('d/m/Y h:i:s a', time());
           $sent = wp_mail($to, $subject, $formatted_message, $headers);
           if($sent) your_story_generate_response("success", $message_sent); //message sent!
           else your_story_generate_response("error", $message_unsent); //message wasn't sent

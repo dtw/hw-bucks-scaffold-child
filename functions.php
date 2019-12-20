@@ -18,15 +18,6 @@
 	require_once('functions/functions-rss.php');
 
 
-
-
-
-
-
-
-
-
-
 function hwb_pre_get_posts( $query ) {
 
 
@@ -51,32 +42,6 @@ if ( is_admin() && 'edit.php' == $pagenow && !isset($_GET['orderby'])) {
 }
 
 add_filter('pre_get_posts', 'set_post_order_in_admin', 5 );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function mytheme_comment($comment, $args, $depth) {
     if ( 'div' === $args['style'] ) {
@@ -133,8 +98,38 @@ printf( __( 'On ' ), get_comment_author_link() ); echo get_comment_date();
 
 if ( function_exists('register_sidebar') )
   register_sidebar(array(
-    'name' => 'Front Page Top',
+    'name' => 'Front Page Panel One',
     'before_widget' => '<div class="hotnews row">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3>',
+    'after_title' => '</h3>',
+  )
+);
+
+if ( function_exists('register_sidebar') )
+  register_sidebar(array(
+    'name' => 'Front Page Panel Two',
+    'before_widget' => '<div class="row news">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3>',
+    'after_title' => '</h3>',
+  )
+);
+
+if ( function_exists('register_sidebar') )
+  register_sidebar(array(
+    'name' => 'Front Page Panel Three',
+    'before_widget' => '<div class="row news">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3>',
+    'after_title' => '</h3>',
+  )
+);
+
+if ( function_exists('register_sidebar') )
+  register_sidebar(array(
+    'name' => 'Front Page Panel Four',
+    'before_widget' => '<div class="row news">',
     'after_widget' => '</div>',
     'before_title' => '<h3>',
     'after_title' => '</h3>',
@@ -160,4 +155,5 @@ if ( function_exists('register_sidebar') )
     'after_title' => '</h3>',
   )
 );
+
 ?>
