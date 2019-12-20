@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.17.0] - 2019-12-20
+### Changed
+- secured your-story form inputs
+
 ## [1.16.0] - 2019-11-12
 ### Changed
 - extensive CSS updates on front-page
