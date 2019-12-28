@@ -232,7 +232,7 @@ display:none;
 	margin-bottom: 2rem;
 	font-size: 2.5rem;
 	font-weight: 700 !important;
-	display: block;
+	display: inline-block;
 	line-height: 3rem;
 }
 
