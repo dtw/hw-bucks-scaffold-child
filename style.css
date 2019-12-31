@@ -59,14 +59,6 @@
 	padding:0px;
 	}
 
-.widget_search:before {
-	content: " " !important;
-}
-.widget_search:after {
-  content: " " !important;
-  width:
-}
-
 .panel .title-link {
 	margin-bottom: 2rem;
 	font-size: 2.5rem;
@@ -349,14 +341,6 @@ display:none;
 	text-align: left;
 	padding:0px;
 	}
-
-.home .widget_search:before {
-	content: " " !important;
-}
-
-.home .widget_search:after {
-  content: " " !important;
-}
 
 .home .row h3 {
 	margin:0 !important;
