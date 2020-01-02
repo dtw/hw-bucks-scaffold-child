@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Changed
 - remove unused before/after styles on front page
+- fixed privacy statement links
 
 ## [1.17.0] - 2019-12-20
 ### Changed
