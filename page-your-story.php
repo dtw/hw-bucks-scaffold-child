@@ -12,7 +12,7 @@
 
     //if($type == "success") $response = "<div class='success'>{$message}</div>";
     //else $response = "<div class='error'>{$message}</div>";
-    if($type == "success") $response = "<div class='alert alert-success' role='alert'>{$message}</div>";
+    if($type == "success") $response = "<div class='alert alert-success alert-relative' role='alert'>{$message}</div>";
     else $response = "<div class='alert alert-danger' role='alert'>{$message}</div>";
 
   }
