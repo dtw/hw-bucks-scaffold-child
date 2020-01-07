@@ -417,6 +417,8 @@ display:none;
 
 .alert-relative {
 	position: relative !important;
+	border-left: 1px;
+	border-right: 1px;
 }
 
 .alert-scaffold {
