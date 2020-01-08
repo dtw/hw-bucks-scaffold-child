@@ -18,9 +18,9 @@
   }
 
   //response messages
-  $not_human       = "Human verification incorrect";
+  $not_human       = "Robot check incorrect";
   $missing_content = "Please fill in your story";
-  $missing_recaptcha = "Please complete reCAPTCHA";
+  $missing_recaptcha = "Please complete the Robot check";
   $email_invalid   = "Email address format invalid";
   $message_unsent  = "Message was not sent. Try Again.";
   $message_sent    = "Thanks! Your story has been sent.";
@@ -74,8 +74,12 @@
         {
           $formatted_message = '<strong>My story</strong><br>' . $message .'<br><br><strong>Name: </strong>' . $name . '<br><br><strong>Email: </strong>' . $email . '<br><br><strong>Phone: </strong>' . $phone . '<br><br><strong>Sent at: </strong>' . date('d/m/Y h:i:s a', time());
           $sent = wp_mail($to, $subject, $formatted_message, $headers);
-          if($sent) your_story_generate_response("success", $message_sent); //message sent!
-          else your_story_generate_response("error", $message_unsent); //message wasn't sent
+          if ($sent) {
+            your_story_generate_response("success", $message_sent); //message sent!
+            $_POST=array(); // blank the form
+          } else {
+            your_story_generate_response("error", $message_unsent); //message wasn't sent
+          }
         }
       }
     }
@@ -126,7 +130,7 @@
                       <label class="inline-label" for="message_human">Human Verification</label>
                       <input required class="no-asterisk" id="verification" name="message_human" type="text" tabindex="6" aria-required="true"> + 3 = 5
                     </p>-->
-                    <h2>Human Verification</h2>
+                    <h2>Robot check</h2>
                     <div class="comment-form-captcha">
                       <div class="g-recaptcha" data-sitekey="6LevMM0UAAAAADjh6PhzQFSWGWXtoOF1D061Ch78"></div>
                     </div>
