@@ -415,17 +415,17 @@ display:none;
 /* Bootstrap Alerts
 -------------------- */
 
-.alert-relative {
-	position: relative !important;
-	border-left: 1px !important;
-	border-right: 1px !important;
-}
-
 .alert-scaffold {
 	padding: 5px 35px 5px 15px !important;
 	font-weight: normal !important;
 	border-left: none;
 	border-right: none;
+	position: fixed;
+	bottom: 0;
+	z-index: 500;
+	display: inline-block;
+	margin-bottom: 0;
+	border-radius: 0;
 }
 
 input#verification {
