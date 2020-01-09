@@ -422,11 +422,8 @@ display:none;
 .alert-scaffold {
 	padding: 5px 35px 5px 15px !important;
 	font-weight: normal !important;
-}
-
-.alert-success {
-	border-left: 1px solid #b2dba1 !important;
-	border-right: 1px solid #b2dba1 !important;
+	border-left: none;
+	border-right: none;
 }
 
 input#verification {
