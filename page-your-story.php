@@ -57,7 +57,7 @@
         else //ready to go!
         {
           $formatted_message = '<strong>My story</strong><br>' . $message .'<br><br><strong>Name: </strong>' . $name . '<br><br><strong>Email: </strong>' . $email . '<br><br><strong>Phone: </strong>' . $phone . '<br><br><strong>Sent at: </strong>' . date('d/m/Y h:i:s a', time());
-          $sent = wp_mail($to, $subject, $formatted_message, $headers);
+          $sent = wp_mail($to, $subject, stripslashes($formatted_message), $headers);
           if($sent) your_story_generate_response("success", $message_sent); //message sent!
           else your_story_generate_response("error", $message_unsent); //message wasn't sent
         }
