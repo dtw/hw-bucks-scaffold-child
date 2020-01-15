@@ -5,7 +5,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-sm-12 shade">
-				<h2>We're here to listen to you and work with the people that run your health and care services to make them better</h2>
+				<h2>We listen to you and work with the people that run health and care services to make them better</h2>
 				<div class="col-md-12 col-sm-12" id="search-box" title="Search for a health or care service">
 					<p>Rate and review over 500 GPs, dentists, pharmacies, care homes and hospitals</p>
 					<?php echo do_shortcode("[wd_asp id=1]"); ?>
