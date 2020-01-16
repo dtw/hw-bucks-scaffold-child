@@ -70,6 +70,7 @@
 <?php get_header(); ?>
   <div class="container">
     <div id="content" role="main" class="col-md-12 col-sm-12">
+      <?php echo $response; ?>
       <div class="row">
 
         <?php while ( have_posts() ) : the_post(); ?>
@@ -79,7 +80,6 @@
               <div class="entry-content">
                 <?php the_content(); ?>
                 <div id="respond">
-                  <?php echo $response; ?>
                   <form class="your-story" action="<?php the_permalink(); ?>" method="post">
                     <p class="comment-form-comment">
                       <label for="comment">What happened?</label>
