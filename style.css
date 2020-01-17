@@ -194,7 +194,6 @@ display:none;
 	margin-bottom: 2rem;
 	color: #666;
 	font-size: 2.5rem;
-	line-height: 3rem;
 	display: inline-block;
 	font-weight: 700 !important;
 }
@@ -217,7 +216,6 @@ display:none;
 	font-size: 2.5rem;
 	font-weight: 700 !important;
 	display: inline-block;
-	line-height: 3rem;
 }
 
 .home .panel .btn {
