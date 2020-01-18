@@ -4,25 +4,32 @@
 
   //response generation function
   $response = "";
+  $title_mod ="";
 
   //function to generate response
   function your_story_generate_response($type, $message){
 
     global $response;
+    global $title_mod;
 
     //if($type == "success") $response = "<div class='success'>{$message}</div>";
     //else $response = "<div class='error'>{$message}</div>";
-    if($type == "success") $response = "<div class='alert alert-success alert-relative' role='alert'>{$message}</div>";
-    else $response = "<div class='alert alert-danger alert-relative' role='alert'>{$message}</div>";
-
+    if ($type == "success") {
+      $response = "<div class='alert alert-success alert-relative' role='alert'>{$message}</div>";
+      $title_mod = "Success - ";
+    } else {
+      $response = "<div class='alert alert-danger alert-relative' role='alert'>{$message}</div>";
+      $title_mod = "Error - ";
+    }
   }
 
   //response messages
-  $not_human       = "Human verification incorrect.";
-  $missing_content = "Please mandatory information.";
-  $email_invalid   = "Email address format invalid.";
-  $message_unsent  = "Message was not sent. Try Again.";
-  $message_sent    = "Thanks! Your story has been sent.";
+  $not_human       = "Error - Robot check incorrect";
+  $missing_content = "Error - Please fill in your story";
+  $missing_recaptcha = "Error - Please complete the Robot check";
+  $email_invalid   = "Error - Email address format invalid";
+  $message_unsent  = "Error - Message was not sent. Try Again.";
+  $message_sent    = "Success - Thanks, your story has been sent!";
 
   //user posted variables
   //names should only contain basic ascii characters
@@ -57,15 +64,27 @@
         else //ready to go!
         {
           $formatted_message = '<strong>My story</strong><br>' . $message .'<br><br><strong>Name: </strong>' . $name . '<br><br><strong>Email: </strong>' . $email . '<br><br><strong>Phone: </strong>' . $phone . '<br><br><strong>Sent at: </strong>' . date('d/m/Y h:i:s a', time());
-          $sent = wp_mail($to, $subject, $formatted_message, $headers);
-          if($sent) your_story_generate_response("success", $message_sent); //message sent!
-          else your_story_generate_response("error", $message_unsent); //message wasn't sent
+          $sent = wp_mail($to, $subject, stripslashes($formatted_message), $headers);
+          if ($sent) {
+            your_story_generate_response("success", $message_sent); //message sent!
+            $_POST=array(); // blank the form
+          } else {
+            your_story_generate_response("error", $message_unsent); //message wasn't sent
+          }
         }
       }
     }
   }
   else if ($_POST['submitted']) your_story_generate_response("error", $missing_content);
 
+?>
+<?php /* Update the page title */
+function custom_title($title) {
+    //return $title_mod;
+    global $title_mod;
+    return $title_mod.$title;
+}
+add_filter( 'pre_get_document_title', 'custom_title', 999, 1 );
 ?>
 <?php get_header(); ?>
   <div class="container">
@@ -87,7 +106,7 @@
                       <textarea required tabindex="1" id="comment" name="message_text" type="text" cols="45" rows="4" aria-required="true"><?php echo esc_textarea($_POST['message_text']); ?></textarea>
                     </p>
                     <h2>Your contact details</h2>
-                    <p>If you would like us to contact you about your story, please provide your details below.</p>
+                    <p>If you would like us to contact you about your story, please provide your details below. You can also <a href="https://www.healthwatchbucks.co.uk/contact-us/">contact us</a>.</p>
                     <p class="comment-form-author">
                       <label for="message_name">Your name</label>
                       <input placeholder="Your first and last names (optional)" id="author" name="message_name" autocomplete="off" type="text" size="30" tabindex="2" value="<?php echo esc_attr($_POST['message_name']); ?>"/>
