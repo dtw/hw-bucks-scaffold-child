@@ -4,22 +4,22 @@
 
   //response generation function
   $response = "";
-  $title_mod ="";
+  $page_title_msg ="";
 
   //function to generate response
   function your_story_generate_response($type, $message){
 
     global $response;
-    global $title_mod;
+    global $page_title_msg;
 
     //if($type == "success") $response = "<div class='success'>{$message}</div>";
     //else $response = "<div class='error'>{$message}</div>";
     if ($type == "success") {
       $response = "<div class='alert alert-success alert-relative' role='alert'>{$message}</div>";
-      $title_mod = "Success - ";
+      $page_title_msg = "Success - ";
     } else {
       $response = "<div class='alert alert-danger alert-relative' role='alert'>{$message}</div>";
-      $title_mod = "Error - ";
+      $page_title_msg = "Error - ";
     }
   }
 
@@ -79,12 +79,12 @@
 
 ?>
 <?php /* Update the page title */
-function custom_title($title) {
-    //return $title_mod;
-    global $title_mod;
-    return $title_mod.$title;
+function modify_page_title($title) {
+    //return $page_title_msg;
+    global $page_title_msg;
+    return $page_title_msg.$title;
 }
-add_filter( 'pre_get_document_title', 'custom_title', 999, 1 );
+add_filter( 'pre_get_document_title', 'modify_page_title', 999, 1 );
 ?>
 <?php get_header(); ?>
   <div class="container">
