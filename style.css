@@ -167,10 +167,6 @@ display:none;
 	transition: 400ms ease-out 100ms;
 	}
 
-.home .row .three-column {
-	margin-bottom: 1rem;
-}
-
 .home .panel h1 {
 	text-shadow: #f2f2f2 1px 1px 1px;
 	font-weight: 700;
@@ -389,7 +385,12 @@ display:none;
 }
 
 .home .subitem-container {
-		margin-bottom: 1rem;
+	margin-bottom: 2rem;
+	padding: 0;
+}
+
+.home .feedback .subitem-container .subitem {
+	min-height: 180px !important;
 	}
 
 .home .subitem {
