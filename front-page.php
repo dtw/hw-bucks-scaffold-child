@@ -20,30 +20,9 @@
 	<div id="content">
 		<div class="row">
 		<!-- Front Page top widget -->
-		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Front Page Panel One") ) : ?>
+		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Front Page Widget") ) : ?>
 		<?php endif;?>
 		</div>
-
-<div class='row news'>
-	<!-- Front Page Panel Two widget area -->
-	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Front Page Panel Two") ) : ?>
-	<?php endif;?>
-</div>
-<!-- end of row -->
-<!-- 3. Dignity in Care -->
-<div class="row news">
-	<!-- Front Page Panel Three widget area -->
-	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Front Page Panel Three") ) : ?>
-	<?php endif;?>
-</div>
-<!-- end of row -->
-<!-- 7. PPG -->
-<div class='row news'>
-	<!-- Front Page Panel Four widget area -->
-	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Front Page Panel Four") ) : ?>
-	<?php endif;?>
-</div>
-<!-- end of row -->
-</div>
+	</div>
 <!-- end of content column -->
 <?php get_footer(); ?>
