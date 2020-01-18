@@ -167,9 +167,7 @@ display:none;
 	transition: 400ms ease-out 100ms;
 	}
 
-.home .hotnews,
-.home .feedback,
-.home .news {
+.home .row .three-column {
 	margin-bottom: 1rem;
 }
 
@@ -389,6 +387,10 @@ display:none;
 	width: 80px;
 	height: 80px;
 }
+
+.home .subitem-container {
+		margin-bottom: 1rem;
+	}
 
 .home .subitem {
 	padding-right: 4rem;
