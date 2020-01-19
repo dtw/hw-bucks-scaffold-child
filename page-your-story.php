@@ -37,7 +37,22 @@
   $email = $_POST['message_email'];
   $phone = filter_var($_POST['message_phone'], FILTER_SANITIZE_NUMBER_INT);
   $message = filter_var($_POST['message_text'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_BACKTICK);
-  $human = $_POST['message_human'];
+
+  $recaptcha_response = $_POST["g-recaptcha-response"];
+  $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
+  $recaptcha_data = array(
+    'secret' => '6LevMM0UAAAAAL2L_FW_OK7mq8s-aUs7z5bsOFCk',
+    'response' => $_POST["g-recaptcha-response"]
+  );
+  $recaptcha_options = array(
+    'http' => array (
+      'method' => 'POST',
+      'content' => http_build_query($recaptcha_data)
+    )
+  );
+  $recaptcha_context  = stream_context_create($recaptcha_options);
+  $recaptcha_verify = file_get_contents($recaptcha_url, false, $recaptcha_context);
+  $captcha_success = json_decode($recaptcha_verify);
 
   //php mailer variables
   $to = get_option('admin_email');
@@ -45,10 +60,10 @@
   //set headers to allow HTML
   $headers = array('Content-Type: text/html; charset=UTF-8');
 
-  //validate $human is numeric
-  if (filter_var($human, FILTER_VALIDATE_INT)) {
-    //we don't use $human again
-    if(intval($human) != 2) your_story_generate_response("error", $not_human); //not human!
+  //validate $recaptcha_response is not empty
+  if ($recaptcha_response != '') {
+    //check response from Google
+    if($captcha_success->success==false) your_story_generate_response("error", $not_human); //not human!
     else {
       //validate email
       if(!$email == 0 && !filter_var($email, FILTER_VALIDATE_EMAIL))
@@ -75,7 +90,7 @@
       }
     }
   }
-  else if ($_POST['submitted']) your_story_generate_response("error", $missing_content);
+  else if ($_POST['submitted']) your_story_generate_response("error", $missing_recaptcha);
 
 ?>
 <?php /* Update the page title */
@@ -125,10 +140,10 @@ add_filter( 'pre_get_document_title', 'modify_page_title', 999, 1 );
                       <label class="inline-label" for="message_privacy">I agree</label>
                       <input required class="no-asterisk regular-checkbox" id="privacy" name="message_privacy" type="checkbox" tabindex="5" aria-required="true">
                     </p>
-                    <p class="comment-form-verification">
-                      <label class="inline-label" for="message_human">Human Verification</label>
-                      <input required class="no-asterisk" id="verification" name="message_human" type="text" tabindex="6" aria-required="true"> + 3 = 5
-                    </p>
+                    <h2>Robot check</h2>
+                    <div class="comment-form-captcha">
+                      <div class="g-recaptcha" data-sitekey="6LevMM0UAAAAADjh6PhzQFSWGWXtoOF1D061Ch78"></div>
+                    </div>
                     <input type="hidden" name="submitted" value="1">
                     <p class="form-submit">
                       <input name="submit" type="submit" id="submit" class="submit" tabindex="7" value="Send your story" />
