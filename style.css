@@ -92,7 +92,7 @@ h3 {
 }
 
 .subitem {
-	padding-right: 4rem;
+	padding-right: 2rem;
 }
 
 .subitem:hover {
@@ -394,7 +394,7 @@ display:none;
 	}
 
 .home .subitem {
-	padding-right: 4rem;
+	padding-right: 2rem;
 }
 
 .home .subitem:hover {
