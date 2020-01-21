@@ -6,6 +6,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.19.0] - 2020-01-21
+### Added
+- implemented Google reCAPTCHA on your-story form
+- new hover effects for feedback widget subitems
+
+### Changed
+- updated homepage intro (need to widgetise this)
+- form response on your-story page appears sooner (further up) page
+- many CSS updates, especially spacing on home page and mobile
+
+### Removed
+- deleted old CSS styles
+- extra widget areas on home page
+
 ## [1.18.1] - 2020-01-10
 ### Changed
 - fixes to bootstrap alerts CSS
