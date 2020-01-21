@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.18.1] - 2020-06-10
+## [1.18.1] - 2020-01-10
 ### Changed
 - fixes to bootstrap alerts CSS
 
