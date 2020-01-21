@@ -53,7 +53,7 @@ function mytheme_comment($comment, $args, $depth) {
     }?>
     <<?php echo $tag; ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?> id="comment-<?php comment_ID() ?>"><?php
     if ( 'div' != $args['style'] ) { ?>
-        <div id="div-comment-<?php comment_ID() ?>" class="comment-body" style="background-color: rgba(0,0,0,.02); padding: 1rem;"><?php
+        <div id="div-comment-<?php comment_ID() ?>" class="comment-body"><?php
     } ?>
         <div class="comment-author vcard"><?php
             if ( $args['avatar_size'] != 0 ) {
