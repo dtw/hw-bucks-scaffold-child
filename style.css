@@ -221,7 +221,7 @@ display:none;
 }
 
 .home .panel-turquoise,
-.home .panel-turquoise .panel-icon-img, {
+.home .panel-turquoise .panel-icon-img {
 	background-color: rgba(179, 255, 249, .8);
 	border: rgba(179, 255, 249, .8) solid 2px !important;
 }
