@@ -13,6 +13,7 @@
 #hwbucks {
 	margin-bottom: 1rem;
 }
+
 #hwbucks .toprow {
 	background: #0080A4;
 	color: white;
@@ -34,17 +35,17 @@
 .news .panel {
 	padding: 2rem 0;
 	border: none;
-	}
+}
 
 .news .panel h3,
 .news .panel p {
 	padding: 1rem 2rem 0 2rem;
-	}
+}
 */
 
 .widget_search .ajaxsearchpro {
 	margin-top: 12rem;
-	}
+}
 
 .widget_search h2,
 #mailchimp-title h2 {
@@ -53,11 +54,11 @@
 	color: #fff;
 	text-align: left;
 	padding:0px;
-	}
+}
 
 .panel p .clear-both {
 	clear: both;
-	}
+}
 
 .row h3 {
 	margin:0 !important;
@@ -161,7 +162,7 @@ display:none;
 	padding-bottom: 2rem;
 	margin-bottom: 2rem;
 	transition: 400ms ease-out 100ms;
-	}
+}
 
 .home .panel h1 {
 	text-shadow: #f2f2f2 1px 1px 1px;
@@ -178,7 +179,7 @@ display:none;
 	padding: 0;
 	margin-top:0;
 	line-height: 3.6rem;
-	}
+}
 
 .home .panel .city {
 	margin-bottom: 2rem;
@@ -307,11 +308,11 @@ display:none;
 	background-repeat: no-repeat;
 	background-position: 0% 5%;
 	border-radius: 0;
-	}
+}
 
 .home .widget_search .ajaxsearchpro {
 	margin-top: 12rem;
-	}
+}
 
 .home .widget_search p,
 .home .widget_search h2 {
@@ -320,7 +321,7 @@ display:none;
 	color: #fff;
 	text-align: left;
 	padding:0px;
-	}
+}
 
 .home .row h3 {
 	margin:0 !important;
@@ -356,7 +357,7 @@ display:none;
 	padding: 2rem;
 	margin-top: 0px;
 	line-height:4rem;
-	}
+}
 
 .home .feedback .row {
 	margin-bottom: 0;
@@ -387,7 +388,7 @@ display:none;
 
 .home .feedback .subitem-container .subitem {
 	min-height: 180px !important;
-	}
+}
 
 .home .subitem {
 	padding-right: 2rem;
