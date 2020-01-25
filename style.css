@@ -236,7 +236,7 @@ display:none;
 
 .home .panel-orange:hover,
 .home .panel-orange .panel-icon-img:hover {
-	border: #F79486 solid 2px !important;
+	border: var(--hw-orange) solid 2px !important;
 }
 
 .home .panel-pink,
@@ -438,7 +438,7 @@ input.no-asterisk{
 
 .regular-checkbox {
 	-webkit-appearance: none;
-	border: 1px solid #e73e97 !important;
+	border: 1px solid var(--hw-pink) !important;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
 	padding: 9px !important;
 	margin-top: 0px !important;
@@ -469,5 +469,5 @@ input.no-asterisk{
 	position: absolute;
 	top: 0px;
 	left: 3px;
-	color: #e73e97;
+	color: var(--hw-pink);
 }
