@@ -118,7 +118,7 @@ add_filter( 'pre_get_document_title', 'modify_page_title', 999, 1 );
                     <p class="comment-form-comment">
                       <label for="comment">What happened?</label>
                       <p>Please tell us what happened. If you can, please make suggestions for improvements. Please do not include any personal information like names or detailed health information.</p>
-                      <textarea required tabindex="1" id="comment" name="message_text" type="text" cols="45" rows="4" aria-required="true"><?php echo esc_textarea($_POST['message_text']); ?></textarea>
+                      <textarea tabindex="1" id="comment" name="message_text" type="text" cols="45" rows="4" required="required"><?php echo esc_textarea($_POST['message_text']); ?></textarea>
                     </p>
                     <h2>Your contact details</h2>
                     <p>If you would like us to contact you about your story, please provide your details below. You can also <a href="https://www.healthwatchbucks.co.uk/contact-us/">contact us</a>.</p>
@@ -138,7 +138,7 @@ add_filter( 'pre_get_document_title', 'modify_page_title', 999, 1 );
                     <p>Please review our <a href="https://www.healthwatchbucks.co.uk/privacy/" target="_blank">privacy policy</a>. By ticking the box, you agree that you have read and understood the privacy information provided, and confirm you are over 18.</p>
                     <p class="comment-form-privacy">
                       <label class="inline-label" for="message_privacy">I agree</label>
-                      <input required class="no-asterisk regular-checkbox" id="privacy" name="message_privacy" type="checkbox" tabindex="5" aria-required="true">
+                      <input class="no-asterisk regular-checkbox" id="privacy" name="message_privacy" type="checkbox" tabindex="5" required="required">
                     </p>
                     <h2>Robot check</h2>
                     <div class="comment-form-captcha">
