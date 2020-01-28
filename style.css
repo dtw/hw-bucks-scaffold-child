@@ -247,7 +247,7 @@ display:none;
 
 .home .panel-pink:hover,
 .home .panel-pink .panel-icon-img:hover {
-	border: #F08BC0 solid 2px !important;
+	border: var(--hw-pink) solid 2px !important;
 }
 
 .home .panel-blue,
@@ -318,7 +318,7 @@ display:none;
 .home .widget_search h2 {
 	text-shadow: #000 1px 1px 1px;
 	font-weight: 700;
-	color: #fff;
+	color: white;
 	text-align: left;
 	padding:0px;
 }
