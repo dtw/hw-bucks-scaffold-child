@@ -121,7 +121,7 @@ display:none;
 
 #comments ul {
 	list-style: none;
-	padding-left: 0 !important;
+	padding-left: 0px !important;
 }
 
 #comments ul ul {
@@ -302,7 +302,7 @@ display:none;
 }
 
 .home .widget_search {
-	padding: 0 !important;
+	padding: 0px !important;
 	background-image: url(https://www.healthwatchbucks.co.uk/wp-content/themes/scaffold-child/images/frontpage.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
