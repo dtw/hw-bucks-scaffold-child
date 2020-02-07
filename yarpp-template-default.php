@@ -1,11 +1,9 @@
 <?php
 /*
 YARPP Template: Default
-Author: mitcho (Michael Yoshitaka Erlewine)
-Description: A simple example YARPP template.
+Author: dtw (Phil Thiselton)
+Description: A simple YARPP template based on the default.
 */
-?><h3>Related Posts</h3>
-<?php
 // a little easter egg: if the default image URL is left blank,
 // default to the theme's header image. (hopefully it has one)
 if ( empty($thumbnails_default) )
@@ -13,32 +11,29 @@ if ( empty($thumbnails_default) )
 
 $dimensions = $this->thumbnail_dimensions();
 if (have_posts()) {
-	$output .= '<div class="yarpp-thumbnails-horizontal">' . "\n";
+	$output .= '<!--default template--><div class="yarpp-thumbnails-horizontal col-md-12 col-sm-8 col-xs-12 col-md-offset-0 col-sm-offset-2"><h3>Related Posts</h3>';
 	while (have_posts()) {
 		the_post();
 
-		$output .= "<a class='yarpp-thumbnail' rel='norewrite' href='" . get_permalink() . "' title='" . the_title_attribute('echo=0') . "'>" . "\n";
+		$output .= '<div class="yarpp-container media"><a class="yarpp-thumbnail media-left img-anchor" rel="norewrite" href="' . get_permalink() . '" title="' . the_title_attribute('echo=0') . '">';
 
 		$post_thumbnail_html = '';
 		if ( has_post_thumbnail() ) {
 			if ( $this->diagnostic_generate_thumbnails() )
 				$this->ensure_resized_post_thumbnail( get_the_ID(), $dimensions );
-			$post_thumbnail_html = get_the_post_thumbnail(null, $dimensions['size'], array('data-pin-nopin' => 'true') );
+			$post_thumbnail_html = get_the_post_thumbnail(null, $dimensions['size'], array('class' => 'media-object','data-pin-nopin' => 'true') );
 		}
 
 		if ( trim($post_thumbnail_html) != '' )
-			$output .= $post_thumbnail_html;
+			$output .= $post_thumbnail_html . '</a>';
 		else
-			$output .= '<span class="yarpp-thumbnail-default"><img src="' . esc_url($thumbnails_default) . '" alt="Default Thumbnail" data-pin-nopin="true" /></span>';
+			$output .= '<img src="' . esc_url($thumbnails_default) . '" alt="Default Thumbnail" data-pin-nopin="true" /></a>';
 
-		$output .= '<span class="yarpp-thumbnail-title">' . get_the_title() . '</span>';
-		$output .= '</a>' . "\n";
-
+		$output .= '<a class="yarpp-thumbnail-title media-body" rel="norewrite" href="' . get_permalink() . '" title="' . the_title_attribute('echo=0') . '">'  . get_the_title() . '</a>';
+		$output .= '</div>';
 	}
-	$output .= "</div>\n";
+	$output .= '</div>';
 } else {
 	$output .= $no_results;
 }
-
-echo $output;
 ?>

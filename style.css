@@ -20,7 +20,7 @@
 }
 
 #hwbucks td {
-	padding:10px 5px;
+	padding: 1rem 0.5rem;
 	border: 1px solid rgb(242,242,242);
 }
 
@@ -62,7 +62,7 @@
 
 .row h3 {
 	margin:0 !important;
-	padding-top: 0;
+	padding-top: 0px;
 	padding-bottom: .5rem;
 }
 
@@ -71,7 +71,7 @@ h3 {
 }
 
 .feedback .row {
-	margin-bottom: 0;
+	margin-bottom: 0px;
 }
 
 .service-icon-container {
@@ -121,7 +121,7 @@ display:none;
 
 #comments ul {
 	list-style: none;
-	padding-left: 0 !important;
+	padding-left: 0px !important;
 }
 
 #comments ul ul {
@@ -176,7 +176,7 @@ display:none;
 	color: rgba(0,0,0,.6);
 	font-size: 3.2rem;
 	font-weight: 700 !important;
-	padding: 0;
+	padding: 0px;
 	margin-top:0;
 	line-height: 3.6rem;
 }
@@ -191,7 +191,7 @@ display:none;
 
 .home .panel .city a {
 	display: inline-block;
-	margin-bottom: 0;
+	margin-bottom: 0px;
 }
 
 .home .panel .panel-title {
@@ -210,7 +210,7 @@ display:none;
 }
 
 .home .panel .btn {
-	margin-bottom: 0;
+	margin-bottom: 0px;
 }
 
 .home .panel-icon-img {
@@ -287,7 +287,7 @@ display:none;
 
 .home .panel-title,
 .home .panel-content {
-  padding-left: 0;
+  padding-left: 0px;
 }
 
 .home .panel-icon {
@@ -302,12 +302,12 @@ display:none;
 }
 
 .home .widget_search {
-	padding: 0 !important;
+	padding: 0px !important;
 	background-image: url(https://www.healthwatchbucks.co.uk/wp-content/themes/scaffold-child/images/frontpage.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 0% 5%;
-	border-radius: 0;
+	border-radius: 0px;
 }
 
 .home .widget_search .ajaxsearchpro {
@@ -325,7 +325,7 @@ display:none;
 
 .home .row h3 {
 	margin:0 !important;
-	padding-top: 0;
+	padding-top: 0px;
 	padding-bottom: .5rem;
 }
 
@@ -336,7 +336,7 @@ display:none;
 .home .strap {
 	text-align: center;
 	padding: 2rem;
-	margin-top: 0;
+	margin-top: 0px;
 }
 
 .home .strap h2 {
@@ -350,7 +350,7 @@ display:none;
 
 .home .shade {
 	background-color: rgba(35, 82, 124, 0.5);
-	padding: 0;
+	padding: 0px;
 }
 
 .home .shade h2 {
@@ -360,7 +360,7 @@ display:none;
 }
 
 .home .feedback .row {
-	margin-bottom: 0;
+	margin-bottom: 0px;
 }
 
 .home .service-icon-container {
@@ -383,7 +383,7 @@ display:none;
 
 .home .subitem-container {
 	margin-bottom: 2rem;
-	padding: 0;
+	padding: 0px;
 }
 
 .home .feedback .subitem-container .subitem {
@@ -405,17 +405,17 @@ display:none;
 /* Bootstrap Alerts
 -------------------- */
 
-.alert-scaffold {
+.scaffold-alert {
 	padding: 5px 35px 5px 15px !important;
 	font-weight: normal !important;
 	border-left: none;
 	border-right: none;
 	position: fixed;
-	bottom: 0;
+	bottom: 0px;
 	z-index: 500;
 	display: inline-block;
-	margin-bottom: 0;
-	border-radius: 0;
+	margin-bottom: 0px;
+	border-radius: 0px;
 	width: 100%;
 }
 
@@ -428,12 +428,12 @@ input.no-asterisk{
 }
 
 .your-story {
-    margin-top: 0;
+    margin-top: 0px;
 }
 
 .inline-label {
 	vertical-align: middle;
-	padding: 0 5px 0 0;
+	padding: 0 0.5rem 0 0;
 }
 
 .regular-checkbox {
