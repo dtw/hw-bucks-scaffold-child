@@ -43,7 +43,7 @@ if ( is_admin() && 'edit.php' == $pagenow && !isset($_GET['orderby'])) {
 
 add_filter('pre_get_posts', 'set_post_order_in_admin', 5 );
 
-function mytheme_comment($comment, $args, $depth) {
+function scaffold_threaded_comments($comment, $args, $depth) {
   if ( 'div' === $args['style'] ) {
     $tag       = 'div';
     $add_below = 'comment';
