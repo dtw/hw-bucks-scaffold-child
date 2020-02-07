@@ -405,7 +405,7 @@ display:none;
 /* Bootstrap Alerts
 -------------------- */
 
-.alert-scaffold {
+.scaffold-alert {
 	padding: 5px 35px 5px 15px !important;
 	font-weight: normal !important;
 	border-left: none;
