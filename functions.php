@@ -44,56 +44,49 @@ if ( is_admin() && 'edit.php' == $pagenow && !isset($_GET['orderby'])) {
 add_filter('pre_get_posts', 'set_post_order_in_admin', 5 );
 
 function mytheme_comment($comment, $args, $depth) {
-    if ( 'div' === $args['style'] ) {
-        $tag       = 'div';
-        $add_below = 'comment';
-    } else {
-        $tag       = 'li';
-        $add_below = 'div-comment';
-    }?>
-    <<?php echo $tag; ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?> id="comment-<?php comment_ID() ?>"><?php
-    if ( 'div' != $args['style'] ) { ?>
-        <div id="div-comment-<?php comment_ID() ?>" class="comment-body"><?php
-    } ?>
-        <div class="comment-author vcard"><?php
-            if ( $args['avatar_size'] != 0 ) {
-                echo get_avatar( $comment, $args['avatar_size'] );
-            }
+  if ( 'div' === $args['style'] ) {
+    $tag       = 'div';
+    $add_below = 'comment';
+  } else {
+    $tag       = 'li';
+    $add_below = 'div-comment';
+  }?>
+  <<?php echo $tag; ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?> id="comment-<?php comment_ID() ?>"><?php
+  if ( 'div' != $args['style'] ) { ?>
+    <div id="div-comment-<?php comment_ID() ?>" class="comment-body"><?php
+  } ?>
+      <div class="comment-author vcard"><?php
+        if ( $args['avatar_size'] != 0 ) {
+          echo get_avatar( $comment, $args['avatar_size'] );
+        }
+				$author_name = get_comment_author();
+				if ($author_name == 'Anonymous') {
+				printf( __( '<strong>Commenter</strong> said on ' ), get_comment_author_link() ); echo get_comment_date();
+					} else {
+				echo "<p><img width='200' src='https://www.healthwatchbucks.co.uk/wp-content/uploads/2017/02/HW_Bucks_CMYK.svg' alt='Healthwatch Bucks' id='HWBucksCommentLogo'/></p>";
+				printf( __( 'On ' ), get_comment_author_link() ); echo get_comment_date();
+				}?>
+      </div><?php
+      if ( $comment->comment_approved == '0' ) { ?>
+        <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></em><br/><?php
+      } ?>
+      <?php comment_text(); ?>
 
-
-
-	$author_name = get_comment_author();
-	if ($author_name == 'Anonymous') {
-printf( __( '<strong>Commenter</strong> said on ' ), get_comment_author_link() ); echo get_comment_date();
-		} else {
-echo "<p><img width='200' src='https://www.healthwatchbucks.co.uk/wp-content/uploads/2017/02/HW_Bucks_CMYK.svg' alt='Healthwatch Bucks' id='HWBucksCommentLogo'/></p>";
-printf( __( 'On ' ), get_comment_author_link() ); echo get_comment_date();
-		}
-
-
-
-             ?>
-        </div><?php
-        if ( $comment->comment_approved == '0' ) { ?>
-            <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></em><br/><?php
-        } ?>
-        <?php comment_text(); ?>
-
-        <div class="reply"><?php
-                comment_reply_link(
-                    array_merge(
-                        $args,
-                        array(
-                            'add_below' => $add_below,
-                            'depth'     => $depth,
-                            'max_depth' => $args['max_depth']
-                        )
-                    )
-                ); ?>
-        </div><?php
-    if ( 'div' != $args['style'] ) : ?>
-        </div><?php
-    endif;
+      <div class="reply"><?php
+      comment_reply_link(
+        array_merge(
+          $args,
+          array(
+            'add_below' => $add_below,
+            'depth'     => $depth,
+            'max_depth' => $args['max_depth']
+          )
+        )
+      ); ?>
+      </div><?php
+  		if ( 'div' != $args['style'] ) : ?>
+    </div><?php
+  endif;
 }
 
 if ( function_exists('register_sidebar') )
