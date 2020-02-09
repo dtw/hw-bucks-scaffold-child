@@ -63,9 +63,12 @@ function scaffold_threaded_comments($comment, $args, $depth) {
 				if ($author_name == 'Anonymous') {
 				printf( __( '<strong>Commenter</strong> said on ' ), get_comment_author_link() ); echo get_comment_date();
 					} else {
-				echo "<p><img width='200' src='https://www.healthwatchbucks.co.uk/wp-content/uploads/2017/02/HW_Bucks_CMYK.svg' alt='Healthwatch Bucks' id='HWBucksCommentLogo'/></p>";
-				printf( __( 'On ' ), get_comment_author_link() ); echo get_comment_date();
-				}?>
+				echo "<div class='vcard-container'><p>";
+					printf( __( '<strong>Healthwatch Bucks</strong> replied on ' ), get_comment_author_link() ); echo get_comment_date();?>
+					</p>
+					<img src='https://www.healthwatchbucks.co.uk/wp-content/uploads/2017/02/HW_Bucks_CMYK.svg' alt='Healthwatch Bucks' id='HWBucksCommentLogo' aria-aria-hidden="true" />
+				</div>
+				<?php } ?>
       </div><?php
       if ( $comment->comment_approved == '0' ) { ?>
         <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></em><br/><?php
