@@ -125,7 +125,7 @@ display:none;
 }
 
 #comments ul ul {
-	padding-left: 8rem !important;
+	padding: 1.5rem 0 0 1.5rem !important;
 }
 
 #comments ul {
