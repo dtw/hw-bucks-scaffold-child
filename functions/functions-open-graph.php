@@ -14,7 +14,7 @@ function insert_fb_in_head() {
 		return;
 		
 // Standard OG for Facebook
-		
+				echo '<!-- scaffold OG for Facebook -->';
         echo '<meta property="og:title" content="' . get_the_title() . '"/>';
         echo '<meta property="og:description" content="' . get_the_excerpt() . '"/>';
         echo '<meta property="og:type" content="article"/>';
@@ -32,7 +32,7 @@ function insert_fb_in_head() {
 
 
 // Twitter
-
+		echo '<!-- scaffold meta for Twitter -->';
 		echo '<meta name="twitter:card" content="summary_large_image" />';
 		echo '<meta name="twitter:creator" content="@HW_Bucks" />';
 		echo '<meta name="twitter:title" content="' . get_the_title() . '" />';
