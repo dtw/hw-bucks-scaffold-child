@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.20.0] - 2020-02-10
+### Changed
+- minor CSS changes
+- renamed mytheme_comment() to scaffold_threaded_comments()
+- spacing and style in the comments sections
+
+### Added
+- a new template for yarpp that uses bootstrap media classes
+
 ## [1.19.1] - 2020-01-28
 ### Changed
 - minor CSS updates
