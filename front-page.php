@@ -20,7 +20,7 @@
 	<div id="content">
 		<div class="row">
 		<!-- Front Page top widget -->
-		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Front Page Widget") ) : ?>
+		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Front Page") ) : ?>
 		<?php endif;?>
 		</div>
 	</div>

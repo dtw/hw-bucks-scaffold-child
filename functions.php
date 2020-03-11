@@ -94,7 +94,7 @@ function scaffold_threaded_comments($comment, $args, $depth) {
 
 if ( function_exists('register_sidebar') )
   register_sidebar(array(
-    'name' => 'Front Page Widget',
+    'name' => 'Front Page',
     'before_widget' => '<div class="row">',
     'after_widget' => '</div>',
     'before_title' => '<h3>',
