@@ -471,3 +471,40 @@ input.no-asterisk{
 	left: 3px;
 	color: var(--hw-pink);
 }
+
+/* Coronavirus styles */
+.home .panel-coronavirus h2 {
+	color: rgb(136,202,129);
+}
+
+.home .panel-coronavirus,
+.home .panel-coronavirus .panel-icon-img {
+	border: rgb(136,202,129) solid 2px !important;
+	background-color: rgb(7,6,10);
+}
+
+.home .panel-coronavirus:hover,
+.home .panel-coronavirus .panel-icon-img:hover {
+	border: #C4FF3E solid 2px !important;
+}
+
+.home .panel-coronavirus .panel-icon-img {
+	border: rgb(136,202,129) solid 1px;
+}
+
+.home .panel-coronavirus .panel-content a {
+	color:white;
+}
+
+.home .panel-coronavirus .panel-content a:hover,
+.home .panel-coronavirus .panel-content a:focus {
+	background-color: white;
+	color: black;
+	outline: 3px solid white;
+	text-decoration: none;
+	outline-offset: 0px;
+}
+
+.home .panel-coronavirus .title-link {
+	margin-bottom: 0;
+}
