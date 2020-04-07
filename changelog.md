@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.20.2] - 2020-03-19
+### Added
+- Added coronavirus styles based on PHE branding
+
+## [1.20.1] - 2020-03-11
+### Added
+- Signposting & Complaints landing page
+
+### Changed
+- some function/variable name changes
+
 ## [1.20.0] - 2020-02-10
 ### Changed
 - minor CSS changes
