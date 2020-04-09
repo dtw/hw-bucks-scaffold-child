@@ -512,17 +512,11 @@ input.no-asterisk{
 /* Cookie Notice duplicate styles */
 
 #cookie-notice {
- position:fixed;
- min-width:100%;
  height:auto;
- z-index:100000;
- font-size:13px;
- letter-spacing:0;
- line-height:20px;
- left:0;
- text-align:center;
- font-weight:400;
- font-family:-apple-system,BlinkMacSystemFont,Arial,Roboto,"Helvetica Neue",sans-serif
+ font-size:1.6rem;
+ line-height:2.4rem;
+ font-family:'Open Sans', sans-serif;
+ background-color: #f7f7f7 !important;
 }
 #cookie-notice,
 #cookie-notice * {
@@ -559,6 +553,7 @@ input.no-asterisk{
  bottom:0
 }
 .cookie-notice-container {
+	color: black !important;
  padding:15px 30px;
  text-align:center;
  width:100%;
@@ -602,7 +597,7 @@ input.no-asterisk{
  margin:0
 }
 #cookie-notice .cn-button {
- margin-left:10px
+ margin:0 0 0 10px;
 }
 .cn-button {
  font-family:-apple-system,BlinkMacSystemFont,Arial,Roboto,"Helvetica Neue",sans-serif;
@@ -638,8 +633,8 @@ input.no-asterisk{
  line-height:2.15384615
 }
 .cn-button.wp-default {
- color:#fff;
- background:#fbb03b
+	background-color: var(--url-blue);
+	color: white;
 }
 .cn-button.bootstrap {
  color:#fff;
@@ -650,5 +645,5 @@ input.no-asterisk{
 }
 .cn-buttons-container,
 .cn-text-container {
- display:inline-block
+ display:block;
 }
