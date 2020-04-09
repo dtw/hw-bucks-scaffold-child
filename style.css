@@ -565,33 +565,7 @@ input.no-asterisk{
  z-index:1
 }
 .cn-close-icon {
- position:absolute;
- right:15px;
- top:50%;
- margin-top:-10px;
- width:15px;
- height:15px;
- opacity:.5;
- padding:10px;
- outline:0
-}
-.cn-close-icon:hover {
- opacity:1
-}
-.cn-close-icon:after,
-.cn-close-icon:before {
- position:absolute;
- content:' ';
- height:15px;
- width:2px;
- top:3px;
- background-color:#fff
-}
-.cn-close-icon:before {
- transform:rotate(45deg)
-}
-.cn-close-icon:after {
- transform:rotate(-45deg)
+ display:none;
 }
 #cookie-notice .cn-revoke-cookie {
  margin:0
