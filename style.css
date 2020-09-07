@@ -518,6 +518,80 @@ input.no-asterisk{
 .home .panel-coronavirus .panel-updated {
 	font-weight: 700;
 }
+
+/* Bootstrap Buttons for Panels */
+
+.panel-turquoise .btn-primary {
+	background-color: #1CFFEF;
+	color: white;
+	background-image: none;
+}
+
+.panel-turquoise .btn-primary:hover {
+	background-color: white;
+	border-color: #1CFFEF;
+	color: #1CFFEF;
+}
+
+.panel-orange .btn-primary {
+	background-color: var(--hw-orange);
+	color: white;
+	background-image: none;
+}
+
+.panel-orange .btn-primary:hover {
+	background-color: white;
+	border-color: var(--hw-orange);
+	color: var(--hw-orange);
+}
+
+.panel-pink .btn-primary {
+	background-color: var(--hw-pink);
+	color: white;
+	background-image: none;
+}
+
+.panel-pink .btn-primary:hover {
+	background-color: white;
+	border-color: var(--hw-pink);
+	color: var(--hw-pink);
+}
+
+.panel-blue .btn-primary {
+	background-color: var(--url-blue);
+	color: white;
+	background-image: none;
+}
+
+.panel-blue .btn-primary:hover {
+	background-color: white;
+	border-color: var(--url-blue);
+	color: var(--url-blue);
+}
+
+.panel-green .btn-primary {
+	background-color: #0080A4;
+	color: white;
+	background-image: none;
+}
+
+.panel-green .btn-primary:hover {
+	background-color: white;
+	border-color: #0080A4;
+	color: #0080A4;
+}
+
+.panel-coronavirus .btn-primary {
+	background-color: black;
+	color: #88ca81;
+	background-image: none;
+	border-color: #88ca81;
+}
+
+.panel-coronavirus .btn-primary:hover {
+	background-color: #88ca81;
+	border-color: #88ca81;
+	color: black;
 }
 
 /* Cookie Notice duplicate styles */
