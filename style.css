@@ -510,8 +510,14 @@ input.no-asterisk{
 	outline-offset: 0px;
 }
 
-.home .panel-coronavirus .title-link {
-	margin-bottom: 0;
+.home .panel-coronavirus .panel-excerpt,
+.home .panel-coronavirus .panel-updated {
+	color: white;
+}
+
+.home .panel-coronavirus .panel-updated {
+	font-weight: 700;
+}
 }
 
 /* Cookie Notice duplicate styles */
