@@ -182,7 +182,6 @@ display:none;
 }
 
 .home .panel .city {
-	margin-bottom: 2rem;
 	color: #666;
 	font-size: 2.5rem;
 	display: inline-block;
@@ -203,13 +202,19 @@ display:none;
 }
 
 .home .panel .title-link {
-	margin-bottom: 2rem;
 	font-size: 2.5rem;
 	font-weight: 700 !important;
 	display: inline-block;
 }
 
+.home .panel .panel-excerpt,
+.home .panel .panel-updated {
+	margin-top: 2rem;
+	margin-bottom: 0;
+}
+
 .home .panel .btn {
+	margin-top: 20px;
 	margin-bottom: 0px;
 }
 
