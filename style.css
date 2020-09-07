@@ -497,12 +497,12 @@ input.no-asterisk{
 	border: rgb(136,202,129) solid 1px;
 }
 
-.home .panel-coronavirus .panel-content a {
+.home .panel-coronavirus .panel-content .title-link {
 	color:white;
 }
 
-.home .panel-coronavirus .panel-content a:hover,
-.home .panel-coronavirus .panel-content a:focus {
+.home .panel-coronavirus .panel-content .title-link:hover,
+.home .panel-coronavirus .panel-content .title-link:focus {
 	background-color: white;
 	color: black;
 	outline: 3px solid white;
