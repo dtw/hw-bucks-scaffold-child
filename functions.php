@@ -95,6 +95,7 @@ function scaffold_threaded_comments($comment, $args, $depth) {
 if ( function_exists('register_sidebar') )
   register_sidebar(array(
     'name' => 'Front Page',
+    'id' => 'front_page',
     'before_widget' => '<div class="row">',
     'after_widget' => '</div>',
     'before_title' => '<h3>',
@@ -105,6 +106,7 @@ if ( function_exists('register_sidebar') )
 if ( function_exists('register_sidebar') )
   register_sidebar(array(
     'name' => 'Rate & Review Page',
+    'id' => 'rate_and_review_page',
     'before_widget' => '<div class="row">',
     'after_widget' => '</div>',
     'before_title' => '<h3>',
@@ -115,6 +117,7 @@ if ( function_exists('register_sidebar') )
 if ( function_exists('register_sidebar') )
   register_sidebar(array(
     'name' => 'Your Feedback Page',
+    'id' => 'your_feedback_page',
     'before_widget' => '<div class="row">',
     'after_widget' => '</div>',
     'before_title' => '<h3>',
@@ -125,6 +128,7 @@ if ( function_exists('register_sidebar') )
 if ( function_exists('register_sidebar') )
   register_sidebar(array(
     'name' => 'Signposting & Complaints Page',
+    'id' => 'signpost_and_complaints_page',
     'before_widget' => '<div class="row">',
     'after_widget' => '</div>',
     'before_title' => '<h3>',
