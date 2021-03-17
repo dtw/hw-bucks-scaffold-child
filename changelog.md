@@ -6,6 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.21.1] - 2020-11-26
+### Changed
+- add ids to register_sidebar functions
+
+## [1.21.0] - 2020-09-07
+### Changed
+- CSS including panel .btn styles from parent, fixed coronavirus title and anchor styles
+
+## [1.20.3] - 2020-04-09
+### Changed
+- minor CSS changes for cookie notices
+
 ## [1.20.2] - 2020-03-19
 ### Added
 - Added coronavirus styles based on PHE branding
