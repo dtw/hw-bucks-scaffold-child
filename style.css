@@ -644,6 +644,14 @@ input.no-asterisk{
  width:100%;
  z-index:2
 }
+.cookie-notice-container a {
+	color:var(--hw-blue);
+}
+.cookie-notice-container a:hover, .cookie-notice-container a:focus {
+	color: #FAFAFA;
+	background-color: var(--hw-blue);
+	outline: 3px solid var(--hw-blue);
+}
 .cookie-revoke-container {
  padding:15px 30px;
  width:100%;
