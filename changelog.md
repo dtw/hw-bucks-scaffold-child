@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.21.2] - 2021-03-17
+### Changed
+- update styles for cookie notice anchors
+
 ## [1.21.1] - 2020-11-26
 ### Changed
 - add ids to register_sidebar functions
