@@ -597,10 +597,10 @@ input.no-asterisk{
 /* Cookie Notice duplicate styles */
 
 #cookie-notice {
- height:auto;
- font-size:1.6rem;
- line-height:2.4rem;
- font-family:'Open Sans', sans-serif;
+ height:auto !important;
+ font-size:1.6rem !important;
+ line-height:2.4rem !important;
+ font-family:'Open Sans', sans-serif !important;
  background-color: #f7f7f7 !important;
 }
 #cookie-notice,
@@ -620,16 +620,16 @@ input.no-asterisk{
  animation-duration:1ms!important
 }
 #cookie-notice .cookie-notice-container {
- display:block
+ display:block !important;
 }
 #cookie-notice.cookie-notice-hidden .cookie-notice-container {
- display:none
+ display:none !important;
 }
 #cookie-notice .cookie-revoke-container {
- display:block
+ display:block !important;
 }
 #cookie-notice.cookie-revoke-hidden .cookie-revoke-container {
- display:none
+ display:none !important;
 }
 .cn-position-top {
  top:0
@@ -666,12 +666,12 @@ input.no-asterisk{
 #cookie-notice .cn-button {
  margin:0 0 0 10px;
 }
-.cn-button {
- font-family:-apple-system,BlinkMacSystemFont,Arial,Roboto,"Helvetica Neue",sans-serif;
- font-weight:400;
- font-size:13px;
- letter-spacing:.25px;
- line-height:20px;
+.cn-button.wp-default {
+ font-family: "Open Sans", sans-serif !important;
+ font-weight:700 !important;
+ font-size:1.8rem !important;
+ letter-spacing:.05rem !important;
+ line-height:20px
  margin:0;
  padding:0;
  text-align:center;
@@ -679,38 +679,42 @@ input.no-asterisk{
  display:inline-block;
  cursor:pointer;
  touch-action:manipulation;
- white-space:nowrap;
+ white-space:normal !important;
  outline:0;
  box-shadow:none;
  text-shadow:none;
  border:none;
  -webkit-border-radius:3px;
  -moz-border-radius:3px;
- border-radius:3px
+ border-radius:3px;
 }
-.cn-button:hover {
- box-shadow:inset 0 0 0 99999px rgba(0,0,0,.05);
- text-decoration:none
+.cn-button:hover,
+.cn-button.wp-default:hover {
+ 	text-decoration:none;
+	border-color: var(--url-blue) !important;
+	color: #FAFAFA !important;
+	background-color: var(--hw-blue) !important;
+	outline: 3px solid var(--hw-blue);
 }
 .cn-button.bootstrap,
 .cn-button.wp-default {
  min-height:30px;
  text-decoration:none;
- padding:0 10px;
- line-height:2.15384615
+ padding:0 10px !important;
+ line-height:2.15384615 !important;
 }
 .cn-button.wp-default {
-	background-color: var(--url-blue);
-	color: white;
+	background: var(--url-blue) !important;
+	color: white !important;
 }
 .cn-button.bootstrap {
  color:#fff;
- background:#00a99d
+ background:#00a99d;
 }
 .cn-text-container {
  margin:0 0 6px 0
 }
 .cn-buttons-container,
 .cn-text-container {
- display:block;
+ display:block !important;
 }
