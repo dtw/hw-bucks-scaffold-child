@@ -138,4 +138,15 @@ if ( function_exists('register_sidebar') )
     'after_title' => '</h3>',
   )
 );
+
+if ( function_exists('register_sidebar') )
+  register_sidebar(array(
+    'name' => 'Thanks Page',
+    'id' => 'thanks_page',
+    'before_widget' => '<div class="row">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3>',
+    'after_title' => '</h3>',
+  )
+);
 ?>
