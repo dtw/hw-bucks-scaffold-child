@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.22] - 2021-10-13
+### Added
+- move function-comments.php from main theme
+
 ## [1.21.2] - 2021-03-17
 ### Changed
 - update styles for cookie notice anchors
