@@ -1,5 +1,8 @@
 <?php
 
+// COMMENTS and COMMENT FORM modifications
+	require_once('functions/functions-comments.php');
+
 // ENQUEUE STYLES
 
 	add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
