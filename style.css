@@ -645,7 +645,7 @@ input.no-asterisk{
  z-index:2
 }
 .cookie-notice-container a {
-	color:var(--hw-blue);
+	/*color:var(--hw-blue);*/
 }
 .cookie-notice-container a:hover, .cookie-notice-container a:focus {
 	color: #FAFAFA;
@@ -694,7 +694,7 @@ input.no-asterisk{
 	border-color: var(--url-blue) !important;
 	color: #FAFAFA !important;
 	background-color: var(--hw-blue) !important;
-	outline: 3px solid var(--hw-blue);
+	outline: none !important;
 }
 .cn-button.bootstrap,
 .cn-button.wp-default {
