@@ -121,7 +121,7 @@ add_filter( 'pre_get_document_title', 'modify_page_title', 999, 1 );
                       <textarea tabindex="1" id="comment" name="message_text" type="text" cols="45" rows="4" required="required"><?php echo esc_textarea($_POST['message_text']); ?></textarea>
                     </p>
                     <h2>Your contact details</h2>
-                    <p>If you would like us to contact you about your story, please provide your details below. You can also <a href="https://www.healthwatchbucks.co.uk/contact-us/">contact us</a>.</p>
+                    <p>If you would like us to contact you about your story, please provide your details below. You can also <a href="https://www.healthwatchbucks.co.uk/how-we-work/contact-us/">contact us</a>.</p>
                     <p class="comment-form-author">
                       <label for="message_name">Your name</label>
                       <input placeholder="Your first and last names (optional)" id="author" name="message_name" autocomplete="off" type="text" size="30" tabindex="2" value="<?php echo esc_attr($_POST['message_name']); ?>"/>
