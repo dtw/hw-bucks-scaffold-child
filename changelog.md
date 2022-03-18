@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.23] - 2021-10-14
+### Added
+- template-thanks page - customisable landing page
+- sidebar for Thanks page
+- about-you page and css - send commentors to off-site survey
+- return page - capture users returning from off-site surveys and process to template-thanks pages
+
+### Changed
+- Cookie Notice button css
+
 ## [1.22] - 2021-10-13
 ### Added
 - move function-comments.php from main theme
