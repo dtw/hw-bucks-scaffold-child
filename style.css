@@ -216,6 +216,7 @@ display:none;
 .home .panel .btn {
 	margin-top: 20px;
 	margin-bottom: 0px;
+	padding: 0.6rem 1.2rem;
 }
 
 .home .panel-icon-img {
@@ -717,4 +718,32 @@ input.no-asterisk{
 .cn-buttons-container,
 .cn-text-container {
  display:block !important;
+}
+
+/* About you */
+
+#referral-buttons {
+	/* padding-left: 0; */
+	margin-bottom: 20px;
+	border: 1px var(--hw-orange) solid;
+	padding: 1.2rem;
+	background-color: #f0f0f0;
+	border-radius: 3px;
+}
+
+.far.fa-heart {
+	color: var(--hw-orange);
+	font-size: 10rem;
+}
+
+#no-button a {
+	font-size: 1.6rem;
+}
+
+#clipboard-cropped {
+	width: 200px;
+	height: 200px;
+	background-image: url('https://www.healthwatchbucks.co.uk/wp-content/uploads/2016/07/Icon-Badge-Clipboard-Staff-Patient-300x300.png');
+	background-position: center center;
+	background-repeat: no-repeat;
 }
