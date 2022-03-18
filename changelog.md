@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.23.2] - 2021-12-16
+### Changed
+- fix Contact Us link on Your Story page
+
 ## [1.23.1] - 2021-10-15
 ### Changed
 - update front page lead line wording
