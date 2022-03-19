@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.23.3] - 2022-03-19
+### Changed
+- replace hex colours with var
+
 ## [1.23.2] - 2021-12-16
 ### Changed
 - fix Contact Us link on Your Story page
