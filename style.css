@@ -15,7 +15,7 @@
 }
 
 #hwbucks .toprow {
-	background: #0080A4;
+	background: var(--url-blue);
 	color: white;
 }
 
@@ -571,15 +571,15 @@ input.no-asterisk{
 }
 
 .panel-green .btn-primary {
-	background-color: #0080A4;
+	background-color: var(--url-blue);
 	color: white;
 	background-image: none;
 }
 
 .panel-green .btn-primary:hover {
 	background-color: white;
-	border-color: #0080A4;
-	color: #0080A4;
+	border-color: var(--url-blue);
+	color: var(--url-blue);
 }
 
 .panel-coronavirus .btn-primary {
