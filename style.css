@@ -50,7 +50,7 @@
 .widget_search h2,
 #mailchimp-title h2 {
 	text-shadow: #000 1px 1px 1px;
-	font-weight: 700;
+	font-weight: 600;
 	color: #fff;
 	text-align: left;
 	padding:0px;
@@ -67,7 +67,7 @@
 }
 
 h3 {
-	font-weight: 700;
+	font-weight: 600;
 }
 
 .feedback .row {
@@ -166,7 +166,7 @@ display:none;
 
 .home .panel h1 {
 	text-shadow: #f2f2f2 1px 1px 1px;
-	font-weight: 700;
+	font-weight: 600;
 	color: rgb(0,79,107);
 	margin:0;
 	padding-left: 1.5rem;
@@ -323,7 +323,7 @@ display:none;
 .home .widget_search p,
 .home .widget_search h2 {
 	text-shadow: #000 1px 1px 1px;
-	font-weight: 700;
+	font-weight: 600;
 	color: white;
 	text-align: left;
 	padding:0px;
@@ -336,7 +336,7 @@ display:none;
 }
 
 .home h3 {
-	font-weight: 700;
+	font-weight: normal;
 }
 
 .home .strap {
@@ -517,7 +517,7 @@ input.no-asterisk{
 }
 
 .home .panel-coronavirus .panel-updated {
-	font-weight: 700;
+	font-weight: 600;
 }
 
 /* Bootstrap Buttons for Panels */
