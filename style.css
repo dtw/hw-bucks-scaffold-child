@@ -258,13 +258,13 @@ display:none;
 
 .home .panel-blue,
 .home .panel-blue .panel-icon-img {
-	border: rgba(185,239, 255,.8) solid 2px !important;
-	background-color: rgba(185,239, 255,.8);
+	border: var(--hw-light-blue-50) solid 2px !important;
+	background-color: var(--hw-light-blue-50);
 }
 
 .home .panel-blue:hover,
 .home .panel-blue .panel-icon-img:hover {
-	border: #2FD1FF solid 2px !important;
+	border: var(--hw-blue) solid 2px !important;
 }
 
 .home .panel-green,
