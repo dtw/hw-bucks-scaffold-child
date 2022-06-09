@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.24] - 2022-06-09
+### Added
+- page-link.php - tool for checking and listing matching URLs
+- error message when no src argument detected in return.php
+
 ## [1.23.3] - 2022-03-19
 ### Changed
 - replace hex colours with var
