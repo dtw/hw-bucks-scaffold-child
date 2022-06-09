@@ -10,6 +10,8 @@
 		$location = $the_url . '/thanks-' . $src . '/';
     wp_safe_redirect( $location, 303 );
     exit;
-};
+	} else {
+		echo "No src detected.";
+	}
 
 ?>
