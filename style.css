@@ -323,6 +323,55 @@ display:none;
   border: var(--hw-teal) solid 8px !important;
 }
 
+/* Panel btn rules
+-------------------- */
+
+.panel .btn-blue {
+  background-color: var(--hw-blue);
+}
+
+.panel .btn-gold {
+  background-color: var(--hw-yellow);
+  color: black;
+}
+
+.panel .btn-teal {
+  background-color: var(--hw-teal);
+  color: black;
+}
+
+.panel .btn-light-blue {
+  background-color: var(--hw-light-blue);
+  color: black;
+}
+
+.panel .btn-blue:hover {
+	background-color: var(--hw-blue-50);
+	border-color: var(--hw-blue);
+  color: black;
+}
+
+.panel .btn-gold:hover {
+	background-color: var(--hw-yellow-50);
+	border-color: var(--hw-yellow);
+	color: black;
+}
+
+.panel .btn-teal:hover {
+	background-color: var(--hw-teal-50);
+	border-color: var(--hw-teal);
+  color: black;
+}
+
+.panel .btn-light-blue:hover {
+	background-color: var(--hw-light-blue-50);
+	border-color: var(--hw-light-blue);
+  color: black;
+}
+
+/* Panel text rules
+-------------------- */
+
 .home .panel-text {
 	padding-left: 0px;
 }
