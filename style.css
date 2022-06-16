@@ -165,6 +165,10 @@ display:none;
 	border-width: 2px;
 	border-style: solid;
 }
+
+.home .panel .panel-icon-img {
+	border-width: 8px;
+	border-style: solid;
 }
 
 .home .panel h1 {
@@ -295,6 +299,25 @@ display:none;
 .home .panel-grey .panel-icon-img:hover {
 	border-color: var(--hw-dark-grey) !important;
 }
+
+/* Panel image border colours
+-------------------- */
+
+.home .panel-grey .panel-icon-img,
+.home .panel .panel-icon-img .border-colour-none {
+  border: #000 solid 0px !important;
+}
+.home .panel .panel-icon .border-colour-blue {
+  border: var(--hw-blue) solid 8px !important;
+}
+.home .panel .panel-icon .border-colour-gold {
+  border: var(--hw-yellow) solid 8px !important;
+}
+.home .panel .panel-icon .border-colour-pink {
+  border: var(--hw-pink) solid 8px !important;
+}
+.home .panel .panel-icon .border-colour-teal {
+  border: var(--hw-teal) solid 8px !important;
 }
 
 .home .panel-text {
