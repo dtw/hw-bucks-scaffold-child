@@ -446,12 +446,14 @@ display:none;
 }
 
 .home #search-box {
-	background-color: rgba(35, 82, 124, 0.8);
+	/* CC is 80% trans */
+	background-color: #004f6bcc;
 	padding: 3rem;
 }
 
 .home .shade {
-	background-color: rgba(35, 82, 124, 0.5);
+	/* 4D is 30% trans */
+	background-color: #004F6B4D;
 	padding: 0px;
 }
 
