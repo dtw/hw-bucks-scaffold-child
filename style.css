@@ -347,8 +347,8 @@ display:none;
 }
 
 .panel .btn-light-blue {
-  background-color: var(--hw-light-blue);
-  color: black;
+  background-color: var(--hw-light-blue-50);
+  color: var(--hw-blue);
 }
 
 .panel .btn-blue:hover {
@@ -370,9 +370,9 @@ display:none;
 }
 
 .panel .btn-light-blue:hover {
-	background-color: var(--hw-light-blue-50);
+	background-color: var(--hw-blue);
 	border-color: var(--hw-light-blue);
-  color: black;
+  color: white;
 }
 
 /* Panel text rules
