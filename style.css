@@ -241,7 +241,7 @@ display:none;
 
 .home .panel-teal,
 .home .panel-teal .panel-icon-img {
-	background-color: var(--hw-teal-30);
+	background-color: var(--hw-teal-50);
 }
 
 .home .panel-teal {
@@ -255,7 +255,7 @@ display:none;
 
 .home .panel-gold,
 .home .panel-gold .panel-icon-img {
-	background-color: var(--hw-yellow-30);
+	background-color: var(--hw-yellow-50);
 }
 
 .home .panel-gold {
