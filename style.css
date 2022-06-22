@@ -335,6 +335,7 @@ display:none;
 
 .panel .btn-blue {
   background-color: var(--hw-blue);
+  color: white;
 }
 
 .panel .btn-gold {
@@ -353,7 +354,7 @@ display:none;
 }
 
 .panel .btn-blue:hover {
-	background-color: var(--hw-blue-50);
+	background-color: var(--hw-light-blue);
 	border-color: var(--hw-blue);
   color: black;
 }
