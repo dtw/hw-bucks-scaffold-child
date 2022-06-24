@@ -299,7 +299,7 @@ display:none;
 
 .home .panel-grey .panel-icon-img,
 .home .panel-icon-left .border-colour-none,
-.home .panel .panel-icon-img .border-colour-none {
+.home .panel .panel-icon .border-colour-none {
   border: #000 solid 0px !important;
 }
 .home .panel-icon-left .border-colour-blue,
