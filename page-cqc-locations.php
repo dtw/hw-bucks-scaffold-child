@@ -60,8 +60,8 @@ foreach ($locations as $key => $current_location) {
 echo '<p>Matched: ' . $matched_count . '/' . $registered_counter . '</p>';
 echo '<h2>Un-matched</h2>';
 
-$unmatched_locations = $api_response->locations;
-foreach ($unmatched_locations as $location) {
+//$unmatched_locations = $api_response->locations;
+foreach ($locations as $location) {
   echo '<p>'. $location->locationName . ' (<a href="https://www.cqc.org.uk/location/' . $location->locationId . '" target="_blank">' . $location->locationId . '</a>)</p>';
 }
 
