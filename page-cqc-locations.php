@@ -16,7 +16,6 @@ $api_response = json_decode(hw_feedback_cqc_api_query_locations(array(
 echo $api_response->firstPageUri;
 // get the total count of results
 $total = $api_response->total;
-$counter = 0;
 $registered_counter = 0;
 $matched_count = 0;
 
@@ -49,17 +48,16 @@ foreach ($locations as $key => $current_location) {
         $matched_count ++;
         // this really is a thing - if we just break the loop, we stay at the same point in the query results, so we need to rollback to the start of the query
         $my_query->rewind_posts();
-        unset($api_response->locations[$counter]);
+        unset($locations[$key]);
         break 1;
       }
     }
   } else {
     // it's not Registered
-    unset($api_response->locations[$counter]);
+    unset($locations[$key]);
   }
-  $counter++;
 }
-echo '<p>Matched: ' . $matched_count . '/' . $registered_counter . '/' . $counter . '</p>';
+echo '<p>Matched: ' . $matched_count . '/' . $registered_counter . '</p>';
 echo '<h2>Un-matched</h2>';
 
 $unmatched_locations = $api_response->locations;
