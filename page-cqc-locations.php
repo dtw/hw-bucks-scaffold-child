@@ -3,6 +3,7 @@
 $executionStartTime = microtime(true);
 
 echo '<h1>CQC Locations</h1>';
+echo '<h2>Matched</h2>';
 
 $api_response = json_decode(hw_feedback_cqc_api_query_locations(array(
       'localAuthority' => 'Buckinghamshire',
@@ -59,7 +60,7 @@ foreach ($locations as $current_location) {
   $counter++;
 }
 echo '<p>Matched: ' . $matched_count . '/' . $registered_counter . '/' . $counter . '</p>';
-echo '<h1>End</h1>';
+echo '<h2>Un-matched</h2>';
 
 $unmatched_locations = $api_response->locations;
 foreach ($unmatched_locations as $location) {
@@ -71,6 +72,6 @@ $executionEndTime = microtime(true);
 // The result will be in seconds and milliseconds.
 $seconds = $executionEndTime - $executionStartTime;
 // Print it out
-echo "This script took $seconds seconds to execute.";
+echo "<p>This script took $seconds seconds to execute.</p>";
 
 ?>
