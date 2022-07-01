@@ -2,9 +2,6 @@
 
 $executionStartTime = microtime(true);
 
-echo '<h1>CQC Locations</h1>';
-echo '<h2>Matched</h2>';
-
 $api_response = json_decode(hw_feedback_cqc_api_query_locations(array(
       'localAuthority' => 'Buckinghamshire',
       'page' => '1',
@@ -13,7 +10,9 @@ $api_response = json_decode(hw_feedback_cqc_api_query_locations(array(
       'partnerCode' => 'HW_BUCKS'
     )));
 
-echo $api_response->firstPageUri;
+echo '<h1>CQC Locations</h1>';
+echo '<p>API Query: <a href="https://api.cqc.org.uk/public/v1' . $api_response->firstPageUri . '" target="_blank">https://api.cqc.org.uk/public/v1' . $api_response->firstPageUri . '</a>)</p>';
+echo '<h2>Matched</h2>';
 // get the total count of results
 $total = $api_response->total;
 $registered_counter = 0;
