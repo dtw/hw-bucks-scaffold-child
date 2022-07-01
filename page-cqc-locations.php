@@ -27,10 +27,8 @@ $my_query = new WP_Query( array(
   )
 );
 
-while ($counter <= $total) {
-  $current_location = $api_response->locations[$counter];
-  // this is always going to be a bit of rough so just in case we'll break if something goes wrong
-  if (!$current_location) {break 1;}
+$locations = $api_response->locations;
+foreach ($locations as $current_location) {
   $current_location_id = $current_location->locationId;
   // get the location details
   $current_location_detail = json_decode(hw_feedback_cqc_api_query_by_id('locations',$current_location_id));
