@@ -61,6 +61,11 @@ foreach ($locations as $current_location) {
 echo '<p>Matched: ' . $matched_count . '/' . $registered_counter . '/' . $counter . '</p>';
 echo '<h1>End</h1>';
 
+$unmatched_locations = $api_response->locations;
+foreach ($unmatched_locations as $location) {
+  echo '<p>'. $location->locationName . ' (<a href="https://www.cqc.org.uk/location/' . $location->locationId . '" target="_blank">' . $location->locationId . '</a>)</p>';
+}
+
 $executionEndTime = microtime(true);
 
 // The result will be in seconds and milliseconds.
