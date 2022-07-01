@@ -28,8 +28,8 @@ $my_query = new WP_Query( array(
   )
 );
 
-$locations = $api_response->locations;
-foreach ($locations as $current_location) {
+$locations = array_values($api_response->locations);
+foreach ($locations as $key => $current_location) {
   $current_location_id = $current_location->locationId;
   // get the location details
   $current_location_detail = json_decode(hw_feedback_cqc_api_query_by_id('locations',$current_location_id));
