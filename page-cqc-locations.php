@@ -50,9 +50,13 @@ while ($counter <= $total) {
         $matched_count ++;
         // this really is a thing - if we just break the loop, we stay at the same point in the query results, so we need to rollback to the start of the query
         $my_query->rewind_posts();
+        unset($api_response->locations[$counter]);
         break 1;
       }
     }
+  } else {
+    // it's not Registered
+    unset($api_response->locations[$counter]);
   }
   $counter++;
 }
