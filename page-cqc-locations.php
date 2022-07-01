@@ -7,8 +7,8 @@ echo '<h1>CQC Locations</h1>';
 $api_response = json_decode(hw_feedback_cqc_api_query_locations(array(
       'localAuthority' => 'Buckinghamshire',
       'page' => '1',
-      'perPage' => '300',
-      'primaryInspectionCategoryCode' => 'P1',
+      'perPage' => '20',
+      'primaryInspectionCategoryCode' => 'P2',
       'partnerCode' => 'HW_BUCKS'
     )));
 
@@ -17,7 +17,7 @@ echo $api_response->firstPageUri;
 $total = $api_response->total;
 $counter = 0;
 $registered_counter = 0;
-$unmatched_count = 0;
+$matched_count = 0;
 
 $my_query = new WP_Query( array(
   'posts_per_page' => -1,
@@ -45,9 +45,9 @@ while ($counter <= $total) {
     while ($my_query->have_posts()) {
       $my_query->the_post();
       $our_location_id = get_post_meta( $post->ID, 'hw_services_cqc_location', true );
-      if ($current_location_id != $our_location_id) {
-        echo '<p>'. $current_location_name . ' (' . $current_location_id . ')</p>';
-        $unmatched_count ++;
+      if ($current_location_id == $our_location_id) {
+        echo '<p>'. $current_location_name . ' (<a href="https://www.cqc.org.uk/location/' . $current_location_id . '" target="_blank">' . $current_location_id . '</a>)</p>';
+        $matched_count ++;
         // this really is a thing - if we just break the loop, we stay at the same point in the query results, so we need to rollback to the start of the query
         $my_query->rewind_posts();
         break 1;
@@ -56,7 +56,7 @@ while ($counter <= $total) {
   }
   $counter++;
 }
-echo '<p>Un-matched: ' . $unmatched_count . '/' . $counter . '</p>';
+echo '<p>Matched: ' . $matched_count . '/' . $registered_counter . '/' . $counter . '</p>';
 echo '<h1>End</h1>';
 
 $executionEndTime = microtime(true);
