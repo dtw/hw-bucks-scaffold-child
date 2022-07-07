@@ -2,13 +2,14 @@
 // Get start time
 $executionStartTime = microtime(true);
 
+$GET_I_C = $_GET["inspection-category"];
 
 // Query CQC API
 $api_response = json_decode(hw_feedback_cqc_api_query_locations(array(
       'localAuthority' => 'Buckinghamshire',
       'page' => '1',
-      'perPage' => '20',
-      'primaryInspectionCategoryCode' => 'P2',
+      'perPage' => '600',
+      'primaryInspectionCategoryCode' => $GET_I_C,
       'partnerCode' => 'HW_BUCKS'
     )));
 
