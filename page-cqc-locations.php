@@ -1,7 +1,9 @@
 <?php
-
+// Get start time
 $executionStartTime = microtime(true);
 
+
+// Query CQC API
 $api_response = json_decode(hw_feedback_cqc_api_query_locations(array(
       'localAuthority' => 'Buckinghamshire',
       'page' => '1',
@@ -35,6 +37,8 @@ $locations = array_values($locations);
 
 echo '<h1>CQC Locations</h1>';
 echo '<p>API Query: <a href="https://api.cqc.org.uk/public/v1' . $api_response->firstPageUri . '" target="_blank">https://api.cqc.org.uk/public/v1' . $api_response->firstPageUri . '</a>)</p>';
+
+// query all local_services posts regardless of status
 $my_query = new WP_Query( array(
   'posts_per_page' => -1,
   'post_type' => 'local_services',
