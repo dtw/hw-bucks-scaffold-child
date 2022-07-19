@@ -20,7 +20,7 @@
             <div class="col-sm-9 col-xs-12">
               <p>By telling us more about yourself, you can help us address poor health outcomes across Buckinghamshire.</p>
               <div id="yes-button">
-                <?php echo '<a class="btn btn-cta" href="https://www.surveymonkey.co.uk/r/HW_BUCKS_DEMO?src=website&id=' . $comment_id . '">Contribute your data</a>';?>
+                <?php echo '<a class="btn btn-cta" href="https://www.smartsurvey.co.uk/s/HW_BUCKS_DEMO/?src=website&id=' . $comment_id . '">Contribute your data</a>';?>
               </div>
               <!--<div id="no-button" class="row">
                 <a href="https://www.healthwatchbucks.co.uk/thanks-website/">No, I don't want to answer these questions</a>
