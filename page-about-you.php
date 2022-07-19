@@ -9,7 +9,9 @@
         <div id="referral-buttons" class="row">
         <?php if ( isset($_COOKIE['comment_id']) ) {
           // read the cookie we set when the comment form was submitted
-          $comment_id = $_COOKIE['comment_id']; ?>
+          $comment_id = $_COOKIE['comment_id'];
+          // now remove the cookie
+          unset($_COOKIE['comment_id']); ?>
           <div class="row">
             <h2>Help our research</h2>
           </div>

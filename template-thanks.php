@@ -3,12 +3,8 @@
   <div class="container">
     <div id="content" role="main" class="col-md-8 col-xs-12">
       <? // for cookie we set when returning
-      if ( isset($_COOKIE['src']) ) {
         echo '<div id="demographics" class="row"><div class="alert alert-success alert-relative" role="alert">Thank you for sharing your demographic data. You can <a href="https://www.healthwatchbucks.co.uk/2021/06/why-were-asking-for-more-information-about-you/">read more about why we need this data</a>.</div></div>';
         }
-      unset($_COOKIE['src']);
-      // just in case
-      unset($_COOKIE['comment_id']);
       ?>
       <div class="row">
 
