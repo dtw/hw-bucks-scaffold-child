@@ -12,7 +12,7 @@ function insert_fb_in_head() {
 	global $post;
 	if ( !is_singular()) //if it is not a post or a page
 		return;
-		
+
 // Standard OG for Facebook
 				echo '<!-- scaffold OG for Facebook -->';
         echo '<meta property="og:title" content="' . get_the_title() . '"/>';

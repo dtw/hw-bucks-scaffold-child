@@ -15,7 +15,7 @@
 }
 
 #hwbucks .toprow {
-	background: var(--url-blue);
+	background: var(--hw-blue);
 	color: white;
 }
 
@@ -50,7 +50,7 @@
 .widget_search h2,
 #mailchimp-title h2 {
 	text-shadow: #000 1px 1px 1px;
-	font-weight: 700;
+	font-weight: 600;
 	color: #fff;
 	text-align: left;
 	padding:0px;
@@ -67,7 +67,7 @@
 }
 
 h3 {
-	font-weight: 700;
+	font-weight: 600;
 }
 
 .feedback .row {
@@ -162,35 +162,36 @@ display:none;
 	padding-bottom: 2rem;
 	margin-bottom: 2rem;
 	transition: 400ms ease-out 100ms;
+	border-width: 2px;
+	border-style: solid;
+}
+
+.home .panel .panel-icon-img {
+	border-width: 8px;
+	border-style: solid;
 }
 
 .home .panel h1 {
 	text-shadow: #f2f2f2 1px 1px 1px;
-	font-weight: 700;
+	font-weight: 600;
 	color: rgb(0,79,107);
 	margin:0;
 	padding-left: 1.5rem;
 }
 
 .home .panel h2 {
-	color: rgba(0,0,0,.6);
-	font-size: 3.2rem;
-	font-weight: 700 !important;
+	color: var(--hw-blue);
+	font-size: 4rem;
+	font-weight: 900 !important;
 	padding: 0px;
 	margin-top:0;
 	line-height: 3.6rem;
 }
 
-.home .panel .city {
-	color: #666;
-	font-size: 2.5rem;
-	display: inline-block;
-	font-weight: 700 !important;
-}
-
-.home .panel .city a {
-	display: inline-block;
-	margin-bottom: 0px;
+.home .panel p,
+.home .panel li {
+  font-size: 1.8rem;
+  line-height: 3rem;
 }
 
 .home .panel .panel-title {
@@ -202,7 +203,7 @@ display:none;
 }
 
 .home .panel .title-link {
-	font-size: 2.5rem;
+	font-size: 3rem;
 	font-weight: 700 !important;
 	display: inline-block;
 }
@@ -217,70 +218,156 @@ display:none;
 	margin-top: 20px;
 	margin-bottom: 0px;
 	padding: 0.6rem 1.2rem;
+	font-weight: 600 !important;
 }
 
 .home .panel-icon-img {
 	transition: 400ms ease-out 100ms;
 }
 
-.home .panel-turquoise,
-.home .panel-turquoise .panel-icon-img {
-	background-color: rgba(179, 255, 249, .8);
-	border: rgba(179, 255, 249, .8) solid 2px !important;
+/* Specific Panel colours
+-------------------- */
+
+.home .panel-teal,
+.home .panel-teal .panel-icon-img {
+	background-color: var(--hw-teal-50);
 }
 
-.home .panel-turquoise:hover,
-.home .panel-turquoise .panel-icon-img:hover {
-	border: #1CFFEF solid 2px !important;
+.home .panel-teal {
+	border-color: var(--hw-teal-70) !important;
 }
 
-.home .panel-orange,
-.home .panel-orange .panel-icon-img {
-	border: rgba(252, 219, 214, .8) solid 2px !important;
-	background-color: rgba(252, 219, 214, .8);
+.home .panel-teal:hover {
+	border-color: var(--hw-teal) !important;
 }
 
-.home .panel-orange:hover,
-.home .panel-orange .panel-icon-img:hover {
-	border: var(--hw-orange) solid 2px !important;
+.home .panel-gold,
+.home .panel-gold .panel-icon-img {
+	background-color: var(--hw-yellow-50);
+}
+
+.home .panel-gold {
+	border-color: var(--hw-yellow-70) !important;
+}
+
+.home .panel-gold:hover {
+	border-color: var(--hw-yellow) !important;
 }
 
 .home .panel-pink,
 .home .panel-pink .panel-icon-img {
-	border: rgba(250,216,234,.8) solid 2px !important;
-	background-color: rgba(250,216,234,.8);
+	background-color: var(--hw-pink-30);
 }
 
-.home .panel-pink:hover,
-.home .panel-pink .panel-icon-img:hover {
-	border: var(--hw-pink) solid 2px !important;
+.home .panel-pink {
+	border-color: var(--hw-pink-70) !important;
 }
 
-.home .panel-blue,
-.home .panel-blue .panel-icon-img {
-	border: rgba(185,239, 255,.8) solid 2px !important;
-	background-color: rgba(185,239, 255,.8);
+.home .panel-pink:hover {
+	border-color: var(--hw-pink) !important;
 }
 
-.home .panel-blue:hover,
-.home .panel-blue .panel-icon-img:hover {
-	border: #2FD1FF solid 2px !important;
+.home .panel-light-blue,
+.home .panel-light-blue .panel-icon-img {
+	background-color: var(--hw-light-blue-50);
 }
 
-.home .panel-green,
-.home .panel-green .panel-icon-img {
-	border: rgba(235,255, 190,.8) solid 2px !important;
-	background-color: rgba(235,255, 190,.8);
+.home .panel-light-blue {
+	border-color: var(--hw-light-blue-70) !important;
 }
 
-.home .panel-green:hover,
-.home .panel-green .panel-icon-img:hover {
-	border: #C4FF3E solid 2px !important;
+.home .panel-light-blue:hover {
+	border-color: var(--hw-light-blue) !important;
 }
 
-.home .panel-green .panel-icon-img {
-	border: rgba(235,255, 190,.8) solid 1px;
+.home .panel-grey,
+.home .panel-grey .panel-icon-img {
+	background-color: var(--hw-pale-grey);
 }
+
+.home .panel-grey {
+	border-color: none !important;
+}
+
+.home .panel-grey:hover,
+.home .panel-grey .panel-icon-img:hover {
+	border-color: var(--hw-dark-grey) !important;
+}
+
+/* Panel image border colours
+-------------------- */
+
+.home .panel-grey .panel-icon-img,
+.home .panel-icon-left .border-colour-none,
+.home .panel .panel-icon .border-colour-none {
+  border: #000 solid 0px !important;
+}
+.home .panel-icon-left .border-colour-blue,
+.home .panel .panel-icon .border-colour-blue {
+  border: var(--hw-blue) solid 8px !important;
+}
+.home .panel-icon-left .border-colour-gold,
+.home .panel .panel-icon .border-colour-gold {
+  border: var(--hw-yellow) solid 8px !important;
+}
+.home .panel-icon-left .border-colour-pink,
+.home .panel .panel-icon .border-colour-pink {
+  border: var(--hw-pink) solid 8px !important;
+}
+.home .panel-icon-left .border-colour-teal,
+.home .panel .panel-icon .border-colour-teal {
+  border: var(--hw-teal) solid 8px !important;
+}
+
+/* Panel btn rules
+-------------------- */
+
+.panel .btn-blue {
+  background-color: var(--hw-blue);
+  color: white;
+}
+
+.panel .btn-gold {
+  background-color: var(--hw-yellow);
+  color: black;
+}
+
+.panel .btn-teal {
+  background-color: var(--hw-teal);
+  color: black;
+}
+
+.panel .btn-light-blue {
+  background-color: var(--hw-light-blue-50);
+  color: var(--hw-blue);
+}
+
+.panel .btn-blue:hover {
+	background-color: var(--hw-light-blue);
+	border-color: var(--hw-blue);
+  color: black;
+}
+
+.panel .btn-gold:hover {
+	background-color: var(--hw-yellow-50);
+	border-color: var(--hw-yellow);
+	color: black;
+}
+
+.panel .btn-teal:hover {
+	background-color: var(--hw-teal-50);
+	border-color: var(--hw-teal);
+  color: black;
+}
+
+.panel .btn-light-blue:hover {
+	background-color: var(--hw-blue);
+	border-color: var(--hw-light-blue);
+  color: white;
+}
+
+/* Panel text rules
+-------------------- */
 
 .home .panel-text {
 	padding-left: 0px;
@@ -309,10 +396,10 @@ display:none;
 
 .home .widget_search {
 	padding: 0px !important;
-	background-image: url(https://www.healthwatchbucks.co.uk/wp-content/themes/scaffold-child/images/frontpage.jpg);
+	background-image: url(https://www.healthwatchbucks.co.uk/wp-content/themes/scaffold-child/images/frontpage1.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: 0% 5%;
+	background-position: 0% 35%;
 	border-radius: 0px;
 }
 
@@ -323,7 +410,7 @@ display:none;
 .home .widget_search p,
 .home .widget_search h2 {
 	text-shadow: #000 1px 1px 1px;
-	font-weight: 700;
+	font-weight: 600;
 	color: white;
 	text-align: left;
 	padding:0px;
@@ -336,7 +423,7 @@ display:none;
 }
 
 .home h3 {
-	font-weight: 700;
+	font-weight: normal;
 }
 
 .home .strap {
@@ -350,12 +437,14 @@ display:none;
 }
 
 .home #search-box {
-	background-color: rgba(35, 82, 124, 0.8);
+	/* CC is 80% trans */
+	background-color: #004f6bcc;
 	padding: 3rem;
 }
 
 .home .shade {
-	background-color: rgba(35, 82, 124, 0.5);
+	/* 4D is 30% trans */
+	background-color: #004F6B4D;
 	padding: 0px;
 }
 
@@ -406,6 +495,7 @@ display:none;
 
 .home .subitem h3 {
 	padding-top: 1rem;
+	font-family: 'Poppins','Open Sans', sans-serif;
 }
 
 /* Bootstrap Alerts
@@ -517,82 +607,7 @@ input.no-asterisk{
 }
 
 .home .panel-coronavirus .panel-updated {
-	font-weight: 700;
-}
-
-/* Bootstrap Buttons for Panels */
-
-.panel-turquoise .btn-primary {
-	background-color: #1CFFEF;
-	color: white;
-	background-image: none;
-}
-
-.panel-turquoise .btn-primary:hover {
-	background-color: white;
-	border-color: #1CFFEF;
-	color: #1CFFEF;
-}
-
-.panel-orange .btn-primary {
-	background-color: var(--hw-orange);
-	color: white;
-	background-image: none;
-}
-
-.panel-orange .btn-primary:hover {
-	background-color: white;
-	border-color: var(--hw-orange);
-	color: var(--hw-orange);
-}
-
-.panel-pink .btn-primary {
-	background-color: var(--hw-pink);
-	color: white;
-	background-image: none;
-}
-
-.panel-pink .btn-primary:hover {
-	background-color: white;
-	border-color: var(--hw-pink);
-	color: var(--hw-pink);
-}
-
-.panel-blue .btn-primary {
-	background-color: var(--url-blue);
-	color: white;
-	background-image: none;
-}
-
-.panel-blue .btn-primary:hover {
-	background-color: white;
-	border-color: var(--url-blue);
-	color: var(--url-blue);
-}
-
-.panel-green .btn-primary {
-	background-color: var(--url-blue);
-	color: white;
-	background-image: none;
-}
-
-.panel-green .btn-primary:hover {
-	background-color: white;
-	border-color: var(--url-blue);
-	color: var(--url-blue);
-}
-
-.panel-coronavirus .btn-primary {
-	background-color: black;
-	color: #88ca81;
-	background-image: none;
-	border-color: #88ca81;
-}
-
-.panel-coronavirus .btn-primary:hover {
-	background-color: #88ca81;
-	border-color: #88ca81;
-	color: black;
+	font-weight: 600;
 }
 
 /* Cookie Notice duplicate styles */
@@ -689,24 +704,12 @@ input.no-asterisk{
  -moz-border-radius:3px;
  border-radius:3px;
 }
-.cn-button:hover,
-.cn-button.wp-default:hover {
- 	text-decoration:none;
-	border-color: var(--url-blue) !important;
-	color: #FAFAFA !important;
-	background-color: var(--hw-blue) !important;
-	outline: none !important;
-}
 .cn-button.bootstrap,
 .cn-button.wp-default {
  min-height:30px;
  text-decoration:none;
  padding:0 10px !important;
  line-height:2.15384615 !important;
-}
-.cn-button.wp-default {
-	background: var(--url-blue) !important;
-	color: white !important;
 }
 .cn-button.bootstrap {
  color:#fff;
