@@ -1,8 +1,12 @@
-<?php /* Template Name: Thanks */ ?>
-<?php get_header(); ?>
+<?php /* Template Name: Thanks */
+global $wp;
+$current_slug = add_query_arg( array(), $wp->request );
+
+get_header(); ?>
   <div class="container">
     <div id="content" role="main" class="col-md-8 col-xs-12">
       <? // for cookie we set when returning
+      if ( $current_slug == 'thanks-website' || $current_slug == 'thanks-signposting' ) {
         echo '<div id="demographics" class="row"><div class="alert alert-success alert-relative" role="alert">Thank you for sharing your demographic data. You can <a href="https://www.healthwatchbucks.co.uk/2021/06/why-were-asking-for-more-information-about-you/">read more about why we need this data</a>.</div></div>';
         }
       ?>
