@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1] - 2022-07-19
+### Changed
+- updated demographic survey handling
+
+## [2.0] - 2022-07-07
+### Changed
+- updated fonts and colours in-line with Healthwatch England rebrand
+- reformatted panels
+- replaced old RGB colours with hex/vars
+- some values from customizer now used in meta tags
+
 ## [1.24] - 2022-06-09
 ### Added
 - page-link.php - tool for checking and listing matching URLs
