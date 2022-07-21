@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - updated demographic survey handling
 
-## [2.0] - 2022-07-07
+## [2.0] - 2022-06-27
 ### Changed
 - updated fonts and colours in-line with Healthwatch England rebrand
 - reformatted panels
