@@ -69,7 +69,7 @@ function scaffold_threaded_comments($comment, $args, $depth) {
 				echo "<div class='vcard-container'><p>";
 					printf( __( '<strong>Healthwatch Bucks</strong> replied on ' ), get_comment_author_link() ); echo get_comment_date();?>
 					</p>
-					<img src='https://www.healthwatchbucks.co.uk/wp-content/uploads/2017/02/HW_Bucks_CMYK.svg' alt='Healthwatch Bucks' id='HWBucksCommentLogo' aria-aria-hidden="true" />
+					<img src='https://www.healthwatchbucks.co.uk/wp-content/uploads/2017/02/HW_Bucks_CMYK.svg' alt='Healthwatch Bucks' id='HWBucksCommentLogo' aria-hidden="true" />
 				</div>
 				<?php } ?>
       </div><?php
