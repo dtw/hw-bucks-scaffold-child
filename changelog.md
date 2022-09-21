@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.1] - 2022-09-12
+
+### Changed
+- fix typo
+
 ## [2.1] - 2022-07-19
 ### Changed
 - updated demographic survey handling
