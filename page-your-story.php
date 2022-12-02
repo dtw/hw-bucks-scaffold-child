@@ -55,7 +55,13 @@
   $captcha_success = json_decode($recaptcha_verify);
 
   //php mailer variables
-  $to = get_option('admin_email');
+  // get options from hw-feedback
+  $options = get_option( 'hw_feedback_options' );
+  if ( $options['hw_feedback_field_your_story_email'] != "") {
+    $to = $options['hw_feedback_field_your_story_email'];
+  } else {
+    $to = get_option('admin_email');
+  }
   $subject = "Someone sent a story via ".get_bloginfo('name');
   //set headers to allow HTML
   $headers = array('Content-Type: text/html; charset=UTF-8');
