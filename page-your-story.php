@@ -124,27 +124,27 @@ add_filter( 'pre_get_document_title', 'modify_page_title', 999, 1 );
                     <p class="comment-form-comment">
                       <label for="comment">What happened?</label>
                       <p>Please tell us what happened. If you can, please make suggestions for improvements. Please do not include any personal information like names or detailed health information.</p>
-                      <textarea tabindex="1" id="comment" name="message_text" type="text" cols="45" rows="4" required="required"><?php echo esc_textarea($_POST['message_text']); ?></textarea>
+                      <textarea tabindex="0" id="comment" name="message_text" type="text" cols="45" rows="4" required="required"><?php echo esc_textarea($_POST['message_text']); ?></textarea>
                     </p>
                     <h2>Your contact details</h2>
                     <p>If you would like us to contact you about your story, please provide your details below. You can also <a href="https://www.healthwatchbucks.co.uk/how-we-work/contact-us/">contact us</a>.</p>
                     <p class="comment-form-author">
                       <label for="message_name">Your name</label>
-                      <input placeholder="Your first and last names (optional)" id="author" name="message_name" autocomplete="off" type="text" size="30" tabindex="2" value="<?php echo esc_attr($_POST['message_name']); ?>"/>
+                      <input placeholder="Your first and last names (optional)" id="author" name="message_name" autocomplete="off" type="text" size="30" tabindex="0" value="<?php echo esc_attr($_POST['message_name']); ?>"/>
                     </p>
                     <p class="comment-form-email">
                       <label for="message_email">Email</label>
-                      <input placeholder="Your email address (optional)" id="email" name="message_email" autocomplete="off" type="text" size="30" tabindex="3" value="<?php echo esc_attr($_POST['message_email']); ?>"/>
+                      <input placeholder="Your email address (optional)" id="email" name="message_email" autocomplete="off" type="text" size="30" tabindex="0" value="<?php echo esc_attr($_POST['message_email']); ?>"/>
                     </p>
                     <p class="comment-form-phone">
                       <label for="message_phone">Phone</label>
-                      <input placeholder="Your phone number (optional)" id="phone" name="message_phone" autocomplete="off" type="text" size="30" tabindex="4" value="<?php echo esc_attr($_POST['message_phone']); ?>"/>
+                      <input placeholder="Your phone number (optional)" id="phone" name="message_phone" autocomplete="off" type="text" size="30" tabindex="0" value="<?php echo esc_attr($_POST['message_phone']); ?>"/>
                     </p>
                     <h2>Privacy</h2>
                     <p>Please review our <a href="https://www.healthwatchbucks.co.uk/privacy/" target="_blank">privacy policy</a>. By ticking the box, you agree that you have read and understood the privacy information provided, and confirm you are over 18.</p>
                     <p class="comment-form-privacy">
                       <label class="inline-label" for="message_privacy">I agree</label>
-                      <input class="no-asterisk regular-checkbox" id="privacy" name="message_privacy" type="checkbox" tabindex="5" required="required">
+                      <input class="no-asterisk regular-checkbox" id="privacy" name="message_privacy" type="checkbox" tabindex="0" required="required">
                     </p>
                     <h2>Robot check</h2>
                     <div class="comment-form-captcha">
@@ -152,7 +152,7 @@ add_filter( 'pre_get_document_title', 'modify_page_title', 999, 1 );
                     </div>
                     <input type="hidden" name="submitted" value="1">
                     <p class="form-submit">
-                      <input name="submit" type="submit" id="submit" class="submit" tabindex="7" value="Send your story" />
+                      <input name="submit" type="submit" id="submit" class="submit" tabindex="0" value="Send your story" />
                     </p>
                   </form>
                 </div>
