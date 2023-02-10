@@ -498,6 +498,33 @@ display:none;
 	font-family: 'Poppins','Open Sans', sans-serif;
 }
 
+/* Compact Panels */
+.compact-item-container {
+	padding-top: 10px;
+}
+
+.compact-item {
+	padding-top: 15px;
+	min-height: 170px;
+}
+
+.compact-item:hover {
+	background: white;
+	border-radius: 5px;
+}
+
+.compact-item .panel-icon-img {
+	border-style: none !important;
+}
+
+.home .panel-feedback {
+	border-color: var(--hw-teal-70) !important;
+}
+
+.home .panel-feedback:hover {
+	border-color: var(--hw-teal) !important;
+}
+
 /* Bootstrap Alerts
 -------------------- */
 
