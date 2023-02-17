@@ -6,8 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [2.1.1] - 2022-09-12
+## [2.1.2] - 2023-02-17
+### Changed
+- update Your Story template to use new email settings in hw-feedback
+- accessibility style updates
 
+### Added
+- styles for new compact recent feedback widget
+
+## [2.1.1] - 2022-09-12
 ### Changed
 - fix typo
 
