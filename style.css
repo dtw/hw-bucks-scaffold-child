@@ -560,6 +560,7 @@ input.no-asterisk{
 }
 
 .regular-checkbox {
+	appearance: none;
 	-webkit-appearance: none;
 	border: 1px solid var(--hw-pink) !important;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
