@@ -141,7 +141,7 @@ add_filter( 'pre_get_document_title', 'modify_page_title', 999, 1 );
                       <input placeholder="Your phone number (optional)" id="phone" name="message_phone" autocomplete="off" type="text" size="30" tabindex="0" value="<?php echo esc_attr($_POST['message_phone']); ?>"/>
                     </p>
                     <h2>Privacy</h2>
-                    <p>Please review our <a href="https://www.healthwatchbucks.co.uk/privacy/" target="_blank">privacy policy</a>. By ticking the box, you agree that you have read and understood the privacy information provided, and confirm you are over 18.</p>
+                    <p>Please review our <a href="<?php echo get_site_url() ?>/privacy/" target="_blank">privacy policy</a>. By ticking the box, you agree that you have read and understood the privacy information provided, and confirm you are over 18.</p>
                     <p class="comment-form-privacy">
                       <label class="inline-label" for="message_privacy">I agree</label>
                       <input class="no-asterisk regular-checkbox" id="privacy" name="message_privacy" type="checkbox" tabindex="0" required="required">
