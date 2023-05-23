@@ -778,3 +778,29 @@ input.no-asterisk{
 	background-position: center center;
 	background-repeat: no-repeat;
 }
+
+/* ICS Plugin Style overrides */
+.ics-calendar-select,
+.ics-calendar-month-grid td,
+.ics-calendar-month-grid th {
+	font-size: 100% !important;
+}
+
+.ics-calendar-month-grid .location {
+	font-style: italic;
+}
+
+.ics-calendar-month-grid ul li::before,
+.ics-calendar-month-grid ul li ul li::before {
+	content:"" !important;
+	display: none !important;
+}
+
+.past.empty,
+.past.has_events {
+	background: var(--hw-light-blue-10);
+}
+
+.ics-calendar-month-grid .events .title.confirmed{
+	font-size: 90% !important;
+}
