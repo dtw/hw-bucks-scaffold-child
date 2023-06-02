@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.3] - 2023-06-02
+### Added
+- override styles for ICS plugin
+
+### Changed
+- hard-coded domain strings
+
 ## [2.1.2] - 2023-02-17
 ### Changed
 - update Your Story template to use new email settings in hw-feedback
