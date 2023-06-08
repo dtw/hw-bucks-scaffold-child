@@ -34,6 +34,6 @@ if (have_posts()) {
 	}
 	$output .= '</div>';
 } else {
-	$output .= $no_results;
+	$output .= '<!--No results from yarpp -->';
 }
 ?>
