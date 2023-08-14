@@ -53,7 +53,7 @@
   $headers = array('Content-Type: text/html; charset=UTF-8');
 
   //validate $recaptcha_response is not empty
-  if ($recaptcha_response != '') {
+  if ( ! empty($recaptcha_response) ) {
     // send request
     $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
     $recaptcha_data = array(
@@ -70,21 +70,20 @@
     $recaptcha_verify = file_get_contents($recaptcha_url, false, $recaptcha_context);
     $captcha_success = json_decode($recaptcha_verify);
     //check response from Google
-    if($captcha_success->success==false) your_story_generate_response("error", $not_human); //not human!
-    else {
+    if ( $captcha_success->success==false ) {
+      your_story_generate_response("error", $not_human); //not human!
+    } else {
       //validate email
-      if(!$email == 0 && !filter_var($email, FILTER_VALIDATE_EMAIL))
+      if ( !$email == 0 && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
         your_story_generate_response("error", $email_invalid);
-      else //email is valid
-      {
-        //sanitize email
+      } else {
+        // email valid so sanitize email
         $email = filter_var($email, FILTER_SANITIZE_EMAIL);
         //validate presence of message
-        if(empty($message)){
+        if ( empty($message) ) {
           your_story_generate_response("error", $missing_content);
-        }
-        else //ready to go!
-        {
+        } else {
+          //ready to go!
           $formatted_message = '<strong>My story</strong><br>' . $message .'<br><br><strong>Name: </strong>' . $name . '<br><br><strong>Email: </strong>' . $email . '<br><br><strong>Phone: </strong>' . $phone . '<br><br><strong>Sent at: </strong>' . date('d/m/Y h:i:s a', time());
           $sent = wp_mail($to, $subject, stripslashes($formatted_message), $headers);
           if ($sent) {
