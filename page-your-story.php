@@ -33,13 +33,13 @@
 
   // user posted variables
   // names should only contain basic ascii characters
-  $name = ! empty( $_POST['message_name'] ) ? filter_var($_POST['message_name'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_BACKTICK) : '';
+  $name = isset( $_POST['message_name'] ) ? filter_var($_POST['message_name'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_BACKTICK) : '';
   // sanitise email below
-  $email = ! empty( $_POST['message_email'] ) ? $_POST['message_email'] : '';
-  $phone = ! empty( $_POST['message_phone'] ) ? filter_var($_POST['message_phone'], FILTER_SANITIZE_NUMBER_INT) : '';
-  $message  = ! empty( $_POST['message_text'] ) ? filter_var($_POST['message_text'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_BACKTICK) : '';  
+  $email = isset( $_POST['message_email'] ) ? $_POST['message_email'] : '';
+  $phone = isset( $_POST['message_phone'] ) ? filter_var($_POST['message_phone'], FILTER_SANITIZE_NUMBER_INT) : '';
+  $message  = isset( $_POST['message_text'] ) ? filter_var($_POST['message_text'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_BACKTICK) : '';  
 
-  $recaptcha_response = ! empty( $_POST['g-recaptcha-response'] ) ? filter_var($_POST['g-recaptcha-response'], FILTER_SANITIZE_STRING) : '';
+  $recaptcha_response = isset( $_POST['g-recaptcha-response'] ) ? filter_var($_POST['g-recaptcha-response'], FILTER_SANITIZE_STRING) : '';
 
   //php mailer variables
   // get options from hw-feedback
@@ -54,7 +54,7 @@
   $headers = array('Content-Type: text/html; charset=UTF-8');
 
   //validate $recaptcha_response is not empty
-  if ( ! empty($recaptcha_response) ) {
+  if ( isset($recaptcha_response) ) {
     // send request
     $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
     $recaptcha_data = array(
@@ -97,7 +97,7 @@
       }
     }
   }
-  else if ( ! empty( $_POST['submitted']) ) {
+  else if ( isset($_POST['submitted']) ) {
     your_story_generate_response("error", $missing_recaptcha);
   }
 
