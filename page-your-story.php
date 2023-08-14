@@ -39,20 +39,6 @@
   $message  = ! empty( $_POST['message_text'] ) ? filter_var($_POST['message_text'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_BACKTICK) : '';  
 
   $recaptcha_response = ! empty( $_POST['g-recaptcha-response'] ) ? filter_var($_POST['g-recaptcha-response'], FILTER_SANITIZE_STRING) : '';
-  $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
-  $recaptcha_data = array(
-    'secret' => '6LevMM0UAAAAAL2L_FW_OK7mq8s-aUs7z5bsOFCk',
-    'response' => $recaptcha_response
-  );
-  $recaptcha_options = array(
-    'http' => array (
-      'method' => 'POST',
-      'content' => http_build_query($recaptcha_data)
-    )
-  );
-  $recaptcha_context  = stream_context_create($recaptcha_options);
-  $recaptcha_verify = file_get_contents($recaptcha_url, false, $recaptcha_context);
-  $captcha_success = json_decode($recaptcha_verify);
 
   //php mailer variables
   // get options from hw-feedback
@@ -68,6 +54,20 @@
 
   //validate $recaptcha_response is not empty
   if ($recaptcha_response != '') {
+    $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
+    $recaptcha_data = array(
+      'secret' => '6LevMM0UAAAAAL2L_FW_OK7mq8s-aUs7z5bsOFCk',
+      'response' => $recaptcha_response
+    );
+    $recaptcha_options = array(
+      'http' => array (
+        'method' => 'POST',
+        'content' => http_build_query($recaptcha_data)
+      )
+    );
+    $recaptcha_context  = stream_context_create($recaptcha_options);
+    $recaptcha_verify = file_get_contents($recaptcha_url, false, $recaptcha_context);
+    $captcha_success = json_decode($recaptcha_verify);
     //check response from Google
     if($captcha_success->success==false) your_story_generate_response("error", $not_human); //not human!
     else {
@@ -96,7 +96,9 @@
       }
     }
   }
-  else if ( ! empty( $_POST['submitted']) ) your_story_generate_response("error", $missing_recaptcha);
+  else if ( ! empty( $_POST['submitted']) ) {
+    your_story_generate_response("error", $missing_recaptcha);
+  }
 
 ?>
 <?php /* Update the page title */
