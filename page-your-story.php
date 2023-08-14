@@ -31,8 +31,8 @@
   $message_unsent  = "Error - Message was not sent. Try Again.";
   $message_sent    = "Success - Thanks, your story has been sent!";
 
-  //user posted variables
-  //names should only contain basic ascii characters
+  // user posted variables
+  // names should only contain basic ascii characters
   $name = ! empty( $_POST['message_name'] ) ? filter_var($_POST['message_name'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_BACKTICK) : '';
   $email = ! empty( $_POST['message_email'] ) ? filter_var($_POST['message_email'], FILTER_SANITIZE_EMAIL) : '';
   $phone = ! empty( $_POST['message_phone'] ) ? filter_var($_POST['message_phone'], FILTER_SANITIZE_NUMBER_INT) : '';
@@ -54,6 +54,7 @@
 
   //validate $recaptcha_response is not empty
   if ($recaptcha_response != '') {
+    // send request
     $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
     $recaptcha_data = array(
       'secret' => '6LevMM0UAAAAAL2L_FW_OK7mq8s-aUs7z5bsOFCk',
