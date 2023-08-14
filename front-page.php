@@ -5,7 +5,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-sm-12 shade">
+				<h1>We are <?php echo get_bloginfo('title'); ?></h1>
 				<h2>We make sure NHS leaders & decision makers hear your voice and use your feedback to improve care for everyone</h2>
+				<?php // echo get_bloginfo('description'); ?>
 				<div class="col-md-12 col-sm-12" id="search-box" title="Search for a health or care service">
 					<p>Rate and review over 500 GPs, dentists, pharmacies, care homes and hospitals</p>
 					<?php echo do_shortcode("[wd_asp id=1]"); ?>

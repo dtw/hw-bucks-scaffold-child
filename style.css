@@ -448,8 +448,15 @@ display:none;
 	padding: 0px;
 }
 
+.home .shade h1 {
+	text-align: left;
+	padding: 0rem 2rem;
+	text-shadow: #000 1px 1px 1px;
+	color: white;
+}
+
 .home .shade h2 {
-	padding: 2rem;
+	padding: 1rem 2rem;
 	margin-top: 0px;
 	line-height:4rem;
 }
