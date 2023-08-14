@@ -33,16 +33,16 @@
 
   //user posted variables
   //names should only contain basic ascii characters
-  $name = filter_var($_POST['message_name'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_BACKTICK);
-  $email = $_POST['message_email'];
-  $phone = filter_var($_POST['message_phone'], FILTER_SANITIZE_NUMBER_INT);
-  $message = filter_var($_POST['message_text'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_BACKTICK);
+  $name = ! empty( $_POST['message_name'] ) ? filter_var($_POST['message_name'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_BACKTICK) : '';
+  $email = ! empty( $_POST['message_email'] ) ? filter_var($_POST['message_email'], FILTER_SANITIZE_EMAIL) : '';
+  $phone = ! empty( $_POST['message_phone'] ) ? filter_var($_POST['message_phone'], FILTER_SANITIZE_NUMBER_INT) : '';
+  $message  = ! empty( $_POST['message_text'] ) ? filter_var($_POST['message_text'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_BACKTICK) : '';  
 
-  $recaptcha_response = $_POST["g-recaptcha-response"];
+  $recaptcha_response = ! empty( $_POST['g-recaptcha-response'] ) ? filter_var($_POST['g-recaptcha-response'], FILTER_SANITIZE_STRING) : '';
   $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
   $recaptcha_data = array(
     'secret' => '6LevMM0UAAAAAL2L_FW_OK7mq8s-aUs7z5bsOFCk',
-    'response' => $_POST["g-recaptcha-response"]
+    'response' => $recaptcha_response
   );
   $recaptcha_options = array(
     'http' => array (
@@ -96,7 +96,7 @@
       }
     }
   }
-  else if ($_POST['submitted']) your_story_generate_response("error", $missing_recaptcha);
+  else if ( ! empty( $_POST['submitted']) ) your_story_generate_response("error", $missing_recaptcha);
 
 ?>
 <?php /* Update the page title */
