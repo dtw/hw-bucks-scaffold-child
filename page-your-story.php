@@ -34,7 +34,8 @@
   // user posted variables
   // names should only contain basic ascii characters
   $name = ! empty( $_POST['message_name'] ) ? filter_var($_POST['message_name'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_BACKTICK) : '';
-  $email = ! empty( $_POST['message_email'] ) ? filter_var($_POST['message_email'], FILTER_SANITIZE_EMAIL) : '';
+  // sanitise email below
+  $email = ! empty( $_POST['message_email'] ) ? $_POST['message_email'] : '';
   $phone = ! empty( $_POST['message_phone'] ) ? filter_var($_POST['message_phone'], FILTER_SANITIZE_NUMBER_INT) : '';
   $message  = ! empty( $_POST['message_text'] ) ? filter_var($_POST['message_text'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_BACKTICK) : '';  
 
