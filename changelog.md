@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.4] - 2023-08-17
+### Changed
+- a lot of validation and syntax fixes
+
+### Added
+- an h1 to the home page for SEO purposes
+
 ## [2.1.3] - 2023-06-02
 ### Added
 - override styles for ICS plugin
