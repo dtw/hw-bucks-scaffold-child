@@ -811,3 +811,56 @@ input.no-asterisk{
 .ics-calendar-month-grid .events .title.confirmed{
 	font-size: 90% !important;
 }
+
+/* Team Members Plugin Style overrides */
+.tmm .tmm_theme_f .tmm_names {
+	font-size: 2rem !important;
+	font-weight: bold !important;
+}
+
+.tmm .tmm_theme_f .tmm_job {
+	font-size: 1.8rem !important;
+	color: var(--hw-blue) !important;
+}
+
+.tmm_1_columns .tmm_member .tmm_photo {
+	width: 30% !important;
+	padding-bottom: 30% !important;
+	margin-top: -16% !important;
+}
+
+a.tmm_sociallink {
+	height: 2.8rem;
+	display: inline-block;
+	margin-bottom: 0 !important;
+}
+
+a:hover.tmm_sociallink,
+a:focus.tmm_sociallink,
+a:active.tmm_sociallink {
+	color: white !important;
+	background-color: var(--hw-hyperlink) !important;
+	outline: 3px solid var(--hw-hyperlink)
+}
+
+a:hover.tmm_sociallink::before,
+a:focus.tmm_sociallink::before,
+a:active.tmm_sociallink::before {
+	color: white !important;
+	background-color: var(--hw-hyperlink) !important;
+	outline: 3px solid var(--hw-hyperlink)
+}
+
+a.tmm_sociallink::before {
+	content: "\f0e0";
+	color: var(--hw-hyperlink);
+	font-size: 2.8rem;
+	font-family: 'Font Awesome 5 Pro';
+	font-weight: 400;
+	line-height: 2.8rem;
+	display: inline-block;
+}
+
+a.tmm_sociallink img {
+	display: none !important;
+}
