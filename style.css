@@ -864,3 +864,11 @@ a.tmm_sociallink::before {
 a.tmm_sociallink img {
 	display: none !important;
 }
+
+.tmm_3_columns .tmm_member {
+	min-height: 190px;
+}
+
+.tmm_3_columns .tmm_desc {
+	display: none;
+}
