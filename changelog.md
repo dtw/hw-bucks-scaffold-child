@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.5] - 2023-09-27
+### Added
+- styles for the "Team Members" (tmm) plugin
+
+### Fixed
+- some missing quotes
+
+### Removed
+- styles for the "Simple Staff List" plugin
+
 ## [2.1.4] - 2023-08-17
 ### Changed
 - a lot of validation and syntax fixes
