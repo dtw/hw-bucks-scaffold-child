@@ -4,6 +4,7 @@ if (isset($_GET['src'])) {
   $src = $_GET['src'];
   // delete the cookie when we come back from SM
   unset($_COOKIE['comment_id']);
+  unset($_COOKIE['comment_uuid']);
   // set a cookie with the src
   setcookie('src', $src, time() + HOUR_IN_SECONDS, COOKIEPATH, COOKIE_DOMAIN);
   nocache_headers();
