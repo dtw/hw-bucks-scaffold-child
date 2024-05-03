@@ -54,7 +54,7 @@
   $headers = array('Content-Type: text/html; charset=UTF-8');
 
   //validate $recaptcha_response is not empty
-  if ( isset($recaptcha_response) ) {
+  if ( !empty($recaptcha_response) ) {
     // send request
     $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
     $recaptcha_data = array(
