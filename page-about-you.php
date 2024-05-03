@@ -8,7 +8,7 @@
       </div>
       <?php
       // check if the survey URL is set
-      if (isset(get_theme_mod('scaffold_demographic_rate_review_url'))) {
+      if (get_theme_mod('scaffold_demographic_rate_review_url')) {
         $formatted_survey_url = rtrim(get_theme_mod('scaffold_demographic_rate_review_url'), '/');
       ?>
         <div id="referral-buttons" class="row">
