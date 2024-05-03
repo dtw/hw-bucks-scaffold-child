@@ -23,7 +23,7 @@
           <div class="row">
             <h2>Help our research</h2>
           </div>
-          <div class="row no-gutter col-sm-11 col-xs-12">
+          <div id="referral-buttons-media-wrapper" class="row no-gutter col-sm-11 col-xs-12">
             <div class="text-center col-sm-3 hidden-xs">
               <i class="far fa-heart" aria-hidden="true"></i>
             </div>
@@ -36,9 +36,9 @@
                 <a href="https://www.healthwatchbucks.co.uk/thanks-website/">No, I don't want to answer these questions</a>
               </div> -->
             </div>
-          </div>
+          </div> <!-- close #referral-buttons-media-wrapper -->
         <?php } ?>
-      </div>
+      </div> <!-- close #referral-buttons -->
       <?php while (have_posts()) : the_post(); ?>
 
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
