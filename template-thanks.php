@@ -2,6 +2,13 @@
 global $wp;
 $current_slug = add_query_arg( array(), $wp->request );
 
+// check we've been sent to thanks-website
+if ( $current_slug == 'thanks-website' ) {
+  // delete the cookies set after the feedback form is submitted
+  unset($_COOKIE['comment_id']);
+  unset($_COOKIE['comment_uuid']);
+}
+
 get_header(); ?>
   <div class="container">
     <div id="content" role="main" class="col-md-8 col-xs-12">

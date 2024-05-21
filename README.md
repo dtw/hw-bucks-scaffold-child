@@ -16,7 +16,9 @@ The Scaffold Theme was originally created to be an overarching theme for Local H
 
 ### Demographic Data
 
-To meet our GDPR obligations we avoid storing contact information and sensitive personal data together. We certainly don't want this information cached in a WordPress database
+To meet our GDPR obligations we avoid storing contact information and sensitive personal data together. We certainly don't want this information cached in a WordPress database. This theme supports redirection to a third-party survey to collect this data. For this to function effectively, ensure pages based on the following are not cached:
+* page-about-you.php
+* template-thanks.php
 
 ## License
 Unless otherwise specified, all the plugin files, scripts and images are licensed under GNU General Public License version 2, see http://www.gnu.org/licenses/gpl-2.0.html.
