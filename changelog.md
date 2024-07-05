@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.2.1] - 2024-07-05
 ### Changed
 - minor fixes
-- for hw-feedback
+- support for hw-feedback
 
 ## [2.2] - 2024-05-03
 ### Added
