@@ -42,10 +42,10 @@
   $recaptcha_response = isset( $_POST['g-recaptcha-response'] ) ? filter_var($_POST['g-recaptcha-response'], FILTER_SANITIZE_STRING) : '';
 
   //php mailer variables
-  // get options from hw-feedback
-  $options = get_option( 'hw_feedback_options' );
-  if ( $options['hw_feedback_field_your_story_email'] != "") {
-    $to = $options['hw_feedback_field_your_story_email'];
+  // get plugin settings/options
+  $options = get_option('hw_feedback_options');
+  if ( $options['hw_feedback_field_email_notifications_targets'] != "") {
+    $to = $options['hw_feedback_field_email_notifications_targets'];
   } else {
     $to = get_option('admin_email');
   }

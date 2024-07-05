@@ -4,7 +4,7 @@
  Author:         Jason King / Phil Thiselton
  Author URI:     http://www.kingjason.co.uk
  Template:       scaffold
- Version:        2.2
+ Version:        2.2.1
 */
 /* Header and nav */
 
@@ -205,7 +205,6 @@ display:none;
 .home .panel .title-link {
 	font-size: 3rem;
 	font-weight: 700 !important;
-	display: inline-block;
 }
 
 .home .panel .panel-excerpt,
